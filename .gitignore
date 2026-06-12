@@ -1,0 +1,58 @@
+# ─── Secrets (NEVER commit) ──────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# ─── Python ──────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual environments (incl. the leftover poc/venv)
+.venv/
+venv/
+env/
+ENV/
+
+# ─── Node / Vite (frontend-react) ────────────────────────────────────────
+node_modules/
+frontend-react/dist/
+dist-ssr/
+*.local
+.vite/
+
+# ─── Generated data (rebuild with: python data/init_all.py) ──────────────
+*.db
+*.sqlite
+*.sqlite3
+bf_atlas/data/trading_data.json
+bf_atlas/data/corpus.json
+trading_data.json
+
+# ─── Confidential / personal docs (client brief, contact info) ───────────
+# Excluded by default — if your repo is private and you want these in,
+# delete the three lines below.
+*.pdf
+*.docx
+*.doc
+
+# ─── OS / Editor ─────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# ─── Logs ────────────────────────────────────────────────────────────────
+*.log
