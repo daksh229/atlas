@@ -1,0 +1,479 @@
+[
+  {
+    "brand_surface": "Lancôme",
+    "partner_id": "supp-003",
+    "trader_id": "t5",
+    "offer_price": 54.45,
+    "available_qty": 728,
+    "fired_at": "2026-05-21",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Oil of Olay",
+    "partner_id": "supp-011",
+    "trader_id": "t2",
+    "offer_price": 17.3,
+    "available_qty": 341,
+    "fired_at": "2026-05-17",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Kerastase",
+    "partner_id": "supp-002",
+    "trader_id": "t1",
+    "offer_price": 20.88,
+    "available_qty": 1124,
+    "fired_at": "2026-06-09",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "UD",
+    "partner_id": "supp-013",
+    "trader_id": "t3",
+    "offer_price": 48.22,
+    "available_qty": 1849,
+    "fired_at": "2026-06-07",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Burberry",
+    "partner_id": "supp-005",
+    "trader_id": "t5",
+    "offer_price": 121.11,
+    "available_qty": 1928,
+    "fired_at": "2026-05-18",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Vichy",
+    "partner_id": "supp-005",
+    "trader_id": "t5",
+    "offer_price": 29.07,
+    "available_qty": 1098,
+    "fired_at": "2026-05-26",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Vichy",
+    "partner_id": "supp-006",
+    "trader_id": "t4",
+    "offer_price": 23.59,
+    "available_qty": 660,
+    "fired_at": "2026-06-03",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "CT",
+    "partner_id": "supp-006",
+    "trader_id": "t4",
+    "offer_price": 64.88,
+    "available_qty": 1696,
+    "fired_at": "2026-06-11",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "e.l.f",
+    "partner_id": "supp-005",
+    "trader_id": "t5",
+    "offer_price": 26.88,
+    "available_qty": 1077,
+    "fired_at": "2026-05-23",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Chanel",
+    "partner_id": "supp-001",
+    "trader_id": "t5",
+    "offer_price": 124.52,
+    "available_qty": 1926,
+    "fired_at": "2026-05-27",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Burberry",
+    "partner_id": "supp-017",
+    "trader_id": "t2",
+    "offer_price": 111.01,
+    "available_qty": 609,
+    "fired_at": "2026-06-02",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "The Ordinary",
+    "partner_id": "supp-012",
+    "trader_id": "t4",
+    "offer_price": 26.85,
+    "available_qty": 1305,
+    "fired_at": "2026-05-28",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Armani",
+    "partner_id": "supp-006",
+    "trader_id": "t4",
+    "offer_price": 150.75,
+    "available_qty": 1033,
+    "fired_at": "2026-05-14",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "UD",
+    "partner_id": "supp-020",
+    "trader_id": "t1",
+    "offer_price": 60.09,
+    "available_qty": 374,
+    "fired_at": "2026-05-26",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Neutrogena",
+    "partner_id": "supp-016",
+    "trader_id": "t3",
+    "offer_price": 20.44,
+    "available_qty": 1980,
+    "fired_at": "2026-05-22",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Lancôme",
+    "partner_id": "supp-001",
+    "trader_id": "t5",
+    "offer_price": 125.77,
+    "available_qty": 144,
+    "fired_at": "2026-05-10",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Boss",
+    "partner_id": "supp-017",
+    "trader_id": "t2",
+    "offer_price": 69.82,
+    "available_qty": 1722,
+    "fired_at": "2026-06-14",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Kérastase",
+    "partner_id": "supp-013",
+    "trader_id": "t3",
+    "offer_price": 19.42,
+    "available_qty": 198,
+    "fired_at": "2026-06-10",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "TF",
+    "partner_id": "supp-001",
+    "trader_id": "t5",
+    "offer_price": 123.9,
+    "available_qty": 353,
+    "fired_at": "2026-05-12",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "MAC",
+    "partner_id": "supp-009",
+    "trader_id": "t1",
+    "offer_price": 30.13,
+    "available_qty": 1390,
+    "fired_at": "2026-06-16",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Loreal",
+    "partner_id": "supp-010",
+    "trader_id": "t2",
+    "offer_price": 29.54,
+    "available_qty": 1535,
+    "fired_at": "2026-06-08",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Versace",
+    "partner_id": "supp-014",
+    "trader_id": "t3",
+    "offer_price": 42.59,
+    "available_qty": 1707,
+    "fired_at": "2026-06-10",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Burberry",
+    "partner_id": "supp-016",
+    "trader_id": "t3",
+    "offer_price": 116.75,
+    "available_qty": 513,
+    "fired_at": "2026-05-25",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "CeraVe",
+    "partner_id": "supp-014",
+    "trader_id": "t3",
+    "offer_price": 24.44,
+    "available_qty": 1964,
+    "fired_at": "2026-06-03",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Eucerin",
+    "partner_id": "supp-016",
+    "trader_id": "t3",
+    "offer_price": 19.31,
+    "available_qty": 282,
+    "fired_at": "2026-06-09",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Olaplex",
+    "partner_id": "supp-019",
+    "trader_id": "t2",
+    "offer_price": 22.36,
+    "available_qty": 1696,
+    "fired_at": "2026-05-15",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "The Body Shop",
+    "partner_id": "supp-003",
+    "trader_id": "t5",
+    "offer_price": 18.64,
+    "available_qty": 1035,
+    "fired_at": "2026-05-29",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Shiseido",
+    "partner_id": "supp-009",
+    "trader_id": "t1",
+    "offer_price": 29.08,
+    "available_qty": 1890,
+    "fired_at": "2026-06-14",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Oil of Olay",
+    "partner_id": "supp-010",
+    "trader_id": "t2",
+    "offer_price": 18.56,
+    "available_qty": 294,
+    "fired_at": "2026-06-14",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Gaultier",
+    "partner_id": "supp-001",
+    "trader_id": "t5",
+    "offer_price": 64.87,
+    "available_qty": 832,
+    "fired_at": "2026-05-19",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "La Roche Posay",
+    "partner_id": "supp-020",
+    "trader_id": "t1",
+    "offer_price": 20.2,
+    "available_qty": 474,
+    "fired_at": "2026-06-09",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Bioderma",
+    "partner_id": "supp-013",
+    "trader_id": "t3",
+    "offer_price": 47.21,
+    "available_qty": 1512,
+    "fired_at": "2026-05-17",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Redken",
+    "partner_id": "supp-014",
+    "trader_id": "t3",
+    "offer_price": 23.8,
+    "available_qty": 1587,
+    "fired_at": "2026-06-13",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Versace",
+    "partner_id": "supp-006",
+    "trader_id": "t4",
+    "offer_price": 74.71,
+    "available_qty": 1489,
+    "fired_at": "2026-05-19",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "ELF Cosmetics",
+    "partner_id": "supp-006",
+    "trader_id": "t4",
+    "offer_price": 28.38,
+    "available_qty": 1866,
+    "fired_at": "2026-06-08",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Maybelline New York",
+    "partner_id": "supp-016",
+    "trader_id": "t3",
+    "offer_price": 52.32,
+    "available_qty": 229,
+    "fired_at": "2026-05-31",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Saint Laurent",
+    "partner_id": "supp-011",
+    "trader_id": "t2",
+    "offer_price": 67.81,
+    "available_qty": 1509,
+    "fired_at": "2026-05-08",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Garnier",
+    "partner_id": "supp-004",
+    "trader_id": "t3",
+    "offer_price": 20.79,
+    "available_qty": 1459,
+    "fired_at": "2026-05-23",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Bobbi Brown",
+    "partner_id": "supp-005",
+    "trader_id": "t5",
+    "offer_price": 13.85,
+    "available_qty": 421,
+    "fired_at": "2026-05-15",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Maybelline",
+    "partner_id": "supp-016",
+    "trader_id": "t3",
+    "offer_price": 56.63,
+    "available_qty": 756,
+    "fired_at": "2026-06-01",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "LRP",
+    "partner_id": "supp-011",
+    "trader_id": "t2",
+    "offer_price": 17.31,
+    "available_qty": 1417,
+    "fired_at": "2026-05-23",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Estee Lauder",
+    "partner_id": "supp-013",
+    "trader_id": "t3",
+    "offer_price": 17.87,
+    "available_qty": 1273,
+    "fired_at": "2026-05-19",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Maybelline New York",
+    "partner_id": "supp-003",
+    "trader_id": "t5",
+    "offer_price": 39.58,
+    "available_qty": 1118,
+    "fired_at": "2026-06-15",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Bioderma",
+    "partner_id": "supp-004",
+    "trader_id": "t3",
+    "offer_price": 44.06,
+    "available_qty": 100,
+    "fired_at": "2026-06-11",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "elf",
+    "partner_id": "supp-020",
+    "trader_id": "t1",
+    "offer_price": 28.69,
+    "available_qty": 1034,
+    "fired_at": "2026-05-26",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "TF",
+    "partner_id": "supp-012",
+    "trader_id": "t4",
+    "offer_price": 120.22,
+    "available_qty": 1671,
+    "fired_at": "2026-05-08",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "MAC Cosmetics",
+    "partner_id": "supp-020",
+    "trader_id": "t1",
+    "offer_price": 26.86,
+    "available_qty": 299,
+    "fired_at": "2026-06-02",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Eucerin",
+    "partner_id": "supp-001",
+    "trader_id": "t5",
+    "offer_price": 22.4,
+    "available_qty": 865,
+    "fired_at": "2026-06-10",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Hugo Boss",
+    "partner_id": "supp-002",
+    "trader_id": "t1",
+    "offer_price": 60.35,
+    "available_qty": 1620,
+    "fired_at": "2026-05-21",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Clinique",
+    "partner_id": "supp-004",
+    "trader_id": "t3",
+    "offer_price": 9.24,
+    "available_qty": 1845,
+    "fired_at": "2026-05-22",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Saint Laurent",
+    "partner_id": "supp-ds",
+    "trader_id": "t4",
+    "offer_price": 62.0,
+    "available_qty": 500,
+    "fired_at": "2026-06-14",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Dior",
+    "partner_id": "supp-emw",
+    "trader_id": "t2",
+    "offer_price": 70.0,
+    "available_qty": 400,
+    "fired_at": "2026-06-13",
+    "source": "supplier"
+  },
+  {
+    "brand_surface": "Chanel",
+    "partner_id": null,
+    "trader_id": "t2",
+    "offer_price": 106.59,
+    "available_qty": 300,
+    "fired_at": "2026-06-16",
+    "source": "manual_offer"
+  }
+]

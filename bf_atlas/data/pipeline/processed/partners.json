@@ -1,0 +1,662 @@
+[
+  {
+    "id": "cust-001",
+    "name": "Bright Distribution",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t1",
+    "country": "South Korea",
+    "ref": "odoo-partner-2001",
+    "email": "buyer1@example.com"
+  },
+  {
+    "id": "cust-002",
+    "name": "Pioneer Trading",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t2",
+    "country": "Germany",
+    "ref": "odoo-partner-2002",
+    "email": "buyer2@example.com"
+  },
+  {
+    "id": "cust-003",
+    "name": "Grand Distribution",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t5",
+    "country": "France",
+    "ref": "odoo-partner-2003",
+    "email": "buyer3@example.com"
+  },
+  {
+    "id": "cust-004",
+    "name": "Zenith Imports",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t1",
+    "country": "Netherlands",
+    "ref": "odoo-partner-2004",
+    "email": "buyer4@example.com"
+  },
+  {
+    "id": "cust-005",
+    "name": "Vela Trading",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t2",
+    "country": "USA",
+    "ref": "odoo-partner-2005",
+    "email": "buyer5@example.com"
+  },
+  {
+    "id": "cust-006",
+    "name": "Ember Beauty Group",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t5",
+    "country": "Belgium",
+    "ref": "odoo-partner-2006",
+    "email": "buyer6@example.com"
+  },
+  {
+    "id": "cust-007",
+    "name": "Metro Stores",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t5",
+    "country": "UAE",
+    "ref": "odoo-partner-2007",
+    "email": "buyer7@example.com"
+  },
+  {
+    "id": "cust-008",
+    "name": "Crescent Partners",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t5",
+    "country": "Spain",
+    "ref": "odoo-partner-2008",
+    "email": "buyer8@example.com"
+  },
+  {
+    "id": "cust-009",
+    "name": "Aurora Retail Co",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t4",
+    "country": "Italy",
+    "ref": "odoo-partner-2009",
+    "email": "buyer9@example.com"
+  },
+  {
+    "id": "cust-010",
+    "name": "Pioneer Retail Co",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t2",
+    "country": "Singapore",
+    "ref": "odoo-partner-2010",
+    "email": "buyer10@example.com"
+  },
+  {
+    "id": "cust-011",
+    "name": "Nordic Distribution",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t1",
+    "country": "UAE",
+    "ref": "odoo-partner-2011",
+    "email": "buyer11@example.com"
+  },
+  {
+    "id": "cust-012",
+    "name": "Orient Brands",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t3",
+    "country": "Brazil",
+    "ref": "odoo-partner-2012",
+    "email": "buyer12@example.com"
+  },
+  {
+    "id": "cust-013",
+    "name": "Pioneer Beauty Group",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t4",
+    "country": "USA",
+    "ref": "odoo-partner-2013",
+    "email": "buyer13@example.com"
+  },
+  {
+    "id": "cust-014",
+    "name": "Orient Imports",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t1",
+    "country": "USA",
+    "ref": "odoo-partner-2014",
+    "email": "buyer14@example.com"
+  },
+  {
+    "id": "cust-015",
+    "name": "Atlas Stores",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t5",
+    "country": "Italy",
+    "ref": "odoo-partner-2015",
+    "email": "buyer15@example.com"
+  },
+  {
+    "id": "cust-016",
+    "name": "Zenith Trading",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t1",
+    "country": "Netherlands",
+    "ref": "odoo-partner-2016",
+    "email": "buyer16@example.com"
+  },
+  {
+    "id": "cust-017",
+    "name": "Royal Trading",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t3",
+    "country": "France",
+    "ref": "odoo-partner-2017",
+    "email": "buyer17@example.com"
+  },
+  {
+    "id": "cust-018",
+    "name": "Crescent Distribution",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t4",
+    "country": "Spain",
+    "ref": "odoo-partner-2018",
+    "email": "buyer18@example.com"
+  },
+  {
+    "id": "cust-019",
+    "name": "Pearl Stores",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t3",
+    "country": "Germany",
+    "ref": "odoo-partner-2019",
+    "email": "buyer19@example.com"
+  },
+  {
+    "id": "cust-020",
+    "name": "Azure Brands",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t2",
+    "country": "Japan",
+    "ref": "odoo-partner-2020",
+    "email": "buyer20@example.com"
+  },
+  {
+    "id": "cust-021",
+    "name": "Pioneer Stores",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t1",
+    "country": "Brazil",
+    "ref": "odoo-partner-2021",
+    "email": "buyer21@example.com"
+  },
+  {
+    "id": "cust-022",
+    "name": "Bright Retail Co",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t5",
+    "country": "South Korea",
+    "ref": "odoo-partner-2022",
+    "email": "buyer22@example.com"
+  },
+  {
+    "id": "cust-023",
+    "name": "Crescent Retail Co",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t4",
+    "country": "UAE",
+    "ref": "odoo-partner-2023",
+    "email": "buyer23@example.com"
+  },
+  {
+    "id": "cust-024",
+    "name": "Pioneer Stores",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t5",
+    "country": "Belgium",
+    "ref": "odoo-partner-2024",
+    "email": "buyer24@example.com"
+  },
+  {
+    "id": "cust-025",
+    "name": "Royal Brands",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t1",
+    "country": "Belgium",
+    "ref": "odoo-partner-2025",
+    "email": "buyer25@example.com"
+  },
+  {
+    "id": "cust-026",
+    "name": "Lumen Brands",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t4",
+    "country": "Spain",
+    "ref": "odoo-partner-2026",
+    "email": "buyer26@example.com"
+  },
+  {
+    "id": "cust-027",
+    "name": "Vela Trading",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t5",
+    "country": "South Korea",
+    "ref": "odoo-partner-2027",
+    "email": "buyer27@example.com"
+  },
+  {
+    "id": "cust-028",
+    "name": "Nordic Trading",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t4",
+    "country": "UAE",
+    "ref": "odoo-partner-2028",
+    "email": "buyer28@example.com"
+  },
+  {
+    "id": "cust-029",
+    "name": "Bright Partners",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t2",
+    "country": "Spain",
+    "ref": "odoo-partner-2029",
+    "email": "buyer29@example.com"
+  },
+  {
+    "id": "cust-030",
+    "name": "Coastal Trading",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t5",
+    "country": "USA",
+    "ref": "odoo-partner-2030",
+    "email": "buyer30@example.com"
+  },
+  {
+    "id": "cust-031",
+    "name": "Pioneer Perfumery",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t4",
+    "country": "Brazil",
+    "ref": "odoo-partner-2031",
+    "email": "buyer31@example.com"
+  },
+  {
+    "id": "cust-032",
+    "name": "Golden Brands",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t2",
+    "country": "Germany",
+    "ref": "odoo-partner-2032",
+    "email": "buyer32@example.com"
+  },
+  {
+    "id": "cust-033",
+    "name": "Verdant Partners",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t1",
+    "country": "Singapore",
+    "ref": "odoo-partner-2033",
+    "email": "buyer33@example.com"
+  },
+  {
+    "id": "cust-034",
+    "name": "Lumen Distribution",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t2",
+    "country": "Japan",
+    "ref": "odoo-partner-2034",
+    "email": "buyer34@example.com"
+  },
+  {
+    "id": "cust-035",
+    "name": "Summit Stores",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t4",
+    "country": "Brazil",
+    "ref": "odoo-partner-2035",
+    "email": "buyer35@example.com"
+  },
+  {
+    "id": "cust-036",
+    "name": "Vela Imports",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t4",
+    "country": "Brazil",
+    "ref": "odoo-partner-2036",
+    "email": "buyer36@example.com"
+  },
+  {
+    "id": "cust-037",
+    "name": "Pearl Holdings",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t3",
+    "country": "USA",
+    "ref": "odoo-partner-2037",
+    "email": "buyer37@example.com"
+  },
+  {
+    "id": "cust-038",
+    "name": "Aurora Stores",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t1",
+    "country": "Japan",
+    "ref": "odoo-partner-2038",
+    "email": "buyer38@example.com"
+  },
+  {
+    "id": "cust-039",
+    "name": "Harbor Cosmetics",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t3",
+    "country": "France",
+    "ref": "odoo-partner-2039",
+    "email": "buyer39@example.com"
+  },
+  {
+    "id": "cust-040",
+    "name": "Atlas Imports",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t2",
+    "country": "Saudi Arabia",
+    "ref": "odoo-partner-2040",
+    "email": "buyer40@example.com"
+  },
+  {
+    "id": "supp-001",
+    "name": "Aurora Cosmetics",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t5",
+    "country": "Singapore",
+    "ref": "odoo-partner-4001",
+    "email": "supplier1@example.com"
+  },
+  {
+    "id": "supp-002",
+    "name": "Summit Holdings",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t1",
+    "country": "Japan",
+    "ref": "odoo-partner-4002",
+    "email": "supplier2@example.com"
+  },
+  {
+    "id": "supp-003",
+    "name": "Atlas Stores",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t5",
+    "country": "Brazil",
+    "ref": "odoo-partner-4003",
+    "email": "supplier3@example.com"
+  },
+  {
+    "id": "supp-004",
+    "name": "Maple Retail Co",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t3",
+    "country": "Singapore",
+    "ref": "odoo-partner-4004",
+    "email": "supplier4@example.com"
+  },
+  {
+    "id": "supp-005",
+    "name": "Summit Holdings",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t5",
+    "country": "Netherlands",
+    "ref": "odoo-partner-4005",
+    "email": "supplier5@example.com"
+  },
+  {
+    "id": "supp-006",
+    "name": "Ember Brands",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t4",
+    "country": "Netherlands",
+    "ref": "odoo-partner-4006",
+    "email": "supplier6@example.com"
+  },
+  {
+    "id": "supp-007",
+    "name": "Orient Brands",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t3",
+    "country": "Belgium",
+    "ref": "odoo-partner-4007",
+    "email": "supplier7@example.com"
+  },
+  {
+    "id": "supp-008",
+    "name": "Lumen Trading",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t5",
+    "country": "France",
+    "ref": "odoo-partner-4008",
+    "email": "supplier8@example.com"
+  },
+  {
+    "id": "supp-009",
+    "name": "Vela Partners",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t1",
+    "country": "Singapore",
+    "ref": "odoo-partner-4009",
+    "email": "supplier9@example.com"
+  },
+  {
+    "id": "supp-010",
+    "name": "Harbor Retail Co",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t2",
+    "country": "Japan",
+    "ref": "odoo-partner-4010",
+    "email": "supplier10@example.com"
+  },
+  {
+    "id": "supp-011",
+    "name": "Cobalt Holdings",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t2",
+    "country": "Spain",
+    "ref": "odoo-partner-4011",
+    "email": "supplier11@example.com"
+  },
+  {
+    "id": "supp-012",
+    "name": "Verdant Perfumery",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t4",
+    "country": "Belgium",
+    "ref": "odoo-partner-4012",
+    "email": "supplier12@example.com"
+  },
+  {
+    "id": "supp-013",
+    "name": "Harbor Trading",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t3",
+    "country": "UAE",
+    "ref": "odoo-partner-4013",
+    "email": "supplier13@example.com"
+  },
+  {
+    "id": "supp-014",
+    "name": "Royal Stores",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t3",
+    "country": "Saudi Arabia",
+    "ref": "odoo-partner-4014",
+    "email": "supplier14@example.com"
+  },
+  {
+    "id": "supp-015",
+    "name": "Verdant Partners",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t1",
+    "country": "Belgium",
+    "ref": "odoo-partner-4015",
+    "email": "supplier15@example.com"
+  },
+  {
+    "id": "supp-016",
+    "name": "Crescent Distribution",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t3",
+    "country": "Netherlands",
+    "ref": "odoo-partner-4016",
+    "email": "supplier16@example.com"
+  },
+  {
+    "id": "supp-017",
+    "name": "Zenith Holdings",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t2",
+    "country": "Brazil",
+    "ref": "odoo-partner-4017",
+    "email": "supplier17@example.com"
+  },
+  {
+    "id": "supp-018",
+    "name": "Crescent Beauty Group",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t1",
+    "country": "South Korea",
+    "ref": "odoo-partner-4018",
+    "email": "supplier18@example.com"
+  },
+  {
+    "id": "supp-019",
+    "name": "Bright Beauty Group",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t2",
+    "country": "France",
+    "ref": "odoo-partner-4019",
+    "email": "supplier19@example.com"
+  },
+  {
+    "id": "supp-020",
+    "name": "Lumen Brands",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t1",
+    "country": "USA",
+    "ref": "odoo-partner-4020",
+    "email": "supplier20@example.com"
+  },
+  {
+    "id": "cust-ds",
+    "name": "Aurora Beauty Group",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t1",
+    "country": "Netherlands",
+    "ref": "odoo-partner-9001",
+    "email": "buyer@aurorabeauty.com"
+  },
+  {
+    "id": "supp-ds",
+    "name": "Étoile Distribution",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t4",
+    "country": "France",
+    "ref": "odoo-partner-9002",
+    "email": "sales@etoile.fr"
+  },
+  {
+    "id": "supp-emw",
+    "name": "Iberia Fragrance House",
+    "is_customer": 0,
+    "is_supplier": 1,
+    "owner_trader_id": "t2",
+    "country": "Spain",
+    "ref": "odoo-partner-9003",
+    "email": "trade@iberiafragrance.es"
+  },
+  {
+    "id": "cust-stock",
+    "name": "Coastal Retail Co",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t3",
+    "country": "Germany",
+    "ref": "odoo-partner-9004",
+    "email": "orders@coastalretail.de"
+  },
+  {
+    "id": "cust-reorder",
+    "name": "Summit Perfumery",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t5",
+    "country": "Belgium",
+    "ref": "odoo-partner-9005",
+    "email": "buying@summitperf.be"
+  },
+  {
+    "id": "cust-offer",
+    "name": "Pioneer Imports",
+    "is_customer": 1,
+    "is_supplier": 0,
+    "owner_trader_id": "t3",
+    "country": "Italy",
+    "ref": "odoo-partner-9006",
+    "email": "purchasing@pioneerimports.it"
+  }
+]

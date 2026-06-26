@@ -26,13 +26,15 @@ export function PageHeader({ title, subtitle }: { title: string; subtitle?: stri
   );
 }
 
-export function DirectionalNote() {
-  return (
-    <div className="mb-5 rounded-lg bg-brand-50 border border-brand-100 text-brand-900 text-sm px-4 py-2.5">
-      🧭 <strong>Directional proof</strong> — built from the public brief on mock data.
-      Exact rules/layout would conform to BF's spec under NDA.
-    </div>
-  );
+export function Pill({ children, tone = "slate" }: { children: React.ReactNode; tone?: string }) {
+  const map: Record<string, string> = {
+    slate: "bg-slate-100 text-slate-600",
+    green: "bg-green-100 text-green-700",
+    amber: "bg-amber-100 text-amber-700",
+    red: "bg-red-100 text-red-700",
+    brand: "bg-brand-50 text-brand-700",
+  };
+  return <span className={`badge ${map[tone] || map.slate}`}>{children}</span>;
 }
 
 export function eur(n: number | null | undefined): string {

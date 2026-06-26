@@ -1,0 +1,252 @@
+[
+  {
+    "id": "brand-001",
+    "canonical_name": "Yves Saint Laurent",
+    "category": "perfume"
+  },
+  {
+    "id": "brand-002",
+    "canonical_name": "Christian Dior",
+    "category": "perfume"
+  },
+  {
+    "id": "brand-003",
+    "canonical_name": "Chanel",
+    "category": "perfume"
+  },
+  {
+    "id": "brand-004",
+    "canonical_name": "Tom Ford",
+    "category": "perfume"
+  },
+  {
+    "id": "brand-005",
+    "canonical_name": "Giorgio Armani",
+    "category": "perfume"
+  },
+  {
+    "id": "brand-006",
+    "canonical_name": "Dolce & Gabbana",
+    "category": "perfume"
+  },
+  {
+    "id": "brand-007",
+    "canonical_name": "Versace",
+    "category": "perfume"
+  },
+  {
+    "id": "brand-008",
+    "canonical_name": "Paco Rabanne",
+    "category": "perfume"
+  },
+  {
+    "id": "brand-009",
+    "canonical_name": "Jean Paul Gaultier",
+    "category": "perfume"
+  },
+  {
+    "id": "brand-010",
+    "canonical_name": "Carolina Herrera",
+    "category": "perfume"
+  },
+  {
+    "id": "brand-011",
+    "canonical_name": "Hugo Boss",
+    "category": "perfume"
+  },
+  {
+    "id": "brand-012",
+    "canonical_name": "Calvin Klein",
+    "category": "perfume"
+  },
+  {
+    "id": "brand-013",
+    "canonical_name": "Burberry",
+    "category": "perfume"
+  },
+  {
+    "id": "brand-014",
+    "canonical_name": "Givenchy",
+    "category": "perfume"
+  },
+  {
+    "id": "brand-015",
+    "canonical_name": "Lancôme",
+    "category": "perfume"
+  },
+  {
+    "id": "brand-016",
+    "canonical_name": "Estée Lauder",
+    "category": "skincare"
+  },
+  {
+    "id": "brand-017",
+    "canonical_name": "Clinique",
+    "category": "skincare"
+  },
+  {
+    "id": "brand-018",
+    "canonical_name": "La Roche-Posay",
+    "category": "skincare"
+  },
+  {
+    "id": "brand-019",
+    "canonical_name": "CeraVe",
+    "category": "skincare"
+  },
+  {
+    "id": "brand-020",
+    "canonical_name": "The Ordinary",
+    "category": "skincare"
+  },
+  {
+    "id": "brand-021",
+    "canonical_name": "Vichy",
+    "category": "skincare"
+  },
+  {
+    "id": "brand-022",
+    "canonical_name": "Eucerin",
+    "category": "skincare"
+  },
+  {
+    "id": "brand-023",
+    "canonical_name": "Neutrogena",
+    "category": "skincare"
+  },
+  {
+    "id": "brand-024",
+    "canonical_name": "Olay",
+    "category": "skincare"
+  },
+  {
+    "id": "brand-025",
+    "canonical_name": "Nivea",
+    "category": "skincare"
+  },
+  {
+    "id": "brand-026",
+    "canonical_name": "Bioderma",
+    "category": "skincare"
+  },
+  {
+    "id": "brand-027",
+    "canonical_name": "L'Oréal Paris",
+    "category": "skincare"
+  },
+  {
+    "id": "brand-028",
+    "canonical_name": "Garnier",
+    "category": "skincare"
+  },
+  {
+    "id": "brand-029",
+    "canonical_name": "Kiehl's",
+    "category": "skincare"
+  },
+  {
+    "id": "brand-030",
+    "canonical_name": "Shiseido",
+    "category": "skincare"
+  },
+  {
+    "id": "brand-031",
+    "canonical_name": "MAC",
+    "category": "cosmetics"
+  },
+  {
+    "id": "brand-032",
+    "canonical_name": "Maybelline",
+    "category": "cosmetics"
+  },
+  {
+    "id": "brand-033",
+    "canonical_name": "Revlon",
+    "category": "cosmetics"
+  },
+  {
+    "id": "brand-034",
+    "canonical_name": "Urban Decay",
+    "category": "cosmetics"
+  },
+  {
+    "id": "brand-035",
+    "canonical_name": "NARS",
+    "category": "cosmetics"
+  },
+  {
+    "id": "brand-036",
+    "canonical_name": "Bobbi Brown",
+    "category": "cosmetics"
+  },
+  {
+    "id": "brand-037",
+    "canonical_name": "Charlotte Tilbury",
+    "category": "cosmetics"
+  },
+  {
+    "id": "brand-038",
+    "canonical_name": "Fenty Beauty",
+    "category": "cosmetics"
+  },
+  {
+    "id": "brand-039",
+    "canonical_name": "Benefit",
+    "category": "cosmetics"
+  },
+  {
+    "id": "brand-040",
+    "canonical_name": "e.l.f.",
+    "category": "cosmetics"
+  },
+  {
+    "id": "brand-041",
+    "canonical_name": "Kérastase",
+    "category": "haircare"
+  },
+  {
+    "id": "brand-042",
+    "canonical_name": "Redken",
+    "category": "haircare"
+  },
+  {
+    "id": "brand-043",
+    "canonical_name": "Olaplex",
+    "category": "haircare"
+  },
+  {
+    "id": "brand-044",
+    "canonical_name": "Moroccanoil",
+    "category": "haircare"
+  },
+  {
+    "id": "brand-045",
+    "canonical_name": "Schwarzkopf",
+    "category": "haircare"
+  },
+  {
+    "id": "brand-046",
+    "canonical_name": "Pantene",
+    "category": "haircare"
+  },
+  {
+    "id": "brand-047",
+    "canonical_name": "The Body Shop",
+    "category": "bodycare"
+  },
+  {
+    "id": "brand-048",
+    "canonical_name": "Dove",
+    "category": "bodycare"
+  },
+  {
+    "id": "brand-049",
+    "canonical_name": "L'Occitane",
+    "category": "bodycare"
+  },
+  {
+    "id": "brand-050",
+    "canonical_name": "Rituals",
+    "category": "bodycare"
+  }
+]

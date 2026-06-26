@@ -1,12 +1,10 @@
-"""SQLite access: pooled-ish connections, region filter helper, read-only executor."""
+"""SQLite access + small query helpers (trader-owned model, no region partition)."""
 
 import sqlite3
 
 import pandas as pd
 
 from app.core.config import settings
-
-ALL_REGIONS = "All regions"
 
 
 def get_conn() -> sqlite3.Connection:
@@ -21,20 +19,11 @@ def run_query(sql: str, params: tuple = ()) -> pd.DataFrame:
         return pd.read_sql_query(sql, conn, params=params)
 
 
-def run_select_readonly(sql: str) -> pd.DataFrame:
-    """Execute agent-generated SQL on a read-only connection (defence in depth)."""
-    uri = f"file:{settings.DB_PATH}?mode=ro"
-    with sqlite3.connect(uri, uri=True) as conn:
-        return pd.read_sql_query(sql, conn)
+def scalar(sql: str, params: tuple = ()):
+    with get_conn() as conn:
+        row = conn.execute(sql, params).fetchone()
+        return row[0] if row else None
 
 
-def region_clause(region, column: str = "region") -> tuple[str, tuple]:
-    """(sql_fragment, params) for an optional region filter. None/All = no filter."""
-    if not region or region == ALL_REGIONS:
-        return "", ()
-    return f" AND {column} = ?", (region,)
-
-
-def regions() -> list[str]:
-    df = run_query("SELECT DISTINCT region FROM traders ORDER BY region")
-    return [ALL_REGIONS] + df["region"].tolist()
+def traders() -> pd.DataFrame:
+    return run_query("SELECT id, name, team, role FROM traders ORDER BY team, name")

@@ -13,16 +13,16 @@ class Settings:
     APP_NAME = "BF Atlas API"
     VERSION = "0.1.0"
 
-    # Single Claude model for every agent (per decision: Sonnet only).
-    CLAUDE_MODEL = os.getenv("CLAUDE_MODEL", "claude-sonnet-4-6")
+    # Model used to extract structured offers from emails (cheap/fast, high volume).
+    EXTRACT_MODEL = os.getenv("EXTRACT_MODEL", "claude-haiku-4-5")
     ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 
     # JWT signing secret for session/RBAC tokens (set a real one in prod).
-    AUTH_SECRET = os.getenv("AUTH_SECRET", "bf-atlas-dev-secret-change-me")
+    AUTH_SECRET = os.getenv("AUTH_SECRET", "bf-atlas-dev-secret-change-me-in-production-0123456789")
 
-    # SQLite file produced by data/init_db.py + init_atlas.py
+    # SQLite file produced by data/pipeline/build.py (trader-owned, brand-dictionary).
     DB_PATH = os.path.abspath(
-        os.getenv("DB_PATH", os.path.join(_BACKEND_DIR, "..", "data", "bfuturist.db"))
+        os.getenv("DB_PATH", os.path.join(_BACKEND_DIR, "..", "data", "atlas.db"))
     )
 
     # Where sample files (price lists, retailer fixture) live.

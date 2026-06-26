@@ -1,0 +1,659 @@
+[
+  {
+    "brand_surface": "JPG",
+    "partner_id": "cust-029",
+    "trader_id": "t2",
+    "target_price": 117.63,
+    "wanted_qty": 300,
+    "fired_at": "2026-06-13",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "CT",
+    "partner_id": "cust-011",
+    "trader_id": "t1",
+    "target_price": 66.92,
+    "wanted_qty": 300,
+    "fired_at": "2026-05-20",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Neutrogena",
+    "partner_id": "cust-012",
+    "trader_id": "t3",
+    "target_price": 33.24,
+    "wanted_qty": 300,
+    "fired_at": "2026-06-07",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "ELF Cosmetics",
+    "partner_id": "cust-003",
+    "trader_id": "t5",
+    "target_price": 100.72,
+    "wanted_qty": 300,
+    "fired_at": "2026-06-13",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "La Roche-Posay",
+    "partner_id": "cust-006",
+    "trader_id": "t5",
+    "target_price": 38.99,
+    "wanted_qty": 100,
+    "fired_at": "2026-05-07",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "CD",
+    "partner_id": "cust-035",
+    "trader_id": "t4",
+    "target_price": 180.09,
+    "wanted_qty": 300,
+    "fired_at": "2026-05-25",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Revlon",
+    "partner_id": "cust-037",
+    "trader_id": "t3",
+    "target_price": 44.46,
+    "wanted_qty": 50,
+    "fired_at": "2026-05-27",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Lancome",
+    "partner_id": "cust-039",
+    "trader_id": "t3",
+    "target_price": 192.82,
+    "wanted_qty": 300,
+    "fired_at": "2026-05-14",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Rituals",
+    "partner_id": "cust-023",
+    "trader_id": "t4",
+    "target_price": 24.04,
+    "wanted_qty": 100,
+    "fired_at": "2026-05-30",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Dove",
+    "partner_id": "cust-035",
+    "trader_id": "t4",
+    "target_price": 53.26,
+    "wanted_qty": 300,
+    "fired_at": "2026-05-25",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "CK",
+    "partner_id": "cust-012",
+    "trader_id": "t3",
+    "target_price": 203.06,
+    "wanted_qty": 150,
+    "fired_at": "2026-05-10",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Pantene",
+    "partner_id": "cust-002",
+    "trader_id": "t2",
+    "target_price": 56.07,
+    "wanted_qty": 100,
+    "fired_at": "2026-05-16",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "The Ordinary",
+    "partner_id": "cust-035",
+    "trader_id": "t4",
+    "target_price": 52.25,
+    "wanted_qty": 50,
+    "fired_at": "2026-06-02",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Lancome",
+    "partner_id": "cust-039",
+    "trader_id": "t3",
+    "target_price": 188.72,
+    "wanted_qty": 100,
+    "fired_at": "2026-06-08",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Pantene",
+    "partner_id": "cust-022",
+    "trader_id": "t5",
+    "target_price": 18.07,
+    "wanted_qty": 100,
+    "fired_at": "2026-05-10",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Rituals",
+    "partner_id": "cust-010",
+    "trader_id": "t2",
+    "target_price": 31.51,
+    "wanted_qty": 150,
+    "fired_at": "2026-05-22",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Versace",
+    "partner_id": "cust-038",
+    "trader_id": "t1",
+    "target_price": 159.99,
+    "wanted_qty": 100,
+    "fired_at": "2026-05-20",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Redken",
+    "partner_id": "cust-032",
+    "trader_id": "t2",
+    "target_price": 43.47,
+    "wanted_qty": 150,
+    "fired_at": "2026-06-02",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "CK",
+    "partner_id": "cust-038",
+    "trader_id": "t1",
+    "target_price": 198.84,
+    "wanted_qty": 150,
+    "fired_at": "2026-06-08",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "The Body Shop",
+    "partner_id": "cust-012",
+    "trader_id": "t3",
+    "target_price": 31.13,
+    "wanted_qty": 50,
+    "fired_at": "2026-06-05",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Vichy",
+    "partner_id": "cust-039",
+    "trader_id": "t3",
+    "target_price": 68.43,
+    "wanted_qty": 50,
+    "fired_at": "2026-05-16",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Eucerin",
+    "partner_id": "cust-010",
+    "trader_id": "t2",
+    "target_price": 35.69,
+    "wanted_qty": 150,
+    "fired_at": "2026-06-06",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Pantene",
+    "partner_id": "cust-006",
+    "trader_id": "t5",
+    "target_price": 46.49,
+    "wanted_qty": 100,
+    "fired_at": "2026-06-01",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Neutrogena",
+    "partner_id": "cust-005",
+    "trader_id": "t2",
+    "target_price": 84.14,
+    "wanted_qty": 50,
+    "fired_at": "2026-05-23",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "The Body Shop",
+    "partner_id": "cust-029",
+    "trader_id": "t2",
+    "target_price": 31.43,
+    "wanted_qty": 300,
+    "fired_at": "2026-05-23",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "NARS",
+    "partner_id": "cust-023",
+    "trader_id": "t4",
+    "target_price": 89.85,
+    "wanted_qty": 100,
+    "fired_at": "2026-06-06",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Armani",
+    "partner_id": "cust-029",
+    "trader_id": "t2",
+    "target_price": 275.43,
+    "wanted_qty": 150,
+    "fired_at": "2026-06-10",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Eucerin",
+    "partner_id": "cust-005",
+    "trader_id": "t2",
+    "target_price": 33.49,
+    "wanted_qty": 50,
+    "fired_at": "2026-05-12",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Eucerin",
+    "partner_id": "cust-006",
+    "trader_id": "t5",
+    "target_price": 36.69,
+    "wanted_qty": 100,
+    "fired_at": "2026-05-09",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Hugo Boss",
+    "partner_id": "cust-028",
+    "trader_id": "t4",
+    "target_price": 151.1,
+    "wanted_qty": 100,
+    "fired_at": "2026-05-21",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "The Body Shop",
+    "partner_id": "cust-036",
+    "trader_id": "t4",
+    "target_price": 26.23,
+    "wanted_qty": 50,
+    "fired_at": "2026-06-13",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Charlotte Tilbury",
+    "partner_id": "cust-026",
+    "trader_id": "t4",
+    "target_price": 57.58,
+    "wanted_qty": 50,
+    "fired_at": "2026-05-20",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "CeraVe",
+    "partner_id": "cust-006",
+    "trader_id": "t5",
+    "target_price": 70.88,
+    "wanted_qty": 100,
+    "fired_at": "2026-06-06",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Dolce & Gabbana",
+    "partner_id": "cust-019",
+    "trader_id": "t3",
+    "target_price": 224.5,
+    "wanted_qty": 300,
+    "fired_at": "2026-05-17",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Olaplex",
+    "partner_id": "cust-032",
+    "trader_id": "t2",
+    "target_price": 36.3,
+    "wanted_qty": 300,
+    "fired_at": "2026-06-05",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Nivea",
+    "partner_id": "cust-024",
+    "trader_id": "t5",
+    "target_price": 54.44,
+    "wanted_qty": 150,
+    "fired_at": "2026-05-19",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Clinique",
+    "partner_id": "cust-030",
+    "trader_id": "t5",
+    "target_price": 23.2,
+    "wanted_qty": 100,
+    "fired_at": "2026-06-10",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Olaplex",
+    "partner_id": "cust-006",
+    "trader_id": "t5",
+    "target_price": 39.91,
+    "wanted_qty": 100,
+    "fired_at": "2026-05-12",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Nivea",
+    "partner_id": "cust-004",
+    "trader_id": "t1",
+    "target_price": 56.66,
+    "wanted_qty": 100,
+    "fired_at": "2026-05-17",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Dolce & Gabbana",
+    "partner_id": "cust-020",
+    "trader_id": "t2",
+    "target_price": 239.12,
+    "wanted_qty": 100,
+    "fired_at": "2026-06-09",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Calvin Klein",
+    "partner_id": "cust-029",
+    "trader_id": "t2",
+    "target_price": 203.19,
+    "wanted_qty": 100,
+    "fired_at": "2026-06-14",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "D&G",
+    "partner_id": "cust-028",
+    "trader_id": "t4",
+    "target_price": 276.49,
+    "wanted_qty": 100,
+    "fired_at": "2026-05-09",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Vichy",
+    "partner_id": "cust-017",
+    "trader_id": "t3",
+    "target_price": 56.99,
+    "wanted_qty": 300,
+    "fired_at": "2026-05-12",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "La Roche-Posay",
+    "partner_id": "cust-021",
+    "trader_id": "t1",
+    "target_price": 43.63,
+    "wanted_qty": 300,
+    "fired_at": "2026-06-09",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Carolina Herrera",
+    "partner_id": "cust-027",
+    "trader_id": "t5",
+    "target_price": 98.16,
+    "wanted_qty": 50,
+    "fired_at": "2026-05-29",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Neutrogena",
+    "partner_id": "cust-035",
+    "trader_id": "t4",
+    "target_price": 75.75,
+    "wanted_qty": 300,
+    "fired_at": "2026-05-11",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "MAC",
+    "partner_id": "cust-039",
+    "trader_id": "t3",
+    "target_price": 49.9,
+    "wanted_qty": 100,
+    "fired_at": "2026-05-08",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Moroccan Oil",
+    "partner_id": "cust-039",
+    "trader_id": "t3",
+    "target_price": 32.95,
+    "wanted_qty": 150,
+    "fired_at": "2026-06-01",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Dove",
+    "partner_id": "cust-004",
+    "trader_id": "t1",
+    "target_price": 43.0,
+    "wanted_qty": 50,
+    "fired_at": "2026-05-26",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "The Ordinary",
+    "partner_id": "cust-020",
+    "trader_id": "t2",
+    "target_price": 37.39,
+    "wanted_qty": 50,
+    "fired_at": "2026-06-02",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "The Ordinary",
+    "partner_id": "cust-009",
+    "trader_id": "t4",
+    "target_price": 63.67,
+    "wanted_qty": 150,
+    "fired_at": "2026-05-30",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Benefit",
+    "partner_id": "cust-027",
+    "trader_id": "t5",
+    "target_price": 44.81,
+    "wanted_qty": 100,
+    "fired_at": "2026-05-21",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "L'Occitane",
+    "partner_id": "cust-032",
+    "trader_id": "t2",
+    "target_price": 52.94,
+    "wanted_qty": 100,
+    "fired_at": "2026-06-12",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Pantene",
+    "partner_id": "cust-020",
+    "trader_id": "t2",
+    "target_price": 59.85,
+    "wanted_qty": 50,
+    "fired_at": "2026-06-05",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Burberry",
+    "partner_id": "cust-013",
+    "trader_id": "t4",
+    "target_price": 213.68,
+    "wanted_qty": 50,
+    "fired_at": "2026-05-24",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "La Roche Posay",
+    "partner_id": "cust-013",
+    "trader_id": "t4",
+    "target_price": 40.08,
+    "wanted_qty": 50,
+    "fired_at": "2026-06-15",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Oil of Olay",
+    "partner_id": "cust-016",
+    "trader_id": "t1",
+    "target_price": 34.17,
+    "wanted_qty": 300,
+    "fired_at": "2026-05-10",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Neutrogena",
+    "partner_id": "cust-036",
+    "trader_id": "t4",
+    "target_price": 87.05,
+    "wanted_qty": 150,
+    "fired_at": "2026-06-11",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Christian Dior",
+    "partner_id": "cust-019",
+    "trader_id": "t3",
+    "target_price": 168.41,
+    "wanted_qty": 100,
+    "fired_at": "2026-06-02",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Moroccan Oil",
+    "partner_id": "cust-015",
+    "trader_id": "t5",
+    "target_price": 69.21,
+    "wanted_qty": 50,
+    "fired_at": "2026-06-16",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Jean Paul Gaultier",
+    "partner_id": "cust-031",
+    "trader_id": "t4",
+    "target_price": 128.18,
+    "wanted_qty": 50,
+    "fired_at": "2026-06-02",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Benefit Cosmetics",
+    "partner_id": "cust-017",
+    "trader_id": "t3",
+    "target_price": 80.33,
+    "wanted_qty": 300,
+    "fired_at": "2026-05-25",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Clinique",
+    "partner_id": "cust-030",
+    "trader_id": "t5",
+    "target_price": 21.32,
+    "wanted_qty": 300,
+    "fired_at": "2026-05-10",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Saint Laurent",
+    "partner_id": "cust-007",
+    "trader_id": "t5",
+    "target_price": 124.34,
+    "wanted_qty": 50,
+    "fired_at": "2026-05-17",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Eucerin",
+    "partner_id": "cust-005",
+    "trader_id": "t2",
+    "target_price": 41.79,
+    "wanted_qty": 150,
+    "fired_at": "2026-05-28",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Carolina Herrera",
+    "partner_id": "cust-013",
+    "trader_id": "t4",
+    "target_price": 94.89,
+    "wanted_qty": 300,
+    "fired_at": "2026-05-27",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "The Body Shop",
+    "partner_id": "cust-009",
+    "trader_id": "t4",
+    "target_price": 32.43,
+    "wanted_qty": 150,
+    "fired_at": "2026-05-21",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Nivea",
+    "partner_id": "cust-026",
+    "trader_id": "t4",
+    "target_price": 52.64,
+    "wanted_qty": 100,
+    "fired_at": "2026-05-13",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Olaplex",
+    "partner_id": "cust-031",
+    "trader_id": "t4",
+    "target_price": 38.53,
+    "wanted_qty": 100,
+    "fired_at": "2026-05-29",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "MAC Cosmetics",
+    "partner_id": "cust-007",
+    "trader_id": "t5",
+    "target_price": 49.62,
+    "wanted_qty": 100,
+    "fired_at": "2026-05-26",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "YSL",
+    "partner_id": "cust-ds",
+    "trader_id": "t1",
+    "target_price": 95.0,
+    "wanted_qty": 200,
+    "fired_at": "2026-06-15",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Olaplex",
+    "partner_id": "cust-stock",
+    "trader_id": "t3",
+    "target_price": 59.8,
+    "wanted_qty": 250,
+    "fired_at": "2026-06-15",
+    "source": "crm"
+  },
+  {
+    "brand_surface": "Chanel",
+    "partner_id": "cust-offer",
+    "trader_id": "t3",
+    "target_price": 254.13,
+    "wanted_qty": 180,
+    "fired_at": "2026-06-12",
+    "source": "crm"
+  }
+]

@@ -1,15 +1,14 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { getToken, setToken } from "../api/client";
-import { ALL_REGIONS, type AuthState, type Role, type Session } from "./types";
+import type { AuthState, Session } from "./types";
 import { createSession } from "../api/endpoints";
 
 const STORAGE = "bf_atlas_session";
 
 interface AuthCtx {
   auth: AuthState | null;
-  login: (role: Role, region: string) => Promise<void>;
+  login: (traderId: string) => Promise<void>;
   logout: () => void;
-  setActiveRegion: (region: string) => void;
 }
 
 const Ctx = createContext<AuthCtx | undefined>(undefined);
@@ -19,9 +18,7 @@ function load(): AuthState | null {
   const raw = localStorage.getItem(STORAGE);
   if (!token || !raw) return null;
   try {
-    const s = JSON.parse(raw) as Session;
-    const active = s.role === "trader" ? s.region : ALL_REGIONS;
-    return { ...s, activeRegion: active };
+    return JSON.parse(raw) as Session;
   } catch {
     return null;
   }
@@ -30,7 +27,6 @@ function load(): AuthState | null {
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [auth, setAuth] = useState<AuthState | null>(load);
 
-  // keep storage in sync (active region too)
   useEffect(() => {
     if (auth) localStorage.setItem(STORAGE, JSON.stringify(auth));
   }, [auth]);
@@ -38,19 +34,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const value = useMemo<AuthCtx>(
     () => ({
       auth,
-      async login(role, region) {
-        const s = await createSession(role, region);
+      async login(traderId) {
+        const s = await createSession(traderId);
         setToken(s.token);
-        const active = s.role === "trader" ? s.region : ALL_REGIONS;
-        setAuth({ ...s, activeRegion: active });
+        setAuth(s);
       },
       logout() {
         setToken(null);
         localStorage.removeItem(STORAGE);
         setAuth(null);
-      },
-      setActiveRegion(region) {
-        setAuth((prev) => (prev ? { ...prev, activeRegion: region } : prev));
       },
     }),
     [auth]

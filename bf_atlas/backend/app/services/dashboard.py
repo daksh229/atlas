@@ -1,104 +1,32 @@
-"""Dashboard data: KPIs + chart frames (region-scoped)."""
+"""Dashboard — a slim 'My View' overview, scoped to the session trader (§9)."""
 
-import pandas as pd
+from app.core.database import run_query, scalar
+from app.core.security import Session
 
-from app.core.database import ALL_REGIONS, region_clause, run_query
 
-
-def kpis(region=None) -> dict:
-    rclause, rparams = region_clause(region)
-
-    rev = run_query(
-        f"""SELECT COALESCE(SUM(total_amount), 0) AS revenue FROM orders
-            WHERE status != 'cancelled'
-              AND strftime('%Y-%m', order_date) = strftime('%Y-%m', 'now') {rclause}""",
-        rparams,
-    )["revenue"].iloc[0]
-
-    open_deals = run_query(
-        f"""SELECT COUNT(*) AS n, COALESCE(SUM(value),0) AS pipeline FROM crm_deals
-            WHERE stage NOT IN ('won','lost') {rclause}""",
-        rparams,
-    )
-
-    low_stock = run_query(
-        f"""SELECT COUNT(*) AS n FROM inventory
-            WHERE qty_available < low_stock_threshold {rclause}""",
-        rparams,
-    )["n"].iloc[0]
-
-    closed = run_query(
-        f"""SELECT SUM(CASE WHEN stage='won' THEN 1 ELSE 0 END) AS won,
-                   SUM(CASE WHEN stage IN ('won','lost') THEN 1 ELSE 0 END) AS closed
-            FROM crm_deals WHERE 1=1 {rclause}""",
-        rparams,
-    )
-    won, total = closed["won"].iloc[0] or 0, closed["closed"].iloc[0] or 0
-    win_rate = round(float(won / total * 100), 1) if total else 0.0
-
+def kpis(session: Session) -> dict:
+    tid = session.trader_id
+    clients = scalar("SELECT COUNT(*) FROM partners WHERE is_customer=1 AND owner_trader_id=?", (tid,))
+    suppliers = scalar("SELECT COUNT(*) FROM partners WHERE is_supplier=1 AND owner_trader_id=?", (tid,))
+    open_demand = scalar("SELECT COUNT(*) FROM demand_signals WHERE trader_id=?", (tid,))
+    revenue = scalar(
+        """SELECT COALESCE(SUM(amount_total),0) FROM sale_orders
+           WHERE trader_id=? AND state!='cancel'""", (tid,))
     return {
-        "revenue_mtd": float(rev),
-        "open_deals": int(open_deals["n"].iloc[0]),
-        "open_pipeline": float(open_deals["pipeline"].iloc[0]),
-        "low_stock": int(low_stock),
-        "win_rate": win_rate,
+        "clients": int(clients or 0), "suppliers": int(suppliers or 0),
+        "open_demand_signals": int(open_demand or 0), "revenue_total": float(revenue or 0),
     }
 
 
-def revenue_by_region(region=None) -> pd.DataFrame:
-    # Region-scoped for RBAC: a trader sees only their own region's bar.
-    rclause, rparams = region_clause(region)
+def my_brands(session: Session):
+    """Top brands the trader is active on (by combined demand+supply signal count)."""
     return run_query(
-        f"""SELECT region, SUM(total_amount) AS revenue, SUM(margin_amount) AS margin
-            FROM orders WHERE status != 'cancelled' {rclause}
-            GROUP BY region ORDER BY revenue DESC""",
-        rparams,
-    )
-
-
-def pipeline_by_stage(region=None) -> pd.DataFrame:
-    rclause, rparams = region_clause(region)
-    df = run_query(
-        f"""SELECT stage, COUNT(*) AS deals, SUM(value) AS value
-            FROM crm_deals WHERE 1=1 {rclause} GROUP BY stage""",
-        rparams,
-    )
-    order = ["lead", "qualified", "proposal", "negotiation", "won", "lost"]
-    df["stage"] = pd.Categorical(df["stage"], categories=order, ordered=True)
-    return df.sort_values("stage")
-
-
-def low_stock(region=None) -> pd.DataFrame:
-    rclause, rparams = region_clause(region, column="i.region")
-    return run_query(
-        f"""SELECT p.name AS product, p.sku, p.category, i.warehouse, i.region,
-                   i.qty_available, i.low_stock_threshold
-            FROM inventory i JOIN products p ON p.id = i.product_id
-            WHERE i.qty_available < i.low_stock_threshold {rclause}
-            ORDER BY i.qty_available ASC""",
-        rparams,
-    )
-
-
-def revenue_over_time(region=None) -> pd.DataFrame:
-    rclause, rparams = region_clause(region)
-    return run_query(
-        f"""SELECT strftime('%Y-%m', order_date) AS month, SUM(total_amount) AS revenue
-            FROM orders WHERE status != 'cancelled' {rclause}
-            GROUP BY month ORDER BY month""",
-        rparams,
-    )
-
-
-def top_products(region=None, limit=10) -> pd.DataFrame:
-    rclause, rparams = region_clause(region, column="o.region")
-    return run_query(
-        f"""SELECT p.name AS product, p.category,
-                   SUM(oi.qty) AS units, SUM(oi.line_total) AS revenue
-            FROM order_items oi
-            JOIN orders o ON o.id = oi.order_id
-            JOIN products p ON p.id = oi.product_id
-            WHERE o.status != 'cancelled' {rclause}
-            GROUP BY p.id ORDER BY revenue DESC LIMIT ?""",
-        rparams + (limit,),
-    )
+        """SELECT b.canonical_name AS brand, b.category,
+                  COUNT(DISTINCT d.id) AS demand, COUNT(DISTINCT s.id) AS supply
+           FROM brands b
+           LEFT JOIN demand_signals d ON d.brand_id=b.id AND d.trader_id=?
+           LEFT JOIN supply_signals s ON s.brand_id=b.id AND s.trader_id=?
+           GROUP BY b.id
+           HAVING demand>0 OR supply>0
+           ORDER BY (demand+supply) DESC LIMIT 10""",
+        (session.trader_id, session.trader_id))

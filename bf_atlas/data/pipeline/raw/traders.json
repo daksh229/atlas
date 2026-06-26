@@ -1,0 +1,32 @@
+[
+  {
+    "id": "t1",
+    "name": "Sophie Laurent",
+    "team": "Aurora",
+    "role": "trader"
+  },
+  {
+    "id": "t2",
+    "name": "Marco Ricci",
+    "team": "Aurora",
+    "role": "trader"
+  },
+  {
+    "id": "t3",
+    "name": "Anna Kowalski",
+    "team": "Aurora",
+    "role": "trader"
+  },
+  {
+    "id": "t4",
+    "name": "David Chen",
+    "team": "Zenith",
+    "role": "trader"
+  },
+  {
+    "id": "t5",
+    "name": "Layla Hassan",
+    "team": "Zenith",
+    "role": "trader"
+  }
+]

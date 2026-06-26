@@ -1,15 +1,19 @@
 """
-security.py — lightweight JWT session + region-based RBAC.
+security.py — trader-based session + access control (spec §9).
 
-Onboarding (role + region) calls /auth/session, which issues a JWT encoding the
-user's role and allotted region. Every data request carries that token; the
-backend derives the *effective* region from it and ENFORCES isolation:
+The spec is explicit and non-negotiable: each trader logs in and sees ONLY their
+own clients, suppliers and data. Other traders' accounts are NEVER shown by name —
+only aggregate signals (brand, quantity, price) plus which colleague is
+responsible. This is enforced SERVER-SIDE, in every data response.
 
-  - trader  → locked to their allotted region. Requesting any other region → 403.
-  - manager → may view any single region or the cross-region ("All regions") view.
+Model:
+  - Onboarding picks a trader identity → /auth/session issues a JWT encoding the
+    trader_id (+ name, team, role).
+  - Every request carries the token; the backend derives the trader from it.
+  - `owns()` / `mask_partner()` are the primitives every service uses so the rule
+    holds uniformly, not per-endpoint.
 
-This mirrors the brief's Postgres row-level-security story: isolation is enforced
-server-side, not in the UI. (Auth is intentionally password-less for the POC.)
+Auth is intentionally password-less for the POC (production adds Google OAuth).
 """
 
 from dataclasses import dataclass
@@ -18,37 +22,34 @@ import jwt
 from fastapi import Depends, Header, HTTPException
 
 from app.core.config import settings
-from app.core.database import ALL_REGIONS, regions as db_regions
+from app.core.database import run_query
 
 ALGO = "HS256"
-ROLES = {"trader", "manager"}
-
-
-def valid_regions() -> list[str]:
-    """Concrete regions (excludes the 'All regions' pseudo-value)."""
-    return [r for r in db_regions() if r != ALL_REGIONS]
 
 
 @dataclass
 class Session:
-    role: str
-    region: str               # the user's home/allotted region
-    allowed_regions: list[str]  # regions this user may read
+    trader_id: str
+    name: str
+    team: str
+    role: str  # 'trader' | 'manager'
+
+    @property
+    def is_manager(self) -> bool:
+        return self.role == "manager"
 
 
-def create_token(role: str, region: str) -> str:
-    if role not in ROLES:
-        raise ValueError(f"Invalid role: {role}")
-    regions = valid_regions()
-    if role == "trader":
-        if region not in regions:
-            raise ValueError(f"Invalid region: {region}")
-        allowed = [region]
-    else:  # manager
-        allowed = regions + [ALL_REGIONS]
-        if region not in regions:
-            region = regions[0]
-    payload = {"role": role, "region": region, "allowed": allowed}
+def _trader_row(trader_id: str):
+    df = run_query("SELECT id, name, team, role FROM traders WHERE id = ?", (trader_id,))
+    return None if df.empty else df.iloc[0]
+
+
+def create_token(trader_id: str) -> str:
+    row = _trader_row(trader_id)
+    if row is None:
+        raise ValueError(f"Unknown trader: {trader_id}")
+    payload = {"trader_id": row["id"], "name": row["name"],
+               "team": row["team"], "role": row["role"]}
     return jwt.encode(payload, settings.AUTH_SECRET, algorithm=ALGO)
 
 
@@ -57,37 +58,40 @@ def decode_token(token: str) -> Session:
         data = jwt.decode(token, settings.AUTH_SECRET, algorithms=[ALGO])
     except jwt.PyJWTError as exc:
         raise HTTPException(status_code=401, detail=f"Invalid session token: {exc}")
-    return Session(role=data["role"], region=data["region"],
-                   allowed_regions=data.get("allowed", []))
+    return Session(trader_id=data["trader_id"], name=data.get("name", ""),
+                   team=data.get("team", ""), role=data.get("role", "trader"))
 
 
 def get_session(authorization: str | None = Header(default=None)) -> Session:
-    """FastAPI dependency. No token → permissive default (manager, all regions)
-    for API docs / tooling / curl. Production would require a valid token."""
+    """FastAPI dependency. No token → first trader as a convenience default for
+    API docs / curl. Production would reject anonymous requests."""
     if not authorization or not authorization.lower().startswith("bearer "):
-        return Session(role="manager", region=valid_regions()[0],
-                       allowed_regions=valid_regions() + [ALL_REGIONS])
+        df = run_query("SELECT id FROM traders ORDER BY id LIMIT 1")
+        if df.empty:
+            raise HTTPException(status_code=500, detail="No traders in database.")
+        return decode_token(create_token(df.iloc[0]["id"]))
     return decode_token(authorization.split(" ", 1)[1].strip())
 
 
-def resolve_region(session: Session, requested: str | None) -> str | None:
-    """Map a requested region to what this session is actually allowed to read.
+# ── access-control primitives every service shares ──────────────────────────
 
-    Raises 403 if a trader tries to reach outside their allotted region.
-    Returns the effective region (None / 'All regions' = cross-region for managers).
+def owns(session: Session, owner_trader_id: str | None) -> bool:
+    """True if this session may see the named account. Managers see all."""
+    return session.is_manager or owner_trader_id == session.trader_id
+
+
+def colleague_name(owner_trader_id: str | None) -> str:
+    row = _trader_row(owner_trader_id) if owner_trader_id else None
+    return row["name"] if row is not None else "another trader"
+
+
+def mask_partner(session: Session, owner_trader_id: str | None,
+                 partner_name: str | None) -> str:
+    """Return the partner name if owned, else the responsible colleague instead.
+
+    Implements "other traders' clients/suppliers are never shown by name — only …
+    which colleague is responsible". Used everywhere a counterparty is rendered.
     """
-    if session.role == "trader":
-        if requested and requested not in (session.region,):
-            raise HTTPException(
-                status_code=403,
-                detail=f"Trader access is restricted to {session.region}. "
-                       f"'{requested}' is not permitted.",
-            )
-        return session.region
-
-    # manager
-    if not requested:
-        return ALL_REGIONS
-    if requested not in session.allowed_regions:
-        raise HTTPException(status_code=403, detail=f"Region '{requested}' not allowed.")
-    return requested
+    if owns(session, owner_trader_id):
+        return partner_name or "—"
+    return f"(via {colleague_name(owner_trader_id)})"

@@ -1,14 +1,18 @@
 export type Role = "trader" | "manager";
 
-export const ALL_REGIONS = "All regions";
-
 export interface Session {
   token: string;
+  trader_id: string;
+  name: string;
+  team: string;
   role: Role;
-  region: string; // home / allotted region
-  allowed_regions: string[];
 }
 
-export interface AuthState extends Session {
-  activeRegion: string; // currently viewed region (manager can switch; trader fixed)
+export interface Trader {
+  id: string;
+  name: string;
+  team: string;
+  role: string;
 }
+
+export type AuthState = Session;

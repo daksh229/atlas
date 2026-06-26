@@ -1,0 +1,245 @@
+"""
+load_db.py — create the BF Atlas schema and load processed/*.json into atlas.db.
+
+Odoo-SHAPED but SQLite (POC): table/field names mirror Odoo concepts
+(res.partner → partners, sale.order → sale_orders, purchase.order →
+purchase_orders, product → products, stock → inventory) so a future read-only
+Odoo integration is a near drop-in — without depending on Odoo now.
+
+Access model is TRADER-OWNED: partners.owner_trader_id is the account owner the
+§9 access control enforces on. There is no region partition.
+
+Run (after preprocess.py):  python load_db.py
+"""
+
+import json
+import os
+import sqlite3
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+PROCESSED = os.path.join(HERE, "processed")
+DB_PATH = os.path.join(HERE, "..", "atlas.db")  # data/atlas.db
+
+SCHEMA = """
+DROP TABLE IF EXISTS traders;
+DROP TABLE IF EXISTS brands;
+DROP TABLE IF EXISTS brand_aliases;
+DROP TABLE IF EXISTS partners;
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS inventory;
+DROP TABLE IF EXISTS sale_orders;
+DROP TABLE IF EXISTS sale_order_lines;
+DROP TABLE IF EXISTS purchase_orders;
+DROP TABLE IF EXISTS purchase_order_lines;
+DROP TABLE IF EXISTS demand_signals;
+DROP TABLE IF EXISTS supply_signals;
+DROP TABLE IF EXISTS retailer_prices;
+DROP TABLE IF EXISTS alerts;
+
+CREATE TABLE traders (
+    id    TEXT PRIMARY KEY,
+    name  TEXT NOT NULL,
+    team  TEXT NOT NULL,
+    role  TEXT DEFAULT 'trader'
+);
+
+-- §9 brand dictionary: one canonical record per brand …
+CREATE TABLE brands (
+    id             TEXT PRIMARY KEY,
+    canonical_name TEXT NOT NULL UNIQUE,
+    category       TEXT
+);
+-- … with known aliases resolving to it.
+CREATE TABLE brand_aliases (
+    id       TEXT PRIMARY KEY,
+    brand_id TEXT REFERENCES brands(id),
+    alias    TEXT NOT NULL
+);
+
+-- res.partner: a client AND/OR a supplier, OWNED by one trader (access control).
+CREATE TABLE partners (
+    id              TEXT PRIMARY KEY,
+    name            TEXT NOT NULL,
+    is_customer     INTEGER DEFAULT 0,
+    is_supplier     INTEGER DEFAULT 0,
+    owner_trader_id TEXT REFERENCES traders(id),
+    country         TEXT,
+    ref             TEXT,
+    email           TEXT
+);
+
+CREATE TABLE products (
+    id          TEXT PRIMARY KEY,
+    brand_id    TEXT REFERENCES brands(id),
+    name        TEXT NOT NULL,
+    sku         TEXT,
+    category    TEXT,
+    list_price  REAL,
+    cost_price  REAL,
+    ref         TEXT
+);
+
+CREATE TABLE inventory (
+    id            TEXT PRIMARY KEY,
+    product_id    TEXT REFERENCES products(id),
+    warehouse     TEXT,
+    qty_on_hand   INTEGER DEFAULT 0,
+    qty_reserved  INTEGER DEFAULT 0,
+    qty_available INTEGER DEFAULT 0,
+    reorder_min   INTEGER DEFAULT 50
+);
+
+CREATE TABLE sale_orders (
+    id            TEXT PRIMARY KEY,
+    ref           TEXT,
+    partner_id    TEXT REFERENCES partners(id),
+    trader_id     TEXT REFERENCES traders(id),
+    order_date    TEXT,
+    state         TEXT,
+    amount_total  REAL,
+    margin_amount REAL
+);
+CREATE TABLE sale_order_lines (
+    id         TEXT PRIMARY KEY,
+    order_id   TEXT REFERENCES sale_orders(id),
+    product_id TEXT REFERENCES products(id),
+    brand_id   TEXT REFERENCES brands(id),
+    qty        INTEGER,
+    unit_price REAL,
+    subtotal   REAL
+);
+
+CREATE TABLE purchase_orders (
+    id           TEXT PRIMARY KEY,
+    ref          TEXT,
+    partner_id   TEXT REFERENCES partners(id),
+    trader_id    TEXT REFERENCES traders(id),
+    order_date   TEXT,
+    state        TEXT,
+    amount_total REAL
+);
+CREATE TABLE purchase_order_lines (
+    id         TEXT PRIMARY KEY,
+    order_id   TEXT REFERENCES purchase_orders(id),
+    product_id TEXT REFERENCES products(id),
+    brand_id   TEXT REFERENCES brands(id),
+    qty        INTEGER,
+    unit_price REAL,
+    subtotal   REAL
+);
+
+-- A client wants a brand (demand) / we can source a brand (supply). Both carry
+-- brand_id, an owner trader (for routing), and fired_at (for the recency window).
+CREATE TABLE demand_signals (
+    id           TEXT PRIMARY KEY,
+    brand_id     TEXT REFERENCES brands(id),
+    partner_id   TEXT REFERENCES partners(id),
+    trader_id    TEXT REFERENCES traders(id),
+    target_price REAL,
+    wanted_qty   INTEGER,
+    fired_at     TEXT,
+    source       TEXT
+);
+CREATE TABLE supply_signals (
+    id            TEXT PRIMARY KEY,
+    brand_id      TEXT REFERENCES brands(id),
+    partner_id    TEXT REFERENCES partners(id),   -- nullable for manual offers
+    trader_id     TEXT REFERENCES traders(id),
+    offer_price   REAL,
+    available_qty INTEGER,
+    fired_at      TEXT,
+    source        TEXT                              -- supplier | manual_offer
+);
+
+CREATE TABLE retailer_prices (
+    id            TEXT PRIMARY KEY,
+    retailer      TEXT,
+    brand_id      TEXT REFERENCES brands(id),       -- NULL = unresolved/unknown brand
+    brand_surface TEXT,
+    product_name  TEXT,
+    price         REAL,
+    stock_status  TEXT,
+    scanned_at    TEXT,
+    is_mock       INTEGER DEFAULT 1
+);
+
+-- Generated by the alert engine at runtime (quality-controlled, routed).
+CREATE TABLE alerts (
+    id              TEXT PRIMARY KEY,
+    type            TEXT,
+    brand_id        TEXT REFERENCES brands(id),
+    target_trader_id TEXT REFERENCES traders(id),
+    priority        INTEGER,
+    title           TEXT,
+    detail          TEXT,
+    value           REAL,
+    payload         TEXT,            -- JSON
+    dedup_key       TEXT,
+    bundle_key      TEXT,
+    created_at      TEXT,
+    status          TEXT DEFAULT 'new'
+);
+
+CREATE INDEX idx_demand_brand ON demand_signals(brand_id);
+CREATE INDEX idx_supply_brand ON supply_signals(brand_id);
+CREATE INDEX idx_sol_brand    ON sale_order_lines(brand_id);
+CREATE INDEX idx_partners_own ON partners(owner_trader_id);
+CREATE INDEX idx_alias_norm   ON brand_aliases(alias);
+"""
+
+# Columns inserted per table (order matters for executemany).
+COLUMNS = {
+    "traders": ["id", "name", "team", "role"],
+    "brands": ["id", "canonical_name", "category"],
+    "brand_aliases": ["id", "brand_id", "alias"],
+    "partners": ["id", "name", "is_customer", "is_supplier", "owner_trader_id",
+                 "country", "ref", "email"],
+    "products": ["id", "brand_id", "name", "sku", "category", "list_price",
+                 "cost_price", "ref"],
+    "inventory": ["id", "product_id", "warehouse", "qty_on_hand", "qty_reserved",
+                  "qty_available", "reorder_min"],
+    "sale_orders": ["id", "ref", "partner_id", "trader_id", "order_date", "state",
+                    "amount_total", "margin_amount"],
+    "sale_order_lines": ["id", "order_id", "product_id", "brand_id", "qty",
+                         "unit_price", "subtotal"],
+    "purchase_orders": ["id", "ref", "partner_id", "trader_id", "order_date",
+                        "state", "amount_total"],
+    "purchase_order_lines": ["id", "order_id", "product_id", "brand_id", "qty",
+                             "unit_price", "subtotal"],
+    "demand_signals": ["id", "brand_id", "partner_id", "trader_id", "target_price",
+                       "wanted_qty", "fired_at", "source"],
+    "supply_signals": ["id", "brand_id", "partner_id", "trader_id", "offer_price",
+                       "available_qty", "fired_at", "source"],
+    "retailer_prices": ["id", "retailer", "brand_id", "brand_surface", "product_name",
+                        "price", "stock_status", "scanned_at", "is_mock"],
+}
+
+
+def _load(name):
+    with open(os.path.join(PROCESSED, f"{name}.json"), "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def main():
+    conn = sqlite3.connect(os.path.abspath(DB_PATH))
+    try:
+        conn.executescript(SCHEMA)
+        counts = {}
+        for table, cols in COLUMNS.items():
+            rows = _load(table)
+            ph = ", ".join("?" for _ in cols)
+            conn.executemany(
+                f"INSERT INTO {table} ({', '.join(cols)}) VALUES ({ph})",
+                [[r.get(c) for c in cols] for r in rows],
+            )
+            counts[table] = len(rows)
+        conn.commit()
+    finally:
+        conn.close()
+    print(f"=== loaded → {os.path.abspath(DB_PATH)} ===")
+    for table, n in counts.items():
+        print(f"  {table:22s} {n}")
+
+
+if __name__ == "__main__":
+    main()

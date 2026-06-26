@@ -1,135 +1,135 @@
 import { api } from "./client";
-import { ALL_REGIONS, type Role, type Session } from "../auth/types";
+import type { Session, Trader } from "../auth/types";
 
-// Pass region only when it is a concrete region; "All regions" => omit (manager
-// cross-region). The backend enforces RBAC from the token regardless.
-function regionParams(region?: string) {
-  return region && region !== ALL_REGIONS ? { region } : {};
+// ---- auth / onboarding ----
+export async function getTraders(): Promise<Trader[]> {
+  const { data } = await api.get("/auth/traders", { timeout: 8000 });
+  return data.traders ?? [];
 }
-
-// ---- auth ----
-export async function createSession(role: Role, region: string): Promise<Session> {
-  const { data } = await api.post("/auth/session", { role, region });
-  return data;
-}
-export async function fetchRegions(): Promise<string[]> {
-  // Short timeout so onboarding fails fast if the backend isn't up.
-  const { data } = await api.get("/auth/regions", { timeout: 8000 });
-  return data.regions ?? [];
-}
-
-// ---- dashboard ----
-export interface Kpis {
-  revenue_mtd: number;
-  open_deals: number;
-  open_pipeline: number;
-  low_stock: number;
-  win_rate: number;
-}
-export interface Charts {
-  revenue_by_region: any[];
-  pipeline_by_stage: any[];
-  revenue_over_time: any[];
-  low_stock: any[];
-  top_products: any[];
-}
-export async function getKpis(region?: string): Promise<Kpis> {
-  const { data } = await api.get("/dashboard/kpis", { params: regionParams(region) });
-  return data;
-}
-export async function getCharts(region?: string): Promise<Charts> {
-  const { data } = await api.get("/dashboard/charts", { params: regionParams(region) });
+export async function createSession(traderId: string): Promise<Session> {
+  const { data } = await api.post("/auth/session", { trader_id: traderId });
   return data;
 }
 
-// ---- opportunities / alerts ----
-export async function getOpportunities(region?: string, limit = 50) {
-  const { data } = await api.get("/opportunities", {
-    params: { ...regionParams(region), limit },
-  });
-  return data as { count: number; items: any[] };
+// ---- Opportunity Alerts (routed, bundled, capped) ----
+export interface AlertBundle {
+  id: string;
+  type: string;
+  label: string;
+  brand: string;
+  brand_id: string;
+  priority: number;
+  value: number;
+  items: string[];
 }
-export async function getAlerts(region?: string) {
-  const { data } = await api.get("/alerts", { params: regionParams(region) });
-  return data as { counts: Record<string, number>; items: any[] };
+export interface AlertFeed {
+  trader: string;
+  total: number;
+  suppressed: number;
+  counts: Record<string, number>;
+  items: AlertBundle[];
+}
+export async function getAlerts(): Promise<AlertFeed> {
+  const { data } = await api.get("/alerts");
+  return data;
 }
 
-// ---- brands ----
-export async function getBrandsSell(region?: string) {
-  const { data } = await api.get("/brands/sell", { params: regionParams(region) });
+// ---- Brand Maps + Brand Intelligence ----
+export async function getBrandsSell() {
+  const { data } = await api.get("/brands/sell");
   return data.items as any[];
 }
-export async function getBrandsBuy(region?: string) {
-  const { data } = await api.get("/brands/buy", { params: regionParams(region) });
+export async function getBrandsBuy() {
+  const { data } = await api.get("/brands/buy");
   return data.items as any[];
 }
-export async function getBrandDetail(brand: string, region?: string) {
-  const { data } = await api.get(`/brands/${encodeURIComponent(brand)}`, {
-    params: regionParams(region),
-  });
-  return data as { brand: string; best: any; offers: any[]; demands: any[] };
-}
-
-// ---- price list ----
-export async function analyzePricelist(opts: {
-  file?: File;
-  useSample: boolean;
-  preferAi: boolean;
-}) {
-  const form = new FormData();
-  if (opts.file) form.append("file", opts.file);
-  const { data } = await api.post("/pricelist/analyze", form, {
-    params: { use_sample: opts.useSample, prefer_ai: opts.preferAi },
-  });
+export async function getBrandDetail(brandId: string) {
+  const { data } = await api.get(`/brands/${encodeURIComponent(brandId)}`);
   return data as {
-    engine: string;
-    matched: number;
-    total: number;
-    below_cost: number;
+    brand_id: string;
+    brand: string;
+    category: string;
+    best_historical_sell_price: number | null;
+    colleagues: any[];
+    demands: any[];
+    offers: any[];
+    retailers: any[];
+  };
+}
+
+// ---- My Relationships ----
+export async function getMyClients() {
+  const { data } = await api.get("/relationships/clients");
+  return data.items as any[];
+}
+export async function getMySuppliers() {
+  const { data } = await api.get("/relationships/suppliers");
+  return data.items as any[];
+}
+
+// ---- Offers Inbox (structural) ----
+export async function getOffers() {
+  const { data } = await api.get("/offers");
+  return data.items as any[];
+}
+export async function submitOffer(brand: string, offer_price: number, qty: number) {
+  const { data } = await api.post("/offers", { brand, offer_price, qty });
+  return data as {
+    ok: boolean;
+    error?: string;
+    brand?: string;
+    match_count?: number;
+    matches?: any[];
+  };
+}
+export async function getInbox() {
+  const { data } = await api.get("/offers/inbox");
+  return data.items as { id: string; from: string; subject: string; preview: string }[];
+}
+export async function getEmail(id: string) {
+  const { data } = await api.get(`/offers/inbox/${encodeURIComponent(id)}`);
+  return data as { id: string; from: string; subject: string; body: string };
+}
+export async function parseEmail(email_id: string) {
+  // AI extraction can take a few seconds — give it room beyond the default timeout.
+  const { data } = await api.post("/offers/parse", { email_id }, { timeout: 60000 });
+  return data as { engine: string | null; offers: any[]; error?: string };
+}
+export async function acceptOffers(offers: any[]) {
+  const { data } = await api.post("/offers/accept", { offers });
+  return data as { accepted: number; skipped: number; match_count: number; matches: any[] };
+}
+
+// ---- Retailer Radar ----
+export async function getRadar() {
+  const { data } = await api.get("/radar");
+  return data as {
+    count: number;
+    market_windows: number;
+    unknown_brands: number;
     items: any[];
   };
 }
 
-// ---- radar ----
-export async function getRadar() {
-  const { data } = await api.get("/radar");
-  return data as { count: number; retailers: number; items: any[] };
+// ---- Brand Catalog ----
+export async function getCatalog() {
+  const { data } = await api.get("/catalog");
+  return data as { count: number; items: any[] };
+}
+export async function downloadCatalogPdf() {
+  const res = await api.get("/catalog/pdf", { responseType: "blob" });
+  const type = String(res.headers["content-type"] || "application/pdf");
+  const ext = type.includes("pdf") ? "pdf" : "txt";
+  const url = URL.createObjectURL(new Blob([res.data], { type }));
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `bf_brand_catalogue.${ext}`;
+  a.click();
+  URL.revokeObjectURL(url);
 }
 
-// ---- sync ----
-export async function syncAll() {
-  const { data } = await api.post("/sync/all");
-  return data;
-}
-export async function syncSource(source: string) {
-  const { data } = await api.post(`/sync/${source}`);
-  return data;
-}
-export async function getSyncStatus() {
-  const { data } = await api.get("/sync/status");
-  return data.items as any[];
-}
-
-// ---- chat (multi-agent) ----
-export interface AgentStep {
-  agent: string;
-  action: string;
-  detail: string;
-  data?: any;
-}
-export interface ChatResponse {
-  question: string;
-  region: string | null;
-  intent: string | null;
-  answer: string;
-  sql: string | null;
-  rows: any[];
-  structured: any;
-  error: string | null;
-  trace: AgentStep[];
-}
-export async function askAtlas(question: string, region?: string): Promise<ChatResponse> {
-  const body = { question, region: region && region !== ALL_REGIONS ? region : null };
-  const { data } = await api.post("/chat", body);
-  return data;
+// ---- My View (dashboard) ----
+export async function getDashboard() {
+  const { data } = await api.get("/dashboard");
+  return data as { kpis: Record<string, number>; my_brands: any[] };
 }

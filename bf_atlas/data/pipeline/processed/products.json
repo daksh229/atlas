@@ -1,0 +1,942 @@
+[
+  {
+    "id": "prod-001",
+    "category": "perfume",
+    "name": "Yves EDT 125ml",
+    "sku": "PE-0001",
+    "list_price": 139.78,
+    "cost_price": 58.67,
+    "ref": "odoo-prod-1001",
+    "brand_id": "brand-001"
+  },
+  {
+    "id": "prod-002",
+    "category": "perfume",
+    "name": "Christian EDT 125ml",
+    "sku": "PE-0002",
+    "list_price": 210.23,
+    "cost_price": 103.64,
+    "ref": "odoo-prod-1002",
+    "brand_id": "brand-002"
+  },
+  {
+    "id": "prod-003",
+    "category": "perfume",
+    "name": "Christian EDP 50ml",
+    "sku": "PE-0003",
+    "list_price": 198.39,
+    "cost_price": 69.94,
+    "ref": "odoo-prod-1003",
+    "brand_id": "brand-002"
+  },
+  {
+    "id": "prod-004",
+    "category": "perfume",
+    "name": "Chanel EDP 100ml",
+    "sku": "PE-0004",
+    "list_price": 267.51,
+    "cost_price": 96.9,
+    "ref": "odoo-prod-1004",
+    "brand_id": "brand-003"
+  },
+  {
+    "id": "prod-005",
+    "category": "perfume",
+    "name": "Chanel EDP 100ml",
+    "sku": "PE-0005",
+    "list_price": 119.65,
+    "cost_price": 51.17,
+    "ref": "odoo-prod-1005",
+    "brand_id": "brand-003"
+  },
+  {
+    "id": "prod-006",
+    "category": "perfume",
+    "name": "Tom EDP 50ml",
+    "sku": "PE-0006",
+    "list_price": 206.68,
+    "cost_price": 109.33,
+    "ref": "odoo-prod-1006",
+    "brand_id": "brand-004"
+  },
+  {
+    "id": "prod-007",
+    "category": "perfume",
+    "name": "Giorgio EDP 100ml",
+    "sku": "PE-0007",
+    "list_price": 341.71,
+    "cost_price": 117.36,
+    "ref": "odoo-prod-1007",
+    "brand_id": "brand-005"
+  },
+  {
+    "id": "prod-008",
+    "category": "perfume",
+    "name": "Dolce EDP 100ml",
+    "sku": "PE-0008",
+    "list_price": 121.29,
+    "cost_price": 53.17,
+    "ref": "odoo-prod-1008",
+    "brand_id": "brand-006"
+  },
+  {
+    "id": "prod-009",
+    "category": "perfume",
+    "name": "Dolce EDT 75ml",
+    "sku": "PE-0009",
+    "list_price": 251.54,
+    "cost_price": 118.75,
+    "ref": "odoo-prod-1009",
+    "brand_id": "brand-006"
+  },
+  {
+    "id": "prod-010",
+    "category": "perfume",
+    "name": "Versace EDP 100ml",
+    "sku": "PE-0010",
+    "list_price": 295.07,
+    "cost_price": 119.61,
+    "ref": "odoo-prod-1010",
+    "brand_id": "brand-007"
+  },
+  {
+    "id": "prod-011",
+    "category": "perfume",
+    "name": "Versace EDT 75ml",
+    "sku": "PE-0011",
+    "list_price": 178.4,
+    "cost_price": 60.22,
+    "ref": "odoo-prod-1011",
+    "brand_id": "brand-007"
+  },
+  {
+    "id": "prod-012",
+    "category": "perfume",
+    "name": "Versace EDP 50ml",
+    "sku": "PE-0012",
+    "list_price": 93.13,
+    "cost_price": 39.26,
+    "ref": "odoo-prod-1012",
+    "brand_id": "brand-007"
+  },
+  {
+    "id": "prod-013",
+    "category": "perfume",
+    "name": "Paco EDT 125ml",
+    "sku": "PE-0013",
+    "list_price": 76.8,
+    "cost_price": 40.82,
+    "ref": "odoo-prod-1013",
+    "brand_id": "brand-008"
+  },
+  {
+    "id": "prod-014",
+    "category": "perfume",
+    "name": "Jean EDP 50ml",
+    "sku": "PE-0014",
+    "list_price": 140.58,
+    "cost_price": 55.93,
+    "ref": "odoo-prod-1014",
+    "brand_id": "brand-009"
+  },
+  {
+    "id": "prod-015",
+    "category": "perfume",
+    "name": "Jean EDP 100ml",
+    "sku": "PE-0015",
+    "list_price": 205.38,
+    "cost_price": 84.61,
+    "ref": "odoo-prod-1015",
+    "brand_id": "brand-009"
+  },
+  {
+    "id": "prod-016",
+    "category": "perfume",
+    "name": "Jean EDT 75ml",
+    "sku": "PE-0016",
+    "list_price": 130.75,
+    "cost_price": 61.71,
+    "ref": "odoo-prod-1016",
+    "brand_id": "brand-009"
+  },
+  {
+    "id": "prod-017",
+    "category": "perfume",
+    "name": "Carolina EDP 50ml",
+    "sku": "PE-0017",
+    "list_price": 91.1,
+    "cost_price": 35.79,
+    "ref": "odoo-prod-1017",
+    "brand_id": "brand-010"
+  },
+  {
+    "id": "prod-018",
+    "category": "perfume",
+    "name": "Hugo EDP 100ml",
+    "sku": "PE-0018",
+    "list_price": 168.01,
+    "cost_price": 57.54,
+    "ref": "odoo-prod-1018",
+    "brand_id": "brand-011"
+  },
+  {
+    "id": "prod-019",
+    "category": "perfume",
+    "name": "Hugo EDP 50ml",
+    "sku": "PE-0019",
+    "list_price": 135.57,
+    "cost_price": 48.41,
+    "ref": "odoo-prod-1019",
+    "brand_id": "brand-011"
+  },
+  {
+    "id": "prod-020",
+    "category": "perfume",
+    "name": "Hugo EDT 75ml",
+    "sku": "PE-0020",
+    "list_price": 156.93,
+    "cost_price": 60.45,
+    "ref": "odoo-prod-1020",
+    "brand_id": "brand-011"
+  },
+  {
+    "id": "prod-021",
+    "category": "perfume",
+    "name": "Calvin EDP 100ml",
+    "sku": "PE-0021",
+    "list_price": 194.9,
+    "cost_price": 98.11,
+    "ref": "odoo-prod-1021",
+    "brand_id": "brand-012"
+  },
+  {
+    "id": "prod-022",
+    "category": "perfume",
+    "name": "Burberry EDT 75ml",
+    "sku": "PE-0022",
+    "list_price": 263.83,
+    "cost_price": 93.44,
+    "ref": "odoo-prod-1022",
+    "brand_id": "brand-013"
+  },
+  {
+    "id": "prod-023",
+    "category": "perfume",
+    "name": "Givenchy EDP 50ml",
+    "sku": "PE-0023",
+    "list_price": 248.52,
+    "cost_price": 88.91,
+    "ref": "odoo-prod-1023",
+    "brand_id": "brand-014"
+  },
+  {
+    "id": "prod-024",
+    "category": "perfume",
+    "name": "Lancôme EDT 125ml",
+    "sku": "PE-0024",
+    "list_price": 235.84,
+    "cost_price": 118.28,
+    "ref": "odoo-prod-1024",
+    "brand_id": "brand-015"
+  },
+  {
+    "id": "prod-025",
+    "category": "perfume",
+    "name": "Lancôme EDP 50ml",
+    "sku": "PE-0025",
+    "list_price": 130.6,
+    "cost_price": 44.51,
+    "ref": "odoo-prod-1025",
+    "brand_id": "brand-015"
+  },
+  {
+    "id": "prod-026",
+    "category": "perfume",
+    "name": "Lancôme EDT 75ml",
+    "sku": "PE-0026",
+    "list_price": 189.8,
+    "cost_price": 81.96,
+    "ref": "odoo-prod-1026",
+    "brand_id": "brand-015"
+  },
+  {
+    "id": "prod-027",
+    "category": "skincare",
+    "name": "Estée Moisturiser 50ml",
+    "sku": "SK-0027",
+    "list_price": 33.11,
+    "cost_price": 15.77,
+    "ref": "odoo-prod-1027",
+    "brand_id": "brand-016"
+  },
+  {
+    "id": "prod-028",
+    "category": "skincare",
+    "name": "Estée Night Cream 50ml",
+    "sku": "SK-0028",
+    "list_price": 118.85,
+    "cost_price": 44.03,
+    "ref": "odoo-prod-1028",
+    "brand_id": "brand-016"
+  },
+  {
+    "id": "prod-029",
+    "category": "skincare",
+    "name": "Clinique Cleanser 200ml",
+    "sku": "SK-0029",
+    "list_price": 23.94,
+    "cost_price": 8.92,
+    "ref": "odoo-prod-1029",
+    "brand_id": "brand-017"
+  },
+  {
+    "id": "prod-030",
+    "category": "skincare",
+    "name": "Clinique Cleanser 200ml",
+    "sku": "SK-0030",
+    "list_price": 80.57,
+    "cost_price": 38.0,
+    "ref": "odoo-prod-1030",
+    "brand_id": "brand-017"
+  },
+  {
+    "id": "prod-031",
+    "category": "skincare",
+    "name": "La Moisturiser 50ml",
+    "sku": "SK-0031",
+    "list_price": 45.12,
+    "cost_price": 16.23,
+    "ref": "odoo-prod-1031",
+    "brand_id": "brand-018"
+  },
+  {
+    "id": "prod-032",
+    "category": "skincare",
+    "name": "La Moisturiser 50ml",
+    "sku": "SK-0032",
+    "list_price": 42.12,
+    "cost_price": 16.25,
+    "ref": "odoo-prod-1032",
+    "brand_id": "brand-018"
+  },
+  {
+    "id": "prod-033",
+    "category": "skincare",
+    "name": "CeraVe Serum 30ml",
+    "sku": "SK-0033",
+    "list_price": 50.61,
+    "cost_price": 20.99,
+    "ref": "odoo-prod-1033",
+    "brand_id": "brand-019"
+  },
+  {
+    "id": "prod-034",
+    "category": "skincare",
+    "name": "CeraVe Serum 30ml",
+    "sku": "SK-0034",
+    "list_price": 85.49,
+    "cost_price": 40.45,
+    "ref": "odoo-prod-1034",
+    "brand_id": "brand-019"
+  },
+  {
+    "id": "prod-035",
+    "category": "skincare",
+    "name": "The Cleanser 200ml",
+    "sku": "SK-0035",
+    "list_price": 64.4,
+    "cost_price": 24.08,
+    "ref": "odoo-prod-1035",
+    "brand_id": "brand-020"
+  },
+  {
+    "id": "prod-036",
+    "category": "skincare",
+    "name": "The Moisturiser 50ml",
+    "sku": "SK-0036",
+    "list_price": 35.36,
+    "cost_price": 12.28,
+    "ref": "odoo-prod-1036",
+    "brand_id": "brand-020"
+  },
+  {
+    "id": "prod-037",
+    "category": "skincare",
+    "name": "The Moisturiser 50ml",
+    "sku": "SK-0037",
+    "list_price": 61.68,
+    "cost_price": 34.23,
+    "ref": "odoo-prod-1037",
+    "brand_id": "brand-020"
+  },
+  {
+    "id": "prod-038",
+    "category": "skincare",
+    "name": "Vichy Moisturiser 50ml",
+    "sku": "SK-0038",
+    "list_price": 107.19,
+    "cost_price": 42.07,
+    "ref": "odoo-prod-1038",
+    "brand_id": "brand-021"
+  },
+  {
+    "id": "prod-039",
+    "category": "skincare",
+    "name": "Vichy Night Cream 50ml",
+    "sku": "SK-0039",
+    "list_price": 71.62,
+    "cost_price": 32.68,
+    "ref": "odoo-prod-1039",
+    "brand_id": "brand-021"
+  },
+  {
+    "id": "prod-040",
+    "category": "skincare",
+    "name": "Vichy Moisturiser 50ml",
+    "sku": "SK-0040",
+    "list_price": 68.99,
+    "cost_price": 23.56,
+    "ref": "odoo-prod-1040",
+    "brand_id": "brand-021"
+  },
+  {
+    "id": "prod-041",
+    "category": "skincare",
+    "name": "Eucerin Cleanser 200ml",
+    "sku": "SK-0041",
+    "list_price": 39.48,
+    "cost_price": 19.24,
+    "ref": "odoo-prod-1041",
+    "brand_id": "brand-022"
+  },
+  {
+    "id": "prod-042",
+    "category": "skincare",
+    "name": "Neutrogena Serum 30ml",
+    "sku": "SK-0042",
+    "list_price": 37.67,
+    "cost_price": 15.91,
+    "ref": "odoo-prod-1042",
+    "brand_id": "brand-023"
+  },
+  {
+    "id": "prod-043",
+    "category": "skincare",
+    "name": "Neutrogena Night Cream 50ml",
+    "sku": "SK-0043",
+    "list_price": 82.8,
+    "cost_price": 32.56,
+    "ref": "odoo-prod-1043",
+    "brand_id": "brand-023"
+  },
+  {
+    "id": "prod-044",
+    "category": "skincare",
+    "name": "Neutrogena Serum 30ml",
+    "sku": "SK-0044",
+    "list_price": 33.26,
+    "cost_price": 16.31,
+    "ref": "odoo-prod-1044",
+    "brand_id": "brand-023"
+  },
+  {
+    "id": "prod-045",
+    "category": "skincare",
+    "name": "Olay Cleanser 200ml",
+    "sku": "SK-0045",
+    "list_price": 83.35,
+    "cost_price": 30.62,
+    "ref": "odoo-prod-1045",
+    "brand_id": "brand-024"
+  },
+  {
+    "id": "prod-046",
+    "category": "skincare",
+    "name": "Olay Cleanser 200ml",
+    "sku": "SK-0046",
+    "list_price": 40.04,
+    "cost_price": 15.19,
+    "ref": "odoo-prod-1046",
+    "brand_id": "brand-024"
+  },
+  {
+    "id": "prod-047",
+    "category": "skincare",
+    "name": "Nivea Cleanser 200ml",
+    "sku": "SK-0047",
+    "list_price": 58.3,
+    "cost_price": 32.27,
+    "ref": "odoo-prod-1047",
+    "brand_id": "brand-025"
+  },
+  {
+    "id": "prod-048",
+    "category": "skincare",
+    "name": "Bioderma Serum 30ml",
+    "sku": "SK-0048",
+    "list_price": 99.47,
+    "cost_price": 37.75,
+    "ref": "odoo-prod-1048",
+    "brand_id": "brand-026"
+  },
+  {
+    "id": "prod-049",
+    "category": "skincare",
+    "name": "L'Oréal Cleanser 200ml",
+    "sku": "SK-0049",
+    "list_price": 68.74,
+    "cost_price": 24.89,
+    "ref": "odoo-prod-1049",
+    "brand_id": "brand-027"
+  },
+  {
+    "id": "prod-050",
+    "category": "skincare",
+    "name": "Garnier Night Cream 50ml",
+    "sku": "SK-0050",
+    "list_price": 68.71,
+    "cost_price": 23.79,
+    "ref": "odoo-prod-1050",
+    "brand_id": "brand-028"
+  },
+  {
+    "id": "prod-051",
+    "category": "skincare",
+    "name": "Garnier Cleanser 200ml",
+    "sku": "SK-0051",
+    "list_price": 66.61,
+    "cost_price": 24.65,
+    "ref": "odoo-prod-1051",
+    "brand_id": "brand-028"
+  },
+  {
+    "id": "prod-052",
+    "category": "skincare",
+    "name": "Garnier Night Cream 50ml",
+    "sku": "SK-0052",
+    "list_price": 34.38,
+    "cost_price": 18.16,
+    "ref": "odoo-prod-1052",
+    "brand_id": "brand-028"
+  },
+  {
+    "id": "prod-053",
+    "category": "skincare",
+    "name": "Kiehl's Night Cream 50ml",
+    "sku": "SK-0053",
+    "list_price": 77.84,
+    "cost_price": 41.04,
+    "ref": "odoo-prod-1053",
+    "brand_id": "brand-029"
+  },
+  {
+    "id": "prod-054",
+    "category": "skincare",
+    "name": "Kiehl's Cleanser 200ml",
+    "sku": "SK-0054",
+    "list_price": 28.07,
+    "cost_price": 13.65,
+    "ref": "odoo-prod-1054",
+    "brand_id": "brand-029"
+  },
+  {
+    "id": "prod-055",
+    "category": "skincare",
+    "name": "Shiseido Cleanser 200ml",
+    "sku": "SK-0055",
+    "list_price": 47.89,
+    "cost_price": 23.38,
+    "ref": "odoo-prod-1055",
+    "brand_id": "brand-030"
+  },
+  {
+    "id": "prod-056",
+    "category": "skincare",
+    "name": "Shiseido Cleanser 200ml",
+    "sku": "SK-0056",
+    "list_price": 24.91,
+    "cost_price": 8.72,
+    "ref": "odoo-prod-1056",
+    "brand_id": "brand-030"
+  },
+  {
+    "id": "prod-057",
+    "category": "cosmetics",
+    "name": "MAC Foundation 30ml",
+    "sku": "CO-0057",
+    "list_price": 56.54,
+    "cost_price": 24.93,
+    "ref": "odoo-prod-1057",
+    "brand_id": "brand-031"
+  },
+  {
+    "id": "prod-058",
+    "category": "cosmetics",
+    "name": "MAC Palette 12pc",
+    "sku": "CO-0058",
+    "list_price": 56.35,
+    "cost_price": 23.65,
+    "ref": "odoo-prod-1058",
+    "brand_id": "brand-031"
+  },
+  {
+    "id": "prod-059",
+    "category": "cosmetics",
+    "name": "Maybelline Lipstick",
+    "sku": "CO-0059",
+    "list_price": 129.79,
+    "cost_price": 46.21,
+    "ref": "odoo-prod-1059",
+    "brand_id": "brand-032"
+  },
+  {
+    "id": "prod-060",
+    "category": "cosmetics",
+    "name": "Maybelline Foundation 30ml",
+    "sku": "CO-0060",
+    "list_price": 70.04,
+    "cost_price": 38.22,
+    "ref": "odoo-prod-1060",
+    "brand_id": "brand-032"
+  },
+  {
+    "id": "prod-061",
+    "category": "cosmetics",
+    "name": "Revlon Palette 12pc",
+    "sku": "CO-0061",
+    "list_price": 50.46,
+    "cost_price": 23.01,
+    "ref": "odoo-prod-1061",
+    "brand_id": "brand-033"
+  },
+  {
+    "id": "prod-062",
+    "category": "cosmetics",
+    "name": "Urban Lipstick",
+    "sku": "CO-0062",
+    "list_price": 133.2,
+    "cost_price": 47.6,
+    "ref": "odoo-prod-1062",
+    "brand_id": "brand-034"
+  },
+  {
+    "id": "prod-063",
+    "category": "cosmetics",
+    "name": "Urban Foundation 30ml",
+    "sku": "CO-0063",
+    "list_price": 88.38,
+    "cost_price": 47.45,
+    "ref": "odoo-prod-1063",
+    "brand_id": "brand-034"
+  },
+  {
+    "id": "prod-064",
+    "category": "cosmetics",
+    "name": "NARS Foundation 30ml",
+    "sku": "CO-0064",
+    "list_price": 22.07,
+    "cost_price": 12.01,
+    "ref": "odoo-prod-1064",
+    "brand_id": "brand-035"
+  },
+  {
+    "id": "prod-065",
+    "category": "cosmetics",
+    "name": "NARS Lipstick",
+    "sku": "CO-0065",
+    "list_price": 85.68,
+    "cost_price": 41.07,
+    "ref": "odoo-prod-1065",
+    "brand_id": "brand-035"
+  },
+  {
+    "id": "prod-066",
+    "category": "cosmetics",
+    "name": "NARS Foundation 30ml",
+    "sku": "CO-0066",
+    "list_price": 70.07,
+    "cost_price": 33.25,
+    "ref": "odoo-prod-1066",
+    "brand_id": "brand-035"
+  },
+  {
+    "id": "prod-067",
+    "category": "cosmetics",
+    "name": "Bobbi Palette 12pc",
+    "sku": "CO-0067",
+    "list_price": 125.52,
+    "cost_price": 45.92,
+    "ref": "odoo-prod-1067",
+    "brand_id": "brand-036"
+  },
+  {
+    "id": "prod-068",
+    "category": "cosmetics",
+    "name": "Bobbi Mascara 12ml",
+    "sku": "CO-0068",
+    "list_price": 113.47,
+    "cost_price": 38.93,
+    "ref": "odoo-prod-1068",
+    "brand_id": "brand-036"
+  },
+  {
+    "id": "prod-069",
+    "category": "cosmetics",
+    "name": "Bobbi Lipstick",
+    "sku": "CO-0069",
+    "list_price": 36.28,
+    "cost_price": 13.8,
+    "ref": "odoo-prod-1069",
+    "brand_id": "brand-036"
+  },
+  {
+    "id": "prod-070",
+    "category": "cosmetics",
+    "name": "Charlotte Lipstick",
+    "sku": "CO-0070",
+    "list_price": 132.35,
+    "cost_price": 52.51,
+    "ref": "odoo-prod-1070",
+    "brand_id": "brand-037"
+  },
+  {
+    "id": "prod-071",
+    "category": "cosmetics",
+    "name": "Charlotte Lipstick",
+    "sku": "CO-0071",
+    "list_price": 70.53,
+    "cost_price": 31.42,
+    "ref": "odoo-prod-1071",
+    "brand_id": "brand-037"
+  },
+  {
+    "id": "prod-072",
+    "category": "cosmetics",
+    "name": "Fenty Foundation 30ml",
+    "sku": "CO-0072",
+    "list_price": 70.79,
+    "cost_price": 31.68,
+    "ref": "odoo-prod-1072",
+    "brand_id": "brand-038"
+  },
+  {
+    "id": "prod-073",
+    "category": "cosmetics",
+    "name": "Benefit Mascara 12ml",
+    "sku": "CO-0073",
+    "list_price": 93.13,
+    "cost_price": 36.09,
+    "ref": "odoo-prod-1073",
+    "brand_id": "brand-039"
+  },
+  {
+    "id": "prod-074",
+    "category": "cosmetics",
+    "name": "Benefit Lipstick",
+    "sku": "CO-0074",
+    "list_price": 86.64,
+    "cost_price": 39.62,
+    "ref": "odoo-prod-1074",
+    "brand_id": "brand-039"
+  },
+  {
+    "id": "prod-075",
+    "category": "cosmetics",
+    "name": "Benefit Palette 12pc",
+    "sku": "CO-0075",
+    "list_price": 52.32,
+    "cost_price": 22.19,
+    "ref": "odoo-prod-1075",
+    "brand_id": "brand-039"
+  },
+  {
+    "id": "prod-076",
+    "category": "cosmetics",
+    "name": "e.l.f. Palette 12pc",
+    "sku": "CO-0076",
+    "list_price": 106.06,
+    "cost_price": 52.55,
+    "ref": "odoo-prod-1076",
+    "brand_id": "brand-040"
+  },
+  {
+    "id": "prod-077",
+    "category": "cosmetics",
+    "name": "e.l.f. Lipstick",
+    "sku": "CO-0077",
+    "list_price": 60.32,
+    "cost_price": 23.98,
+    "ref": "odoo-prod-1077",
+    "brand_id": "brand-040"
+  },
+  {
+    "id": "prod-078",
+    "category": "haircare",
+    "name": "Kérastase Mask 200ml",
+    "sku": "HA-0078",
+    "list_price": 37.7,
+    "cost_price": 16.48,
+    "ref": "odoo-prod-1078",
+    "brand_id": "brand-041"
+  },
+  {
+    "id": "prod-079",
+    "category": "haircare",
+    "name": "Redken Conditioner 300ml",
+    "sku": "HA-0079",
+    "list_price": 41.68,
+    "cost_price": 22.89,
+    "ref": "odoo-prod-1079",
+    "brand_id": "brand-042"
+  },
+  {
+    "id": "prod-080",
+    "category": "haircare",
+    "name": "Redken Mask 200ml",
+    "sku": "HA-0080",
+    "list_price": 42.95,
+    "cost_price": 16.54,
+    "ref": "odoo-prod-1080",
+    "brand_id": "brand-042"
+  },
+  {
+    "id": "prod-081",
+    "category": "haircare",
+    "name": "Olaplex Hair Oil 100ml",
+    "sku": "HA-0081",
+    "list_price": 59.8,
+    "cost_price": 22.19,
+    "ref": "odoo-prod-1081",
+    "brand_id": "brand-043"
+  },
+  {
+    "id": "prod-082",
+    "category": "haircare",
+    "name": "Olaplex Conditioner 300ml",
+    "sku": "HA-0082",
+    "list_price": 36.57,
+    "cost_price": 17.4,
+    "ref": "odoo-prod-1082",
+    "brand_id": "brand-043"
+  },
+  {
+    "id": "prod-083",
+    "category": "haircare",
+    "name": "Moroccanoil Conditioner 300ml",
+    "sku": "HA-0083",
+    "list_price": 69.52,
+    "cost_price": 25.61,
+    "ref": "odoo-prod-1083",
+    "brand_id": "brand-044"
+  },
+  {
+    "id": "prod-084",
+    "category": "haircare",
+    "name": "Moroccanoil Shampoo 300ml",
+    "sku": "HA-0084",
+    "list_price": 68.0,
+    "cost_price": 31.9,
+    "ref": "odoo-prod-1084",
+    "brand_id": "brand-044"
+  },
+  {
+    "id": "prod-085",
+    "category": "haircare",
+    "name": "Moroccanoil Shampoo 300ml",
+    "sku": "HA-0085",
+    "list_price": 40.6,
+    "cost_price": 18.18,
+    "ref": "odoo-prod-1085",
+    "brand_id": "brand-044"
+  },
+  {
+    "id": "prod-086",
+    "category": "haircare",
+    "name": "Schwarzkopf Conditioner 300ml",
+    "sku": "HA-0086",
+    "list_price": 51.96,
+    "cost_price": 17.5,
+    "ref": "odoo-prod-1086",
+    "brand_id": "brand-045"
+  },
+  {
+    "id": "prod-087",
+    "category": "haircare",
+    "name": "Pantene Mask 200ml",
+    "sku": "HA-0087",
+    "list_price": 22.1,
+    "cost_price": 12.18,
+    "ref": "odoo-prod-1087",
+    "brand_id": "brand-046"
+  },
+  {
+    "id": "prod-088",
+    "category": "haircare",
+    "name": "Pantene Mask 200ml",
+    "sku": "HA-0088",
+    "list_price": 57.87,
+    "cost_price": 19.56,
+    "ref": "odoo-prod-1088",
+    "brand_id": "brand-046"
+  },
+  {
+    "id": "prod-089",
+    "category": "bodycare",
+    "name": "The Body Scrub 300g",
+    "sku": "BO-0089",
+    "list_price": 29.5,
+    "cost_price": 15.62,
+    "ref": "odoo-prod-1089",
+    "brand_id": "brand-047"
+  },
+  {
+    "id": "prod-090",
+    "category": "bodycare",
+    "name": "Dove Body Lotion 250ml",
+    "sku": "BO-0090",
+    "list_price": 54.75,
+    "cost_price": 28.78,
+    "ref": "odoo-prod-1090",
+    "brand_id": "brand-048"
+  },
+  {
+    "id": "prod-091",
+    "category": "bodycare",
+    "name": "Dove Body Oil 100ml",
+    "sku": "BO-0091",
+    "list_price": 40.22,
+    "cost_price": 15.99,
+    "ref": "odoo-prod-1091",
+    "brand_id": "brand-048"
+  },
+  {
+    "id": "prod-092",
+    "category": "bodycare",
+    "name": "Dove Shower Gel 250ml",
+    "sku": "BO-0092",
+    "list_price": 32.93,
+    "cost_price": 13.14,
+    "ref": "odoo-prod-1092",
+    "brand_id": "brand-048"
+  },
+  {
+    "id": "prod-093",
+    "category": "bodycare",
+    "name": "L'Occitane Body Scrub 300g",
+    "sku": "BO-0093",
+    "list_price": 55.46,
+    "cost_price": 20.63,
+    "ref": "odoo-prod-1093",
+    "brand_id": "brand-049"
+  },
+  {
+    "id": "prod-094",
+    "category": "bodycare",
+    "name": "Rituals Body Lotion 250ml",
+    "sku": "BO-0094",
+    "list_price": 28.96,
+    "cost_price": 11.76,
+    "ref": "odoo-prod-1094",
+    "brand_id": "brand-050"
+  }
+]

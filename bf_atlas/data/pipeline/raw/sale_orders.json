@@ -1,0 +1,4547 @@
+[
+  {
+    "id": "so-0001",
+    "ref": "S10001",
+    "partner_id": "cust-039",
+    "trader_id": "t3",
+    "order_date": "2026-01-22",
+    "state": "done",
+    "amount_total": 40782.14,
+    "margin_amount": 22778.31,
+    "lines": [
+      {
+        "product_id": "prod-038",
+        "brand_surface": "Vichy",
+        "qty": 199,
+        "unit_price": 107.19,
+        "subtotal": 21330.81
+      },
+      {
+        "product_id": "prod-005",
+        "brand_surface": "Chanel",
+        "qty": 38,
+        "unit_price": 119.65,
+        "subtotal": 4546.7
+      },
+      {
+        "product_id": "prod-030",
+        "brand_surface": "Clinique",
+        "qty": 87,
+        "unit_price": 80.57,
+        "subtotal": 7009.59
+      },
+      {
+        "product_id": "prod-037",
+        "brand_surface": "The Ordinary",
+        "qty": 128,
+        "unit_price": 61.68,
+        "subtotal": 7895.04
+      }
+    ]
+  },
+  {
+    "id": "so-0002",
+    "ref": "S10002",
+    "partner_id": "cust-010",
+    "trader_id": "t2",
+    "order_date": "2026-03-23",
+    "state": "done",
+    "amount_total": 69094.41,
+    "margin_amount": 41171.08,
+    "lines": [
+      {
+        "product_id": "prod-019",
+        "brand_surface": "Boss",
+        "qty": 98,
+        "unit_price": 135.57,
+        "subtotal": 13285.86
+      },
+      {
+        "product_id": "prod-010",
+        "brand_surface": "Versace",
+        "qty": 132,
+        "unit_price": 295.07,
+        "subtotal": 38949.24
+      },
+      {
+        "product_id": "prod-008",
+        "brand_surface": "Dolce Gabbana",
+        "qty": 139,
+        "unit_price": 121.29,
+        "subtotal": 16859.31
+      }
+    ]
+  },
+  {
+    "id": "so-0003",
+    "ref": "S10003",
+    "partner_id": "cust-018",
+    "trader_id": "t4",
+    "order_date": "2025-11-06",
+    "state": "cancel",
+    "amount_total": 63029.0,
+    "margin_amount": 33405.16,
+    "lines": [
+      {
+        "product_id": "prod-057",
+        "brand_surface": "MAC Cosmetics",
+        "qty": 102,
+        "unit_price": 56.54,
+        "subtotal": 5767.08
+      },
+      {
+        "product_id": "prod-011",
+        "brand_surface": "Versace",
+        "qty": 84,
+        "unit_price": 178.4,
+        "subtotal": 14985.6
+      },
+      {
+        "product_id": "prod-077",
+        "brand_surface": "elf",
+        "qty": 43,
+        "unit_price": 60.32,
+        "subtotal": 2593.76
+      },
+      {
+        "product_id": "prod-006",
+        "brand_surface": "Tom Ford",
+        "qty": 192,
+        "unit_price": 206.68,
+        "subtotal": 39682.56
+      }
+    ]
+  },
+  {
+    "id": "so-0004",
+    "ref": "S10004",
+    "partner_id": "cust-018",
+    "trader_id": "t4",
+    "order_date": "2025-10-18",
+    "state": "confirmed",
+    "amount_total": 37775.04,
+    "margin_amount": 24260.72,
+    "lines": [
+      {
+        "product_id": "prod-023",
+        "brand_surface": "Givenchy",
+        "qty": 152,
+        "unit_price": 248.52,
+        "subtotal": 37775.04
+      }
+    ]
+  },
+  {
+    "id": "so-0005",
+    "ref": "S10005",
+    "partner_id": "cust-012",
+    "trader_id": "t3",
+    "order_date": "2025-12-19",
+    "state": "done",
+    "amount_total": 25537.87,
+    "margin_amount": 13269.26,
+    "lines": [
+      {
+        "product_id": "prod-082",
+        "brand_surface": "Olaplex",
+        "qty": 124,
+        "unit_price": 36.57,
+        "subtotal": 4534.68
+      },
+      {
+        "product_id": "prod-063",
+        "brand_surface": "Urban Decay",
+        "qty": 102,
+        "unit_price": 88.38,
+        "subtotal": 9014.76
+      },
+      {
+        "product_id": "prod-012",
+        "brand_surface": "Versace",
+        "qty": 61,
+        "unit_price": 93.13,
+        "subtotal": 5680.93
+      },
+      {
+        "product_id": "prod-061",
+        "brand_surface": "Revlon",
+        "qty": 125,
+        "unit_price": 50.46,
+        "subtotal": 6307.5
+      }
+    ]
+  },
+  {
+    "id": "so-0006",
+    "ref": "S10006",
+    "partner_id": "cust-026",
+    "trader_id": "t4",
+    "order_date": "2026-05-01",
+    "state": "done",
+    "amount_total": 12979.0,
+    "margin_amount": 8358.0,
+    "lines": [
+      {
+        "product_id": "prod-059",
+        "brand_surface": "Maybelline New York",
+        "qty": 100,
+        "unit_price": 129.79,
+        "subtotal": 12979.0
+      }
+    ]
+  },
+  {
+    "id": "so-0007",
+    "ref": "S10007",
+    "partner_id": "cust-026",
+    "trader_id": "t4",
+    "order_date": "2025-09-11",
+    "state": "done",
+    "amount_total": 5602.8,
+    "margin_amount": 3093.96,
+    "lines": [
+      {
+        "product_id": "prod-085",
+        "brand_surface": "Moroccan Oil",
+        "qty": 138,
+        "unit_price": 40.6,
+        "subtotal": 5602.8
+      }
+    ]
+  },
+  {
+    "id": "so-0008",
+    "ref": "S10008",
+    "partner_id": "cust-034",
+    "trader_id": "t2",
+    "order_date": "2025-11-01",
+    "state": "confirmed",
+    "amount_total": 8920.91,
+    "margin_amount": 5254.54,
+    "lines": [
+      {
+        "product_id": "prod-080",
+        "brand_surface": "Redken",
+        "qty": 33,
+        "unit_price": 42.95,
+        "subtotal": 1417.35
+      },
+      {
+        "product_id": "prod-064",
+        "brand_surface": "NARS",
+        "qty": 88,
+        "unit_price": 22.07,
+        "subtotal": 1942.16
+      },
+      {
+        "product_id": "prod-081",
+        "brand_surface": "Olaplex",
+        "qty": 93,
+        "unit_price": 59.8,
+        "subtotal": 5561.4
+      }
+    ]
+  },
+  {
+    "id": "so-0009",
+    "ref": "S10009",
+    "partner_id": "cust-032",
+    "trader_id": "t2",
+    "order_date": "2026-02-13",
+    "state": "done",
+    "amount_total": 16050.6,
+    "margin_amount": 10236.6,
+    "lines": [
+      {
+        "product_id": "prod-004",
+        "brand_surface": "Chanel",
+        "qty": 60,
+        "unit_price": 267.51,
+        "subtotal": 16050.6
+      }
+    ]
+  },
+  {
+    "id": "so-0010",
+    "ref": "S10010",
+    "partner_id": "cust-036",
+    "trader_id": "t4",
+    "order_date": "2026-04-16",
+    "state": "confirmed",
+    "amount_total": 57788.79,
+    "margin_amount": 33121.37,
+    "lines": [
+      {
+        "product_id": "prod-012",
+        "brand_surface": "Versace",
+        "qty": 185,
+        "unit_price": 93.13,
+        "subtotal": 17229.05
+      },
+      {
+        "product_id": "prod-029",
+        "brand_surface": "Clinique",
+        "qty": 147,
+        "unit_price": 23.94,
+        "subtotal": 3519.18
+      },
+      {
+        "product_id": "prod-015",
+        "brand_surface": "Gaultier",
+        "qty": 150,
+        "unit_price": 205.38,
+        "subtotal": 30807.0
+      },
+      {
+        "product_id": "prod-060",
+        "brand_surface": "Maybelline New York",
+        "qty": 89,
+        "unit_price": 70.04,
+        "subtotal": 6233.56
+      }
+    ]
+  },
+  {
+    "id": "so-0011",
+    "ref": "S10011",
+    "partner_id": "cust-031",
+    "trader_id": "t4",
+    "order_date": "2026-04-02",
+    "state": "confirmed",
+    "amount_total": 27516.91,
+    "margin_amount": 16628.47,
+    "lines": [
+      {
+        "product_id": "prod-059",
+        "brand_surface": "Maybelline",
+        "qty": 118,
+        "unit_price": 129.79,
+        "subtotal": 15315.22
+      },
+      {
+        "product_id": "prod-071",
+        "brand_surface": "Charlotte Tilbury",
+        "qty": 173,
+        "unit_price": 70.53,
+        "subtotal": 12201.69
+      }
+    ]
+  },
+  {
+    "id": "so-0012",
+    "ref": "S10012",
+    "partner_id": "cust-018",
+    "trader_id": "t4",
+    "order_date": "2026-01-22",
+    "state": "done",
+    "amount_total": 33369.44,
+    "margin_amount": 19304.7,
+    "lines": [
+      {
+        "product_id": "prod-044",
+        "brand_surface": "Neutrogena",
+        "qty": 96,
+        "unit_price": 33.26,
+        "subtotal": 3192.96
+      },
+      {
+        "product_id": "prod-065",
+        "brand_surface": "NARS",
+        "qty": 58,
+        "unit_price": 85.68,
+        "subtotal": 4969.44
+      },
+      {
+        "product_id": "prod-035",
+        "brand_surface": "The Ordinary",
+        "qty": 157,
+        "unit_price": 64.4,
+        "subtotal": 10110.8
+      },
+      {
+        "product_id": "prod-001",
+        "brand_surface": "Saint Laurent",
+        "qty": 108,
+        "unit_price": 139.78,
+        "subtotal": 15096.24
+      }
+    ]
+  },
+  {
+    "id": "so-0013",
+    "ref": "S10013",
+    "partner_id": "cust-035",
+    "trader_id": "t4",
+    "order_date": "2026-02-13",
+    "state": "done",
+    "amount_total": 36289.42,
+    "margin_amount": 21923.88,
+    "lines": [
+      {
+        "product_id": "prod-059",
+        "brand_surface": "Maybelline New York",
+        "qty": 166,
+        "unit_price": 129.79,
+        "subtotal": 21545.14
+      },
+      {
+        "product_id": "prod-042",
+        "brand_surface": "Neutrogena",
+        "qty": 79,
+        "unit_price": 37.67,
+        "subtotal": 2975.93
+      },
+      {
+        "product_id": "prod-025",
+        "brand_surface": "Lancome",
+        "qty": 31,
+        "unit_price": 130.6,
+        "subtotal": 4048.6
+      },
+      {
+        "product_id": "prod-090",
+        "brand_surface": "Dove",
+        "qty": 141,
+        "unit_price": 54.75,
+        "subtotal": 7719.75
+      }
+    ]
+  },
+  {
+    "id": "so-0014",
+    "ref": "S10014",
+    "partner_id": "cust-010",
+    "trader_id": "t2",
+    "order_date": "2025-12-28",
+    "state": "done",
+    "amount_total": 24605.83,
+    "margin_amount": 13231.82,
+    "lines": [
+      {
+        "product_id": "prod-005",
+        "brand_surface": "Chanel",
+        "qty": 45,
+        "unit_price": 119.65,
+        "subtotal": 5384.25
+      },
+      {
+        "product_id": "prod-017",
+        "brand_surface": "CH",
+        "qty": 45,
+        "unit_price": 91.1,
+        "subtotal": 4099.5
+      },
+      {
+        "product_id": "prod-065",
+        "brand_surface": "NARS",
+        "qty": 23,
+        "unit_price": 85.68,
+        "subtotal": 1970.64
+      },
+      {
+        "product_id": "prod-076",
+        "brand_surface": "elf",
+        "qty": 124,
+        "unit_price": 106.06,
+        "subtotal": 13151.44
+      }
+    ]
+  },
+  {
+    "id": "so-0015",
+    "ref": "S10015",
+    "partner_id": "cust-017",
+    "trader_id": "t3",
+    "order_date": "2026-05-05",
+    "state": "done",
+    "amount_total": 17970.68,
+    "margin_amount": 10778.2,
+    "lines": [
+      {
+        "product_id": "prod-080",
+        "brand_surface": "Redken",
+        "qty": 104,
+        "unit_price": 42.95,
+        "subtotal": 4466.8
+      },
+      {
+        "product_id": "prod-089",
+        "brand_surface": "The Body Shop",
+        "qty": 101,
+        "unit_price": 29.5,
+        "subtotal": 2979.5
+      },
+      {
+        "product_id": "prod-051",
+        "brand_surface": "Garnier",
+        "qty": 158,
+        "unit_price": 66.61,
+        "subtotal": 10524.38
+      }
+    ]
+  },
+  {
+    "id": "so-0016",
+    "ref": "S10016",
+    "partner_id": "cust-016",
+    "trader_id": "t1",
+    "order_date": "2026-04-26",
+    "state": "confirmed",
+    "amount_total": 31957.3,
+    "margin_amount": 18101.88,
+    "lines": [
+      {
+        "product_id": "prod-030",
+        "brand_surface": "Clinique",
+        "qty": 182,
+        "unit_price": 80.57,
+        "subtotal": 14663.74
+      },
+      {
+        "product_id": "prod-012",
+        "brand_surface": "Versace",
+        "qty": 133,
+        "unit_price": 93.13,
+        "subtotal": 12386.29
+      },
+      {
+        "product_id": "prod-056",
+        "brand_surface": "Shiseido",
+        "qty": 197,
+        "unit_price": 24.91,
+        "subtotal": 4907.27
+      }
+    ]
+  },
+  {
+    "id": "so-0017",
+    "ref": "S10017",
+    "partner_id": "cust-003",
+    "trader_id": "t5",
+    "order_date": "2025-12-06",
+    "state": "done",
+    "amount_total": 31123.84,
+    "margin_amount": 18270.84,
+    "lines": [
+      {
+        "product_id": "prod-008",
+        "brand_surface": "D&G",
+        "qty": 130,
+        "unit_price": 121.29,
+        "subtotal": 15767.7
+      },
+      {
+        "product_id": "prod-038",
+        "brand_surface": "Vichy",
+        "qty": 82,
+        "unit_price": 107.19,
+        "subtotal": 8789.58
+      },
+      {
+        "product_id": "prod-046",
+        "brand_surface": "Olay",
+        "qty": 164,
+        "unit_price": 40.04,
+        "subtotal": 6566.56
+      }
+    ]
+  },
+  {
+    "id": "so-0018",
+    "ref": "S10018",
+    "partner_id": "cust-006",
+    "trader_id": "t5",
+    "order_date": "2025-08-21",
+    "state": "confirmed",
+    "amount_total": 20766.0,
+    "margin_amount": 12635.07,
+    "lines": [
+      {
+        "product_id": "prod-080",
+        "brand_surface": "Redken",
+        "qty": 56,
+        "unit_price": 42.95,
+        "subtotal": 2405.2
+      },
+      {
+        "product_id": "prod-088",
+        "brand_surface": "Pantene",
+        "qty": 138,
+        "unit_price": 57.87,
+        "subtotal": 7986.06
+      },
+      {
+        "product_id": "prod-031",
+        "brand_surface": "La Roche Posay",
+        "qty": 137,
+        "unit_price": 45.12,
+        "subtotal": 6181.44
+      },
+      {
+        "product_id": "prod-064",
+        "brand_surface": "NARS",
+        "qty": 190,
+        "unit_price": 22.07,
+        "subtotal": 4193.3
+      }
+    ]
+  },
+  {
+    "id": "so-0019",
+    "ref": "S10019",
+    "partner_id": "cust-030",
+    "trader_id": "t5",
+    "order_date": "2026-05-09",
+    "state": "done",
+    "amount_total": 61105.5,
+    "margin_amount": 32604.73,
+    "lines": [
+      {
+        "product_id": "prod-087",
+        "brand_surface": "Pantene",
+        "qty": 133,
+        "unit_price": 22.1,
+        "subtotal": 2939.3
+      },
+      {
+        "product_id": "prod-070",
+        "brand_surface": "CT",
+        "qty": 170,
+        "unit_price": 132.35,
+        "subtotal": 22499.5
+      },
+      {
+        "product_id": "prod-021",
+        "brand_surface": "CK",
+        "qty": 183,
+        "unit_price": 194.9,
+        "subtotal": 35666.7
+      }
+    ]
+  },
+  {
+    "id": "so-0020",
+    "ref": "S10020",
+    "partner_id": "cust-030",
+    "trader_id": "t5",
+    "order_date": "2026-04-22",
+    "state": "cancel",
+    "amount_total": 48834.26,
+    "margin_amount": 30379.12,
+    "lines": [
+      {
+        "product_id": "prod-026",
+        "brand_surface": "Lancome",
+        "qty": 80,
+        "unit_price": 189.8,
+        "subtotal": 15184.0
+      },
+      {
+        "product_id": "prod-050",
+        "brand_surface": "Garnier",
+        "qty": 166,
+        "unit_price": 68.71,
+        "subtotal": 11405.86
+      },
+      {
+        "product_id": "prod-062",
+        "brand_surface": "UD",
+        "qty": 167,
+        "unit_price": 133.2,
+        "subtotal": 22244.4
+      }
+    ]
+  },
+  {
+    "id": "so-0021",
+    "ref": "S10021",
+    "partner_id": "cust-019",
+    "trader_id": "t3",
+    "order_date": "2025-11-25",
+    "state": "done",
+    "amount_total": 3654.0,
+    "margin_amount": 2017.8,
+    "lines": [
+      {
+        "product_id": "prod-085",
+        "brand_surface": "Moroccanoil",
+        "qty": 90,
+        "unit_price": 40.6,
+        "subtotal": 3654.0
+      }
+    ]
+  },
+  {
+    "id": "so-0022",
+    "ref": "S10022",
+    "partner_id": "cust-004",
+    "trader_id": "t1",
+    "order_date": "2026-02-23",
+    "state": "confirmed",
+    "amount_total": 40050.52,
+    "margin_amount": 21141.82,
+    "lines": [
+      {
+        "product_id": "prod-037",
+        "brand_surface": "The Ordinary",
+        "qty": 182,
+        "unit_price": 61.68,
+        "subtotal": 11225.76
+      },
+      {
+        "product_id": "prod-030",
+        "brand_surface": "Clinique",
+        "qty": 178,
+        "unit_price": 80.57,
+        "subtotal": 14341.46
+      },
+      {
+        "product_id": "prod-078",
+        "brand_surface": "Kérastase",
+        "qty": 193,
+        "unit_price": 37.7,
+        "subtotal": 7276.1
+      },
+      {
+        "product_id": "prod-046",
+        "brand_surface": "Olay",
+        "qty": 180,
+        "unit_price": 40.04,
+        "subtotal": 7207.2
+      }
+    ]
+  },
+  {
+    "id": "so-0023",
+    "ref": "S10023",
+    "partner_id": "cust-003",
+    "trader_id": "t5",
+    "order_date": "2025-12-11",
+    "state": "done",
+    "amount_total": 20955.69,
+    "margin_amount": 11977.31,
+    "lines": [
+      {
+        "product_id": "prod-057",
+        "brand_surface": "MAC",
+        "qty": 53,
+        "unit_price": 56.54,
+        "subtotal": 2996.62
+      },
+      {
+        "product_id": "prod-005",
+        "brand_surface": "Chanel",
+        "qty": 95,
+        "unit_price": 119.65,
+        "subtotal": 11366.75
+      },
+      {
+        "product_id": "prod-075",
+        "brand_surface": "Benefit",
+        "qty": 126,
+        "unit_price": 52.32,
+        "subtotal": 6592.32
+      }
+    ]
+  },
+  {
+    "id": "so-0024",
+    "ref": "S10024",
+    "partner_id": "cust-035",
+    "trader_id": "t4",
+    "order_date": "2026-03-23",
+    "state": "cancel",
+    "amount_total": 20940.15,
+    "margin_amount": 12549.53,
+    "lines": [
+      {
+        "product_id": "prod-068",
+        "brand_surface": "Bobbi Brown",
+        "qty": 85,
+        "unit_price": 113.47,
+        "subtotal": 9644.95
+      },
+      {
+        "product_id": "prod-065",
+        "brand_surface": "NARS",
+        "qty": 95,
+        "unit_price": 85.68,
+        "subtotal": 8139.6
+      },
+      {
+        "product_id": "prod-035",
+        "brand_surface": "The Ordinary",
+        "qty": 49,
+        "unit_price": 64.4,
+        "subtotal": 3155.6
+      }
+    ]
+  },
+  {
+    "id": "so-0025",
+    "ref": "S10025",
+    "partner_id": "cust-010",
+    "trader_id": "t2",
+    "order_date": "2025-11-24",
+    "state": "done",
+    "amount_total": 5964.98,
+    "margin_amount": 3104.73,
+    "lines": [
+      {
+        "product_id": "prod-087",
+        "brand_surface": "Pantene",
+        "qty": 162,
+        "unit_price": 22.1,
+        "subtotal": 3580.2
+      },
+      {
+        "product_id": "prod-093",
+        "brand_surface": "L Occitane",
+        "qty": 43,
+        "unit_price": 55.46,
+        "subtotal": 2384.78
+      }
+    ]
+  },
+  {
+    "id": "so-0026",
+    "ref": "S10026",
+    "partner_id": "cust-035",
+    "trader_id": "t4",
+    "order_date": "2025-12-09",
+    "state": "done",
+    "amount_total": 24919.68,
+    "margin_amount": 16047.36,
+    "lines": [
+      {
+        "product_id": "prod-059",
+        "brand_surface": "Maybelline New York",
+        "qty": 192,
+        "unit_price": 129.79,
+        "subtotal": 24919.68
+      }
+    ]
+  },
+  {
+    "id": "so-0027",
+    "ref": "S10027",
+    "partner_id": "cust-024",
+    "trader_id": "t5",
+    "order_date": "2026-02-16",
+    "state": "done",
+    "amount_total": 3094.0,
+    "margin_amount": 1388.8,
+    "lines": [
+      {
+        "product_id": "prod-087",
+        "brand_surface": "Pantene",
+        "qty": 140,
+        "unit_price": 22.1,
+        "subtotal": 3094.0
+      }
+    ]
+  },
+  {
+    "id": "so-0028",
+    "ref": "S10028",
+    "partner_id": "cust-036",
+    "trader_id": "t4",
+    "order_date": "2026-05-14",
+    "state": "done",
+    "amount_total": 25280.54,
+    "margin_amount": 14576.02,
+    "lines": [
+      {
+        "product_id": "prod-079",
+        "brand_surface": "Redken",
+        "qty": 182,
+        "unit_price": 41.68,
+        "subtotal": 7585.76
+      },
+      {
+        "product_id": "prod-029",
+        "brand_surface": "Clinique",
+        "qty": 199,
+        "unit_price": 23.94,
+        "subtotal": 4764.06
+      },
+      {
+        "product_id": "prod-083",
+        "brand_surface": "Moroccan Oil",
+        "qty": 186,
+        "unit_price": 69.52,
+        "subtotal": 12930.72
+      }
+    ]
+  },
+  {
+    "id": "so-0029",
+    "ref": "S10029",
+    "partner_id": "cust-003",
+    "trader_id": "t5",
+    "order_date": "2025-10-06",
+    "state": "done",
+    "amount_total": 3509.38,
+    "margin_amount": 1908.06,
+    "lines": [
+      {
+        "product_id": "prod-039",
+        "brand_surface": "Vichy",
+        "qty": 49,
+        "unit_price": 71.62,
+        "subtotal": 3509.38
+      }
+    ]
+  },
+  {
+    "id": "so-0030",
+    "ref": "S10030",
+    "partner_id": "cust-035",
+    "trader_id": "t4",
+    "order_date": "2025-12-08",
+    "state": "confirmed",
+    "amount_total": 35187.91,
+    "margin_amount": 22788.32,
+    "lines": [
+      {
+        "product_id": "prod-050",
+        "brand_surface": "Garnier",
+        "qty": 191,
+        "unit_price": 68.71,
+        "subtotal": 13123.61
+      },
+      {
+        "product_id": "prod-059",
+        "brand_surface": "Maybelline",
+        "qty": 170,
+        "unit_price": 129.79,
+        "subtotal": 22064.3
+      }
+    ]
+  },
+  {
+    "id": "so-0031",
+    "ref": "S10031",
+    "partner_id": "cust-007",
+    "trader_id": "t5",
+    "order_date": "2025-12-08",
+    "state": "done",
+    "amount_total": 40770.79,
+    "margin_amount": 22242.21,
+    "lines": [
+      {
+        "product_id": "prod-079",
+        "brand_surface": "Redken",
+        "qty": 75,
+        "unit_price": 41.68,
+        "subtotal": 3126.0
+      },
+      {
+        "product_id": "prod-053",
+        "brand_surface": "Kiehl's",
+        "qty": 133,
+        "unit_price": 77.84,
+        "subtotal": 10352.72
+      },
+      {
+        "product_id": "prod-036",
+        "brand_surface": "The Ordinary",
+        "qty": 112,
+        "unit_price": 35.36,
+        "subtotal": 3960.32
+      },
+      {
+        "product_id": "prod-005",
+        "brand_surface": "Chanel",
+        "qty": 195,
+        "unit_price": 119.65,
+        "subtotal": 23331.75
+      }
+    ]
+  },
+  {
+    "id": "so-0032",
+    "ref": "S10032",
+    "partner_id": "cust-023",
+    "trader_id": "t4",
+    "order_date": "2026-01-25",
+    "state": "confirmed",
+    "amount_total": 4529.48,
+    "margin_amount": 2853.28,
+    "lines": [
+      {
+        "product_id": "prod-051",
+        "brand_surface": "Garnier",
+        "qty": 68,
+        "unit_price": 66.61,
+        "subtotal": 4529.48
+      }
+    ]
+  },
+  {
+    "id": "so-0033",
+    "ref": "S10033",
+    "partner_id": "cust-030",
+    "trader_id": "t5",
+    "order_date": "2026-02-27",
+    "state": "done",
+    "amount_total": 7470.4,
+    "margin_amount": 4125.28,
+    "lines": [
+      {
+        "product_id": "prod-085",
+        "brand_surface": "Moroccanoil",
+        "qty": 184,
+        "unit_price": 40.6,
+        "subtotal": 7470.4
+      }
+    ]
+  },
+  {
+    "id": "so-0034",
+    "ref": "S10034",
+    "partner_id": "cust-022",
+    "trader_id": "t5",
+    "order_date": "2026-03-02",
+    "state": "confirmed",
+    "amount_total": 19202.8,
+    "margin_amount": 11743.27,
+    "lines": [
+      {
+        "product_id": "prod-017",
+        "brand_surface": "Carolina Herrera",
+        "qty": 37,
+        "unit_price": 91.1,
+        "subtotal": 3370.7
+      },
+      {
+        "product_id": "prod-073",
+        "brand_surface": "Benefit",
+        "qty": 170,
+        "unit_price": 93.13,
+        "subtotal": 15832.1
+      }
+    ]
+  },
+  {
+    "id": "so-0035",
+    "ref": "S10035",
+    "partner_id": "cust-015",
+    "trader_id": "t5",
+    "order_date": "2026-01-25",
+    "state": "done",
+    "amount_total": 26203.97,
+    "margin_amount": 15900.88,
+    "lines": [
+      {
+        "product_id": "prod-019",
+        "brand_surface": "Hugo Boss",
+        "qty": 57,
+        "unit_price": 135.57,
+        "subtotal": 7727.49
+      },
+      {
+        "product_id": "prod-077",
+        "brand_surface": "ELF Cosmetics",
+        "qty": 158,
+        "unit_price": 60.32,
+        "subtotal": 9530.56
+      },
+      {
+        "product_id": "prod-001",
+        "brand_surface": "Yves Saint Laurent",
+        "qty": 64,
+        "unit_price": 139.78,
+        "subtotal": 8945.92
+      }
+    ]
+  },
+  {
+    "id": "so-0036",
+    "ref": "S10036",
+    "partner_id": "cust-002",
+    "trader_id": "t2",
+    "order_date": "2026-02-14",
+    "state": "done",
+    "amount_total": 36700.06,
+    "margin_amount": 18716.7,
+    "lines": [
+      {
+        "product_id": "prod-002",
+        "brand_surface": "Dior",
+        "qty": 170,
+        "unit_price": 210.23,
+        "subtotal": 35739.1
+      },
+      {
+        "product_id": "prod-046",
+        "brand_surface": "Olay",
+        "qty": 24,
+        "unit_price": 40.04,
+        "subtotal": 960.96
+      }
+    ]
+  },
+  {
+    "id": "so-0037",
+    "ref": "S10037",
+    "partner_id": "cust-009",
+    "trader_id": "t4",
+    "order_date": "2025-10-29",
+    "state": "done",
+    "amount_total": 69038.46,
+    "margin_amount": 39905.07,
+    "lines": [
+      {
+        "product_id": "prod-068",
+        "brand_surface": "Bobbi Brown",
+        "qty": 112,
+        "unit_price": 113.47,
+        "subtotal": 12708.64
+      },
+      {
+        "product_id": "prod-015",
+        "brand_surface": "Gaultier",
+        "qty": 135,
+        "unit_price": 205.38,
+        "subtotal": 27726.3
+      },
+      {
+        "product_id": "prod-009",
+        "brand_surface": "Dolce & Gabbana",
+        "qty": 76,
+        "unit_price": 251.54,
+        "subtotal": 19117.04
+      },
+      {
+        "product_id": "prod-061",
+        "brand_surface": "Revlon",
+        "qty": 188,
+        "unit_price": 50.46,
+        "subtotal": 9486.48
+      }
+    ]
+  },
+  {
+    "id": "so-0038",
+    "ref": "S10038",
+    "partner_id": "cust-002",
+    "trader_id": "t2",
+    "order_date": "2025-11-22",
+    "state": "done",
+    "amount_total": 17182.8,
+    "margin_amount": 11042.4,
+    "lines": [
+      {
+        "product_id": "prod-062",
+        "brand_surface": "Urban Decay",
+        "qty": 129,
+        "unit_price": 133.2,
+        "subtotal": 17182.8
+      }
+    ]
+  },
+  {
+    "id": "so-0039",
+    "ref": "S10039",
+    "partner_id": "cust-029",
+    "trader_id": "t2",
+    "order_date": "2026-01-02",
+    "state": "done",
+    "amount_total": 31220.0,
+    "margin_amount": 20681.5,
+    "lines": [
+      {
+        "product_id": "prod-011",
+        "brand_surface": "Versace",
+        "qty": 175,
+        "unit_price": 178.4,
+        "subtotal": 31220.0
+      }
+    ]
+  },
+  {
+    "id": "so-0040",
+    "ref": "S10040",
+    "partner_id": "cust-018",
+    "trader_id": "t4",
+    "order_date": "2026-01-16",
+    "state": "done",
+    "amount_total": 33281.93,
+    "margin_amount": 21537.88,
+    "lines": [
+      {
+        "product_id": "prod-049",
+        "brand_surface": "LOreal Paris",
+        "qty": 136,
+        "unit_price": 68.74,
+        "subtotal": 9348.64
+      },
+      {
+        "product_id": "prod-077",
+        "brand_surface": "e.l.f.",
+        "qty": 45,
+        "unit_price": 60.32,
+        "subtotal": 2714.4
+      },
+      {
+        "product_id": "prod-068",
+        "brand_surface": "Bobbi Brown",
+        "qty": 187,
+        "unit_price": 113.47,
+        "subtotal": 21218.89
+      }
+    ]
+  },
+  {
+    "id": "so-0041",
+    "ref": "S10041",
+    "partner_id": "cust-015",
+    "trader_id": "t5",
+    "order_date": "2026-04-28",
+    "state": "done",
+    "amount_total": 25732.35,
+    "margin_amount": 14730.2,
+    "lines": [
+      {
+        "product_id": "prod-044",
+        "brand_surface": "Neutrogena",
+        "qty": 100,
+        "unit_price": 33.26,
+        "subtotal": 3326.0
+      },
+      {
+        "product_id": "prod-059",
+        "brand_surface": "Maybelline New York",
+        "qty": 100,
+        "unit_price": 129.79,
+        "subtotal": 12979.0
+      },
+      {
+        "product_id": "prod-052",
+        "brand_surface": "Garnier",
+        "qty": 115,
+        "unit_price": 34.38,
+        "subtotal": 3953.7
+      },
+      {
+        "product_id": "prod-054",
+        "brand_surface": "Kiehls",
+        "qty": 195,
+        "unit_price": 28.07,
+        "subtotal": 5473.65
+      }
+    ]
+  },
+  {
+    "id": "so-0042",
+    "ref": "S10042",
+    "partner_id": "cust-006",
+    "trader_id": "t5",
+    "order_date": "2026-04-27",
+    "state": "done",
+    "amount_total": 2864.65,
+    "margin_amount": 1861.85,
+    "lines": [
+      {
+        "product_id": "prod-056",
+        "brand_surface": "Shiseido",
+        "qty": 115,
+        "unit_price": 24.91,
+        "subtotal": 2864.65
+      }
+    ]
+  },
+  {
+    "id": "so-0043",
+    "ref": "S10043",
+    "partner_id": "cust-038",
+    "trader_id": "t1",
+    "order_date": "2025-12-16",
+    "state": "done",
+    "amount_total": 27653.47,
+    "margin_amount": 15192.12,
+    "lines": [
+      {
+        "product_id": "prod-086",
+        "brand_surface": "Schwarzkopf",
+        "qty": 190,
+        "unit_price": 51.96,
+        "subtotal": 9872.4
+      },
+      {
+        "product_id": "prod-016",
+        "brand_surface": "JPG",
+        "qty": 33,
+        "unit_price": 130.75,
+        "subtotal": 4314.75
+      },
+      {
+        "product_id": "prod-053",
+        "brand_surface": "Kiehls",
+        "qty": 173,
+        "unit_price": 77.84,
+        "subtotal": 13466.32
+      }
+    ]
+  },
+  {
+    "id": "so-0044",
+    "ref": "S10044",
+    "partner_id": "cust-037",
+    "trader_id": "t3",
+    "order_date": "2025-10-12",
+    "state": "done",
+    "amount_total": 16509.01,
+    "margin_amount": 9872.74,
+    "lines": [
+      {
+        "product_id": "prod-020",
+        "brand_surface": "Hugo Boss",
+        "qty": 77,
+        "unit_price": 156.93,
+        "subtotal": 12083.61
+      },
+      {
+        "product_id": "prod-085",
+        "brand_surface": "Moroccan Oil",
+        "qty": 109,
+        "unit_price": 40.6,
+        "subtotal": 4425.4
+      }
+    ]
+  },
+  {
+    "id": "so-0045",
+    "ref": "S10045",
+    "partner_id": "cust-018",
+    "trader_id": "t4",
+    "order_date": "2025-09-03",
+    "state": "done",
+    "amount_total": 3156.47,
+    "margin_amount": 1693.23,
+    "lines": [
+      {
+        "product_id": "prod-055",
+        "brand_surface": "Shiseido",
+        "qty": 26,
+        "unit_price": 47.89,
+        "subtotal": 1245.14
+      },
+      {
+        "product_id": "prod-072",
+        "brand_surface": "Fenty Beauty",
+        "qty": 27,
+        "unit_price": 70.79,
+        "subtotal": 1911.33
+      }
+    ]
+  },
+  {
+    "id": "so-0046",
+    "ref": "S10046",
+    "partner_id": "cust-020",
+    "trader_id": "t2",
+    "order_date": "2026-04-03",
+    "state": "done",
+    "amount_total": 61764.14,
+    "margin_amount": 33044.71,
+    "lines": [
+      {
+        "product_id": "prod-045",
+        "brand_surface": "Oil of Olay",
+        "qty": 164,
+        "unit_price": 83.35,
+        "subtotal": 13669.4
+      },
+      {
+        "product_id": "prod-001",
+        "brand_surface": "YSL",
+        "qty": 37,
+        "unit_price": 139.78,
+        "subtotal": 5171.86
+      },
+      {
+        "product_id": "prod-024",
+        "brand_surface": "Lancôme",
+        "qty": 182,
+        "unit_price": 235.84,
+        "subtotal": 42922.88
+      }
+    ]
+  },
+  {
+    "id": "so-0047",
+    "ref": "S10047",
+    "partner_id": "cust-034",
+    "trader_id": "t2",
+    "order_date": "2025-10-26",
+    "state": "confirmed",
+    "amount_total": 10555.16,
+    "margin_amount": 6335.83,
+    "lines": [
+      {
+        "product_id": "prod-049",
+        "brand_surface": "L'Oreal",
+        "qty": 107,
+        "unit_price": 68.74,
+        "subtotal": 7355.18
+      },
+      {
+        "product_id": "prod-054",
+        "brand_surface": "Kiehls",
+        "qty": 114,
+        "unit_price": 28.07,
+        "subtotal": 3199.98
+      }
+    ]
+  },
+  {
+    "id": "so-0048",
+    "ref": "S10048",
+    "partner_id": "cust-037",
+    "trader_id": "t3",
+    "order_date": "2026-03-28",
+    "state": "done",
+    "amount_total": 20502.6,
+    "margin_amount": 13461.0,
+    "lines": [
+      {
+        "product_id": "prod-007",
+        "brand_surface": "Giorgio Armani",
+        "qty": 60,
+        "unit_price": 341.71,
+        "subtotal": 20502.6
+      }
+    ]
+  },
+  {
+    "id": "so-0049",
+    "ref": "S10049",
+    "partner_id": "cust-018",
+    "trader_id": "t4",
+    "order_date": "2025-11-01",
+    "state": "done",
+    "amount_total": 20061.99,
+    "margin_amount": 10102.17,
+    "lines": [
+      {
+        "product_id": "prod-085",
+        "brand_surface": "Moroccan Oil",
+        "qty": 126,
+        "unit_price": 40.6,
+        "subtotal": 5115.6
+      },
+      {
+        "product_id": "prod-055",
+        "brand_surface": "Shiseido",
+        "qty": 75,
+        "unit_price": 47.89,
+        "subtotal": 3591.75
+      },
+      {
+        "product_id": "prod-063",
+        "brand_surface": "UD",
+        "qty": 108,
+        "unit_price": 88.38,
+        "subtotal": 9545.04
+      },
+      {
+        "product_id": "prod-078",
+        "brand_surface": "Kerastase",
+        "qty": 48,
+        "unit_price": 37.7,
+        "subtotal": 1809.6
+      }
+    ]
+  },
+  {
+    "id": "so-0050",
+    "ref": "S10050",
+    "partner_id": "cust-038",
+    "trader_id": "t1",
+    "order_date": "2026-02-23",
+    "state": "done",
+    "amount_total": 32880.46,
+    "margin_amount": 19503.96,
+    "lines": [
+      {
+        "product_id": "prod-068",
+        "brand_surface": "Bobbi Brown",
+        "qty": 121,
+        "unit_price": 113.47,
+        "subtotal": 13729.87
+      },
+      {
+        "product_id": "prod-086",
+        "brand_surface": "Schwarzkopf",
+        "qty": 21,
+        "unit_price": 51.96,
+        "subtotal": 1091.16
+      },
+      {
+        "product_id": "prod-040",
+        "brand_surface": "Vichy",
+        "qty": 97,
+        "unit_price": 68.99,
+        "subtotal": 6692.03
+      },
+      {
+        "product_id": "prod-006",
+        "brand_surface": "TF",
+        "qty": 55,
+        "unit_price": 206.68,
+        "subtotal": 11367.4
+      }
+    ]
+  },
+  {
+    "id": "so-0051",
+    "ref": "S10051",
+    "partner_id": "cust-008",
+    "trader_id": "t5",
+    "order_date": "2025-11-07",
+    "state": "done",
+    "amount_total": 1412.48,
+    "margin_amount": 643.84,
+    "lines": [
+      {
+        "product_id": "prod-064",
+        "brand_surface": "NARS",
+        "qty": 64,
+        "unit_price": 22.07,
+        "subtotal": 1412.48
+      }
+    ]
+  },
+  {
+    "id": "so-0052",
+    "ref": "S10052",
+    "partner_id": "cust-015",
+    "trader_id": "t5",
+    "order_date": "2025-11-04",
+    "state": "done",
+    "amount_total": 44195.03,
+    "margin_amount": 22104.93,
+    "lines": [
+      {
+        "product_id": "prod-010",
+        "brand_surface": "Versace",
+        "qty": 24,
+        "unit_price": 295.07,
+        "subtotal": 7081.68
+      },
+      {
+        "product_id": "prod-051",
+        "brand_surface": "Garnier",
+        "qty": 39,
+        "unit_price": 66.61,
+        "subtotal": 2597.79
+      },
+      {
+        "product_id": "prod-006",
+        "brand_surface": "TF",
+        "qty": 167,
+        "unit_price": 206.68,
+        "subtotal": 34515.56
+      }
+    ]
+  },
+  {
+    "id": "so-0053",
+    "ref": "S10053",
+    "partner_id": "cust-027",
+    "trader_id": "t5",
+    "order_date": "2025-12-31",
+    "state": "confirmed",
+    "amount_total": 25981.38,
+    "margin_amount": 15225.55,
+    "lines": [
+      {
+        "product_id": "prod-015",
+        "brand_surface": "Gaultier",
+        "qty": 63,
+        "unit_price": 205.38,
+        "subtotal": 12938.94
+      },
+      {
+        "product_id": "prod-052",
+        "brand_surface": "Garnier",
+        "qty": 137,
+        "unit_price": 34.38,
+        "subtotal": 4710.06
+      },
+      {
+        "product_id": "prod-003",
+        "brand_surface": "Dior",
+        "qty": 42,
+        "unit_price": 198.39,
+        "subtotal": 8332.38
+      }
+    ]
+  },
+  {
+    "id": "so-0054",
+    "ref": "S10054",
+    "partner_id": "cust-016",
+    "trader_id": "t1",
+    "order_date": "2025-11-25",
+    "state": "done",
+    "amount_total": 47021.43,
+    "margin_amount": 28953.23,
+    "lines": [
+      {
+        "product_id": "prod-076",
+        "brand_surface": "ELF Cosmetics",
+        "qty": 99,
+        "unit_price": 106.06,
+        "subtotal": 10499.94
+      },
+      {
+        "product_id": "prod-052",
+        "brand_surface": "Garnier",
+        "qty": 76,
+        "unit_price": 34.38,
+        "subtotal": 2612.88
+      },
+      {
+        "product_id": "prod-068",
+        "brand_surface": "Bobbi Brown",
+        "qty": 63,
+        "unit_price": 113.47,
+        "subtotal": 7148.61
+      },
+      {
+        "product_id": "prod-011",
+        "brand_surface": "Versace",
+        "qty": 150,
+        "unit_price": 178.4,
+        "subtotal": 26760.0
+      }
+    ]
+  },
+  {
+    "id": "so-0055",
+    "ref": "S10055",
+    "partner_id": "cust-013",
+    "trader_id": "t4",
+    "order_date": "2026-04-01",
+    "state": "done",
+    "amount_total": 13185.12,
+    "margin_amount": 8272.5,
+    "lines": [
+      {
+        "product_id": "prod-045",
+        "brand_surface": "Olay",
+        "qty": 80,
+        "unit_price": 83.35,
+        "subtotal": 6668.0
+      },
+      {
+        "product_id": "prod-094",
+        "brand_surface": "Rituals",
+        "qty": 57,
+        "unit_price": 28.96,
+        "subtotal": 1650.72
+      },
+      {
+        "product_id": "prod-083",
+        "brand_surface": "Moroccanoil",
+        "qty": 70,
+        "unit_price": 69.52,
+        "subtotal": 4866.4
+      }
+    ]
+  },
+  {
+    "id": "so-0056",
+    "ref": "S10056",
+    "partner_id": "cust-005",
+    "trader_id": "t2",
+    "order_date": "2025-10-21",
+    "state": "confirmed",
+    "amount_total": 14088.78,
+    "margin_amount": 8119.68,
+    "lines": [
+      {
+        "product_id": "prod-081",
+        "brand_surface": "Olaplex",
+        "qty": 164,
+        "unit_price": 59.8,
+        "subtotal": 9807.2
+      },
+      {
+        "product_id": "prod-064",
+        "brand_surface": "NARS",
+        "qty": 194,
+        "unit_price": 22.07,
+        "subtotal": 4281.58
+      }
+    ]
+  },
+  {
+    "id": "so-0057",
+    "ref": "S10057",
+    "partner_id": "cust-021",
+    "trader_id": "t1",
+    "order_date": "2025-10-18",
+    "state": "done",
+    "amount_total": 31919.2,
+    "margin_amount": 17084.76,
+    "lines": [
+      {
+        "product_id": "prod-057",
+        "brand_surface": "MAC Cosmetics",
+        "qty": 133,
+        "unit_price": 56.54,
+        "subtotal": 7519.82
+      },
+      {
+        "product_id": "prod-009",
+        "brand_surface": "Dolce Gabbana",
+        "qty": 97,
+        "unit_price": 251.54,
+        "subtotal": 24399.38
+      }
+    ]
+  },
+  {
+    "id": "so-0058",
+    "ref": "S10058",
+    "partner_id": "cust-023",
+    "trader_id": "t4",
+    "order_date": "2025-10-22",
+    "state": "done",
+    "amount_total": 9313.65,
+    "margin_amount": 6133.05,
+    "lines": [
+      {
+        "product_id": "prod-040",
+        "brand_surface": "Vichy",
+        "qty": 135,
+        "unit_price": 68.99,
+        "subtotal": 9313.65
+      }
+    ]
+  },
+  {
+    "id": "so-0059",
+    "ref": "S10059",
+    "partner_id": "cust-019",
+    "trader_id": "t3",
+    "order_date": "2026-04-30",
+    "state": "done",
+    "amount_total": 12305.04,
+    "margin_amount": 7772.07,
+    "lines": [
+      {
+        "product_id": "prod-083",
+        "brand_surface": "Moroccan Oil",
+        "qty": 177,
+        "unit_price": 69.52,
+        "subtotal": 12305.04
+      }
+    ]
+  },
+  {
+    "id": "so-0060",
+    "ref": "S10060",
+    "partner_id": "cust-036",
+    "trader_id": "t4",
+    "order_date": "2025-08-27",
+    "state": "done",
+    "amount_total": 10481.1,
+    "margin_amount": 6082.2,
+    "lines": [
+      {
+        "product_id": "prod-058",
+        "brand_surface": "MAC",
+        "qty": 186,
+        "unit_price": 56.35,
+        "subtotal": 10481.1
+      }
+    ]
+  },
+  {
+    "id": "so-0061",
+    "ref": "S10061",
+    "partner_id": "cust-031",
+    "trader_id": "t4",
+    "order_date": "2026-04-24",
+    "state": "done",
+    "amount_total": 21374.18,
+    "margin_amount": 12161.14,
+    "lines": [
+      {
+        "product_id": "prod-008",
+        "brand_surface": "Dolce & Gabbana",
+        "qty": 107,
+        "unit_price": 121.29,
+        "subtotal": 12978.03
+      },
+      {
+        "product_id": "prod-058",
+        "brand_surface": "MAC Cosmetics",
+        "qty": 149,
+        "unit_price": 56.35,
+        "subtotal": 8396.15
+      }
+    ]
+  },
+  {
+    "id": "so-0062",
+    "ref": "S10062",
+    "partner_id": "cust-016",
+    "trader_id": "t1",
+    "order_date": "2026-03-26",
+    "state": "confirmed",
+    "amount_total": 40436.98,
+    "margin_amount": 23926.48,
+    "lines": [
+      {
+        "product_id": "prod-057",
+        "brand_surface": "M.A.C",
+        "qty": 113,
+        "unit_price": 56.54,
+        "subtotal": 6389.02
+      },
+      {
+        "product_id": "prod-068",
+        "brand_surface": "Bobbi Brown",
+        "qty": 92,
+        "unit_price": 113.47,
+        "subtotal": 10439.24
+      },
+      {
+        "product_id": "prod-067",
+        "brand_surface": "Bobbi Brown",
+        "qty": 124,
+        "unit_price": 125.52,
+        "subtotal": 15564.48
+      },
+      {
+        "product_id": "prod-079",
+        "brand_surface": "Redken",
+        "qty": 193,
+        "unit_price": 41.68,
+        "subtotal": 8044.24
+      }
+    ]
+  },
+  {
+    "id": "so-0063",
+    "ref": "S10063",
+    "partner_id": "cust-022",
+    "trader_id": "t5",
+    "order_date": "2026-04-28",
+    "state": "done",
+    "amount_total": 13413.6,
+    "margin_amount": 8138.88,
+    "lines": [
+      {
+        "product_id": "prod-043",
+        "brand_surface": "Neutrogena",
+        "qty": 162,
+        "unit_price": 82.8,
+        "subtotal": 13413.6
+      }
+    ]
+  },
+  {
+    "id": "so-0064",
+    "ref": "S10064",
+    "partner_id": "cust-039",
+    "trader_id": "t3",
+    "order_date": "2025-08-21",
+    "state": "cancel",
+    "amount_total": 35094.8,
+    "margin_amount": 22376.98,
+    "lines": [
+      {
+        "product_id": "prod-043",
+        "brand_surface": "Neutrogena",
+        "qty": 189,
+        "unit_price": 82.8,
+        "subtotal": 15649.2
+      },
+      {
+        "product_id": "prod-011",
+        "brand_surface": "Versace",
+        "qty": 109,
+        "unit_price": 178.4,
+        "subtotal": 19445.6
+      }
+    ]
+  },
+  {
+    "id": "so-0065",
+    "ref": "S10065",
+    "partner_id": "cust-026",
+    "trader_id": "t4",
+    "order_date": "2026-05-03",
+    "state": "confirmed",
+    "amount_total": 13372.16,
+    "margin_amount": 8055.98,
+    "lines": [
+      {
+        "product_id": "prod-077",
+        "brand_surface": "e.l.f",
+        "qty": 99,
+        "unit_price": 60.32,
+        "subtotal": 5971.68
+      },
+      {
+        "product_id": "prod-091",
+        "brand_surface": "Dove",
+        "qty": 184,
+        "unit_price": 40.22,
+        "subtotal": 7400.48
+      }
+    ]
+  },
+  {
+    "id": "so-0066",
+    "ref": "S10066",
+    "partner_id": "cust-034",
+    "trader_id": "t2",
+    "order_date": "2025-11-11",
+    "state": "done",
+    "amount_total": 10428.0,
+    "margin_amount": 6586.5,
+    "lines": [
+      {
+        "product_id": "prod-083",
+        "brand_surface": "Moroccan Oil",
+        "qty": 150,
+        "unit_price": 69.52,
+        "subtotal": 10428.0
+      }
+    ]
+  },
+  {
+    "id": "so-0067",
+    "ref": "S10067",
+    "partner_id": "cust-020",
+    "trader_id": "t2",
+    "order_date": "2025-10-10",
+    "state": "done",
+    "amount_total": 10029.95,
+    "margin_amount": 6094.83,
+    "lines": [
+      {
+        "product_id": "prod-028",
+        "brand_surface": "Estée Lauder",
+        "qty": 69,
+        "unit_price": 118.85,
+        "subtotal": 8200.65
+      },
+      {
+        "product_id": "prod-044",
+        "brand_surface": "Neutrogena",
+        "qty": 55,
+        "unit_price": 33.26,
+        "subtotal": 1829.3
+      }
+    ]
+  },
+  {
+    "id": "so-0068",
+    "ref": "S10068",
+    "partner_id": "cust-007",
+    "trader_id": "t5",
+    "order_date": "2025-12-25",
+    "state": "done",
+    "amount_total": 7226.8,
+    "margin_amount": 3990.76,
+    "lines": [
+      {
+        "product_id": "prod-085",
+        "brand_surface": "Moroccanoil",
+        "qty": 178,
+        "unit_price": 40.6,
+        "subtotal": 7226.8
+      }
+    ]
+  },
+  {
+    "id": "so-0069",
+    "ref": "S10069",
+    "partner_id": "cust-010",
+    "trader_id": "t2",
+    "order_date": "2026-03-23",
+    "state": "done",
+    "amount_total": 34818.38,
+    "margin_amount": 17252.92,
+    "lines": [
+      {
+        "product_id": "prod-024",
+        "brand_surface": "Lancôme",
+        "qty": 132,
+        "unit_price": 235.84,
+        "subtotal": 31130.88
+      },
+      {
+        "product_id": "prod-089",
+        "brand_surface": "The Body Shop",
+        "qty": 125,
+        "unit_price": 29.5,
+        "subtotal": 3687.5
+      }
+    ]
+  },
+  {
+    "id": "so-0070",
+    "ref": "S10070",
+    "partner_id": "cust-016",
+    "trader_id": "t1",
+    "order_date": "2025-09-15",
+    "state": "done",
+    "amount_total": 31809.8,
+    "margin_amount": 16159.41,
+    "lines": [
+      {
+        "product_id": "prod-079",
+        "brand_surface": "Redken",
+        "qty": 81,
+        "unit_price": 41.68,
+        "subtotal": 3376.08
+      },
+      {
+        "product_id": "prod-037",
+        "brand_surface": "The Ordinary",
+        "qty": 140,
+        "unit_price": 61.68,
+        "subtotal": 8635.2
+      },
+      {
+        "product_id": "prod-058",
+        "brand_surface": "MAC Cosmetics",
+        "qty": 114,
+        "unit_price": 56.35,
+        "subtotal": 6423.9
+      },
+      {
+        "product_id": "prod-030",
+        "brand_surface": "Clinique",
+        "qty": 166,
+        "unit_price": 80.57,
+        "subtotal": 13374.62
+      }
+    ]
+  },
+  {
+    "id": "so-0071",
+    "ref": "S10071",
+    "partner_id": "cust-019",
+    "trader_id": "t3",
+    "order_date": "2026-03-05",
+    "state": "confirmed",
+    "amount_total": 52018.18,
+    "margin_amount": 27807.63,
+    "lines": [
+      {
+        "product_id": "prod-065",
+        "brand_surface": "NARS",
+        "qty": 174,
+        "unit_price": 85.68,
+        "subtotal": 14908.32
+      },
+      {
+        "product_id": "prod-068",
+        "brand_surface": "Bobbi Brown",
+        "qty": 84,
+        "unit_price": 113.47,
+        "subtotal": 9531.48
+      },
+      {
+        "product_id": "prod-054",
+        "brand_surface": "Kiehls",
+        "qty": 184,
+        "unit_price": 28.07,
+        "subtotal": 5164.88
+      },
+      {
+        "product_id": "prod-021",
+        "brand_surface": "Calvin Klein",
+        "qty": 115,
+        "unit_price": 194.9,
+        "subtotal": 22413.5
+      }
+    ]
+  },
+  {
+    "id": "so-0072",
+    "ref": "S10072",
+    "partner_id": "cust-034",
+    "trader_id": "t2",
+    "order_date": "2026-05-04",
+    "state": "done",
+    "amount_total": 3762.48,
+    "margin_amount": 1674.45,
+    "lines": [
+      {
+        "product_id": "prod-037",
+        "brand_surface": "The Ordinary",
+        "qty": 61,
+        "unit_price": 61.68,
+        "subtotal": 3762.48
+      }
+    ]
+  },
+  {
+    "id": "so-0073",
+    "ref": "S10073",
+    "partner_id": "cust-033",
+    "trader_id": "t1",
+    "order_date": "2026-02-22",
+    "state": "done",
+    "amount_total": 5784.23,
+    "margin_amount": 3586.27,
+    "lines": [
+      {
+        "product_id": "prod-056",
+        "brand_surface": "Shiseido",
+        "qty": 135,
+        "unit_price": 24.91,
+        "subtotal": 3362.85
+      },
+      {
+        "product_id": "prod-012",
+        "brand_surface": "Versace",
+        "qty": 26,
+        "unit_price": 93.13,
+        "subtotal": 2421.38
+      }
+    ]
+  },
+  {
+    "id": "so-0074",
+    "ref": "S10074",
+    "partner_id": "cust-033",
+    "trader_id": "t1",
+    "order_date": "2025-12-06",
+    "state": "confirmed",
+    "amount_total": 43596.35,
+    "margin_amount": 28742.93,
+    "lines": [
+      {
+        "product_id": "prod-031",
+        "brand_surface": "La Roche-Posay",
+        "qty": 77,
+        "unit_price": 45.12,
+        "subtotal": 3474.24
+      },
+      {
+        "product_id": "prod-050",
+        "brand_surface": "Garnier",
+        "qty": 101,
+        "unit_price": 68.71,
+        "subtotal": 6939.71
+      },
+      {
+        "product_id": "prod-011",
+        "brand_surface": "Versace",
+        "qty": 186,
+        "unit_price": 178.4,
+        "subtotal": 33182.4
+      }
+    ]
+  },
+  {
+    "id": "so-0075",
+    "ref": "S10075",
+    "partner_id": "cust-009",
+    "trader_id": "t4",
+    "order_date": "2025-10-17",
+    "state": "confirmed",
+    "amount_total": 12212.64,
+    "margin_amount": 5435.1,
+    "lines": [
+      {
+        "product_id": "prod-037",
+        "brand_surface": "The Ordinary",
+        "qty": 198,
+        "unit_price": 61.68,
+        "subtotal": 12212.64
+      }
+    ]
+  },
+  {
+    "id": "so-0076",
+    "ref": "S10076",
+    "partner_id": "cust-031",
+    "trader_id": "t4",
+    "order_date": "2026-02-04",
+    "state": "done",
+    "amount_total": 49925.2,
+    "margin_amount": 30335.49,
+    "lines": [
+      {
+        "product_id": "prod-079",
+        "brand_surface": "Redken",
+        "qty": 75,
+        "unit_price": 41.68,
+        "subtotal": 3126.0
+      },
+      {
+        "product_id": "prod-001",
+        "brand_surface": "Yves Saint-Laurent",
+        "qty": 160,
+        "unit_price": 139.78,
+        "subtotal": 22364.8
+      },
+      {
+        "product_id": "prod-011",
+        "brand_surface": "Versace",
+        "qty": 48,
+        "unit_price": 178.4,
+        "subtotal": 8563.2
+      },
+      {
+        "product_id": "prod-003",
+        "brand_surface": "Dior",
+        "qty": 80,
+        "unit_price": 198.39,
+        "subtotal": 15871.2
+      }
+    ]
+  },
+  {
+    "id": "so-0077",
+    "ref": "S10077",
+    "partner_id": "cust-016",
+    "trader_id": "t1",
+    "order_date": "2026-04-20",
+    "state": "done",
+    "amount_total": 52866.64,
+    "margin_amount": 29408.59,
+    "lines": [
+      {
+        "product_id": "prod-082",
+        "brand_surface": "Olaplex",
+        "qty": 147,
+        "unit_price": 36.57,
+        "subtotal": 5375.79
+      },
+      {
+        "product_id": "prod-080",
+        "brand_surface": "Redken",
+        "qty": 181,
+        "unit_price": 42.95,
+        "subtotal": 7773.95
+      },
+      {
+        "product_id": "prod-059",
+        "brand_surface": "Maybelline New York",
+        "qty": 56,
+        "unit_price": 129.79,
+        "subtotal": 7268.24
+      },
+      {
+        "product_id": "prod-009",
+        "brand_surface": "Dolce & Gabbana",
+        "qty": 129,
+        "unit_price": 251.54,
+        "subtotal": 32448.66
+      }
+    ]
+  },
+  {
+    "id": "so-0078",
+    "ref": "S10078",
+    "partner_id": "cust-016",
+    "trader_id": "t1",
+    "order_date": "2025-12-13",
+    "state": "confirmed",
+    "amount_total": 33488.77,
+    "margin_amount": 20686.14,
+    "lines": [
+      {
+        "product_id": "prod-024",
+        "brand_surface": "Lancôme",
+        "qty": 37,
+        "unit_price": 235.84,
+        "subtotal": 8726.08
+      },
+      {
+        "product_id": "prod-086",
+        "brand_surface": "Schwarzkopf",
+        "qty": 119,
+        "unit_price": 51.96,
+        "subtotal": 6183.24
+      },
+      {
+        "product_id": "prod-011",
+        "brand_surface": "Versace",
+        "qty": 31,
+        "unit_price": 178.4,
+        "subtotal": 5530.4
+      },
+      {
+        "product_id": "prod-068",
+        "brand_surface": "Bobbi Brown",
+        "qty": 115,
+        "unit_price": 113.47,
+        "subtotal": 13049.05
+      }
+    ]
+  },
+  {
+    "id": "so-0079",
+    "ref": "S10079",
+    "partner_id": "cust-023",
+    "trader_id": "t4",
+    "order_date": "2026-02-12",
+    "state": "confirmed",
+    "amount_total": 15669.8,
+    "margin_amount": 9913.24,
+    "lines": [
+      {
+        "product_id": "prod-045",
+        "brand_surface": "Olay",
+        "qty": 188,
+        "unit_price": 83.35,
+        "subtotal": 15669.8
+      }
+    ]
+  },
+  {
+    "id": "so-0080",
+    "ref": "S10080",
+    "partner_id": "cust-022",
+    "trader_id": "t5",
+    "order_date": "2025-09-09",
+    "state": "cancel",
+    "amount_total": 29715.88,
+    "margin_amount": 15164.85,
+    "lines": [
+      {
+        "product_id": "prod-006",
+        "brand_surface": "Tom Ford",
+        "qty": 106,
+        "unit_price": 206.68,
+        "subtotal": 21908.08
+      },
+      {
+        "product_id": "prod-046",
+        "brand_surface": "Oil of Olay",
+        "qty": 195,
+        "unit_price": 40.04,
+        "subtotal": 7807.8
+      }
+    ]
+  },
+  {
+    "id": "so-0081",
+    "ref": "S10081",
+    "partner_id": "cust-031",
+    "trader_id": "t4",
+    "order_date": "2025-10-24",
+    "state": "confirmed",
+    "amount_total": 22731.63,
+    "margin_amount": 12631.72,
+    "lines": [
+      {
+        "product_id": "prod-018",
+        "brand_surface": "Boss",
+        "qty": 29,
+        "unit_price": 168.01,
+        "subtotal": 4872.29
+      },
+      {
+        "product_id": "prod-009",
+        "brand_surface": "Dolce & Gabbana",
+        "qty": 71,
+        "unit_price": 251.54,
+        "subtotal": 17859.34
+      }
+    ]
+  },
+  {
+    "id": "so-0082",
+    "ref": "S10082",
+    "partner_id": "cust-003",
+    "trader_id": "t5",
+    "order_date": "2025-09-10",
+    "state": "confirmed",
+    "amount_total": 17954.35,
+    "margin_amount": 11375.69,
+    "lines": [
+      {
+        "product_id": "prod-040",
+        "brand_surface": "Vichy",
+        "qty": 141,
+        "unit_price": 68.99,
+        "subtotal": 9727.59
+      },
+      {
+        "product_id": "prod-066",
+        "brand_surface": "NARS",
+        "qty": 29,
+        "unit_price": 70.07,
+        "subtotal": 2032.03
+      },
+      {
+        "product_id": "prod-051",
+        "brand_surface": "Garnier",
+        "qty": 93,
+        "unit_price": 66.61,
+        "subtotal": 6194.73
+      }
+    ]
+  },
+  {
+    "id": "so-0083",
+    "ref": "S10083",
+    "partner_id": "cust-004",
+    "trader_id": "t1",
+    "order_date": "2025-11-04",
+    "state": "done",
+    "amount_total": 29949.79,
+    "margin_amount": 17201.0,
+    "lines": [
+      {
+        "product_id": "prod-035",
+        "brand_surface": "The Ordinary",
+        "qty": 122,
+        "unit_price": 64.4,
+        "subtotal": 7856.8
+      },
+      {
+        "product_id": "prod-016",
+        "brand_surface": "JPG",
+        "qty": 118,
+        "unit_price": 130.75,
+        "subtotal": 15428.5
+      },
+      {
+        "product_id": "prod-048",
+        "brand_surface": "Bioderma",
+        "qty": 67,
+        "unit_price": 99.47,
+        "subtotal": 6664.49
+      }
+    ]
+  },
+  {
+    "id": "so-0084",
+    "ref": "S10084",
+    "partner_id": "cust-024",
+    "trader_id": "t5",
+    "order_date": "2026-05-06",
+    "state": "done",
+    "amount_total": 32681.42,
+    "margin_amount": 20598.22,
+    "lines": [
+      {
+        "product_id": "prod-011",
+        "brand_surface": "Versace",
+        "qty": 130,
+        "unit_price": 178.4,
+        "subtotal": 23192.0
+      },
+      {
+        "product_id": "prod-094",
+        "brand_surface": "Rituals",
+        "qty": 159,
+        "unit_price": 28.96,
+        "subtotal": 4604.64
+      },
+      {
+        "product_id": "prod-055",
+        "brand_surface": "Shiseido",
+        "qty": 102,
+        "unit_price": 47.89,
+        "subtotal": 4884.78
+      }
+    ]
+  },
+  {
+    "id": "so-0085",
+    "ref": "S10085",
+    "partner_id": "cust-019",
+    "trader_id": "t3",
+    "order_date": "2025-11-09",
+    "state": "confirmed",
+    "amount_total": 12920.42,
+    "margin_amount": 7501.52,
+    "lines": [
+      {
+        "product_id": "prod-058",
+        "brand_surface": "MAC Cosmetics",
+        "qty": 62,
+        "unit_price": 56.35,
+        "subtotal": 3493.7
+      },
+      {
+        "product_id": "prod-078",
+        "brand_surface": "Kerastase",
+        "qty": 133,
+        "unit_price": 37.7,
+        "subtotal": 5014.1
+      },
+      {
+        "product_id": "prod-092",
+        "brand_surface": "Dove",
+        "qty": 134,
+        "unit_price": 32.93,
+        "subtotal": 4412.62
+      }
+    ]
+  },
+  {
+    "id": "so-0086",
+    "ref": "S10086",
+    "partner_id": "cust-023",
+    "trader_id": "t4",
+    "order_date": "2025-11-20",
+    "state": "done",
+    "amount_total": 34470.78,
+    "margin_amount": 19959.51,
+    "lines": [
+      {
+        "product_id": "prod-036",
+        "brand_surface": "The Ordinary",
+        "qty": 113,
+        "unit_price": 35.36,
+        "subtotal": 3995.68
+      },
+      {
+        "product_id": "prod-082",
+        "brand_surface": "Olaplex",
+        "qty": 27,
+        "unit_price": 36.57,
+        "subtotal": 987.39
+      },
+      {
+        "product_id": "prod-008",
+        "brand_surface": "Dolce and Gabbana",
+        "qty": 175,
+        "unit_price": 121.29,
+        "subtotal": 21225.75
+      },
+      {
+        "product_id": "prod-010",
+        "brand_surface": "Versace",
+        "qty": 28,
+        "unit_price": 295.07,
+        "subtotal": 8261.96
+      }
+    ]
+  },
+  {
+    "id": "so-0087",
+    "ref": "S10087",
+    "partner_id": "cust-024",
+    "trader_id": "t5",
+    "order_date": "2026-03-29",
+    "state": "done",
+    "amount_total": 39791.3,
+    "margin_amount": 24279.96,
+    "lines": [
+      {
+        "product_id": "prod-050",
+        "brand_surface": "Garnier",
+        "qty": 193,
+        "unit_price": 68.71,
+        "subtotal": 13261.03
+      },
+      {
+        "product_id": "prod-073",
+        "brand_surface": "Benefit Cosmetics",
+        "qty": 114,
+        "unit_price": 93.13,
+        "subtotal": 10616.82
+      },
+      {
+        "product_id": "prod-005",
+        "brand_surface": "Chanel",
+        "qty": 133,
+        "unit_price": 119.65,
+        "subtotal": 15913.45
+      }
+    ]
+  },
+  {
+    "id": "so-0088",
+    "ref": "S10088",
+    "partner_id": "cust-034",
+    "trader_id": "t2",
+    "order_date": "2026-01-24",
+    "state": "confirmed",
+    "amount_total": 16551.11,
+    "margin_amount": 9315.62,
+    "lines": [
+      {
+        "product_id": "prod-051",
+        "brand_surface": "Garnier",
+        "qty": 83,
+        "unit_price": 66.61,
+        "subtotal": 5528.63
+      },
+      {
+        "product_id": "prod-041",
+        "brand_surface": "Eucerin",
+        "qty": 26,
+        "unit_price": 39.48,
+        "subtotal": 1026.48
+      },
+      {
+        "product_id": "prod-084",
+        "brand_surface": "Moroccan Oil",
+        "qty": 147,
+        "unit_price": 68.0,
+        "subtotal": 9996.0
+      }
+    ]
+  },
+  {
+    "id": "so-0089",
+    "ref": "S10089",
+    "partner_id": "cust-008",
+    "trader_id": "t5",
+    "order_date": "2026-02-26",
+    "state": "done",
+    "amount_total": 26970.43,
+    "margin_amount": 15022.05,
+    "lines": [
+      {
+        "product_id": "prod-034",
+        "brand_surface": "CeraVe",
+        "qty": 176,
+        "unit_price": 85.49,
+        "subtotal": 15046.24
+      },
+      {
+        "product_id": "prod-091",
+        "brand_surface": "Dove",
+        "qty": 197,
+        "unit_price": 40.22,
+        "subtotal": 7923.34
+      },
+      {
+        "product_id": "prod-058",
+        "brand_surface": "MAC",
+        "qty": 71,
+        "unit_price": 56.35,
+        "subtotal": 4000.85
+      }
+    ]
+  },
+  {
+    "id": "so-0090",
+    "ref": "S10090",
+    "partner_id": "cust-005",
+    "trader_id": "t2",
+    "order_date": "2026-01-03",
+    "state": "confirmed",
+    "amount_total": 72364.99,
+    "margin_amount": 44793.03,
+    "lines": [
+      {
+        "product_id": "prod-023",
+        "brand_surface": "Givenchy",
+        "qty": 190,
+        "unit_price": 248.52,
+        "subtotal": 47218.8
+      },
+      {
+        "product_id": "prod-092",
+        "brand_surface": "Dove",
+        "qty": 36,
+        "unit_price": 32.93,
+        "subtotal": 1185.48
+      },
+      {
+        "product_id": "prod-057",
+        "brand_surface": "MAC",
+        "qty": 96,
+        "unit_price": 56.54,
+        "subtotal": 5427.84
+      },
+      {
+        "product_id": "prod-012",
+        "brand_surface": "Versace",
+        "qty": 199,
+        "unit_price": 93.13,
+        "subtotal": 18532.87
+      }
+    ]
+  },
+  {
+    "id": "so-0091",
+    "ref": "S10091",
+    "partner_id": "cust-033",
+    "trader_id": "t1",
+    "order_date": "2026-04-05",
+    "state": "done",
+    "amount_total": 15394.8,
+    "margin_amount": 8327.04,
+    "lines": [
+      {
+        "product_id": "prod-016",
+        "brand_surface": "JPG",
+        "qty": 80,
+        "unit_price": 130.75,
+        "subtotal": 10460.0
+      },
+      {
+        "product_id": "prod-026",
+        "brand_surface": "Lancome",
+        "qty": 26,
+        "unit_price": 189.8,
+        "subtotal": 4934.8
+      }
+    ]
+  },
+  {
+    "id": "so-0092",
+    "ref": "S10092",
+    "partner_id": "cust-024",
+    "trader_id": "t5",
+    "order_date": "2026-05-13",
+    "state": "done",
+    "amount_total": 29929.75,
+    "margin_amount": 16857.11,
+    "lines": [
+      {
+        "product_id": "prod-071",
+        "brand_surface": "CT",
+        "qty": 99,
+        "unit_price": 70.53,
+        "subtotal": 6982.47
+      },
+      {
+        "product_id": "prod-017",
+        "brand_surface": "CH",
+        "qty": 142,
+        "unit_price": 91.1,
+        "subtotal": 12936.2
+      },
+      {
+        "product_id": "prod-079",
+        "brand_surface": "Redken",
+        "qty": 124,
+        "unit_price": 41.68,
+        "subtotal": 5168.32
+      },
+      {
+        "product_id": "prod-012",
+        "brand_surface": "Versace",
+        "qty": 52,
+        "unit_price": 93.13,
+        "subtotal": 4842.76
+      }
+    ]
+  },
+  {
+    "id": "so-0093",
+    "ref": "S10093",
+    "partner_id": "cust-029",
+    "trader_id": "t2",
+    "order_date": "2025-09-06",
+    "state": "done",
+    "amount_total": 34224.67,
+    "margin_amount": 21854.38,
+    "lines": [
+      {
+        "product_id": "prod-088",
+        "brand_surface": "Pantene",
+        "qty": 183,
+        "unit_price": 57.87,
+        "subtotal": 10590.21
+      },
+      {
+        "product_id": "prod-067",
+        "brand_surface": "Bobbi Brown",
+        "qty": 53,
+        "unit_price": 125.52,
+        "subtotal": 6652.56
+      },
+      {
+        "product_id": "prod-045",
+        "brand_surface": "Olay",
+        "qty": 148,
+        "unit_price": 83.35,
+        "subtotal": 12335.8
+      },
+      {
+        "product_id": "prod-017",
+        "brand_surface": "Carolina Herrera",
+        "qty": 51,
+        "unit_price": 91.1,
+        "subtotal": 4646.1
+      }
+    ]
+  },
+  {
+    "id": "so-0094",
+    "ref": "S10094",
+    "partner_id": "cust-011",
+    "trader_id": "t1",
+    "order_date": "2025-09-23",
+    "state": "done",
+    "amount_total": 20880.9,
+    "margin_amount": 13087.7,
+    "lines": [
+      {
+        "product_id": "prod-091",
+        "brand_surface": "Dove",
+        "qty": 92,
+        "unit_price": 40.22,
+        "subtotal": 3700.24
+      },
+      {
+        "product_id": "prod-029",
+        "brand_surface": "Clinique",
+        "qty": 84,
+        "unit_price": 23.94,
+        "subtotal": 2010.96
+      },
+      {
+        "product_id": "prod-045",
+        "brand_surface": "Oil of Olay",
+        "qty": 182,
+        "unit_price": 83.35,
+        "subtotal": 15169.7
+      }
+    ]
+  },
+  {
+    "id": "so-0095",
+    "ref": "S10095",
+    "partner_id": "cust-020",
+    "trader_id": "t2",
+    "order_date": "2026-03-21",
+    "state": "done",
+    "amount_total": 14651.28,
+    "margin_amount": 7628.31,
+    "lines": [
+      {
+        "product_id": "prod-065",
+        "brand_surface": "NARS",
+        "qty": 171,
+        "unit_price": 85.68,
+        "subtotal": 14651.28
+      }
+    ]
+  },
+  {
+    "id": "so-0096",
+    "ref": "S10096",
+    "partner_id": "cust-040",
+    "trader_id": "t2",
+    "order_date": "2026-05-05",
+    "state": "done",
+    "amount_total": 85736.17,
+    "margin_amount": 48196.6,
+    "lines": [
+      {
+        "product_id": "prod-073",
+        "brand_surface": "Benefit Cosmetics",
+        "qty": 31,
+        "unit_price": 93.13,
+        "subtotal": 2887.03
+      },
+      {
+        "product_id": "prod-006",
+        "brand_surface": "Tom Ford",
+        "qty": 186,
+        "unit_price": 206.68,
+        "subtotal": 38442.48
+      },
+      {
+        "product_id": "prod-004",
+        "brand_surface": "Chanel",
+        "qty": 166,
+        "unit_price": 267.51,
+        "subtotal": 44406.66
+      }
+    ]
+  },
+  {
+    "id": "so-0097",
+    "ref": "S10097",
+    "partner_id": "cust-002",
+    "trader_id": "t2",
+    "order_date": "2026-01-12",
+    "state": "done",
+    "amount_total": 47291.65,
+    "margin_amount": 28867.13,
+    "lines": [
+      {
+        "product_id": "prod-081",
+        "brand_surface": "Olaplex",
+        "qty": 143,
+        "unit_price": 59.8,
+        "subtotal": 8551.4
+      },
+      {
+        "product_id": "prod-070",
+        "brand_surface": "CT",
+        "qty": 195,
+        "unit_price": 132.35,
+        "subtotal": 25808.25
+      },
+      {
+        "product_id": "prod-038",
+        "brand_surface": "Vichy",
+        "qty": 96,
+        "unit_price": 107.19,
+        "subtotal": 10290.24
+      },
+      {
+        "product_id": "prod-083",
+        "brand_surface": "Moroccanoil",
+        "qty": 38,
+        "unit_price": 69.52,
+        "subtotal": 2641.76
+      }
+    ]
+  },
+  {
+    "id": "so-0098",
+    "ref": "S10098",
+    "partner_id": "cust-027",
+    "trader_id": "t5",
+    "order_date": "2026-04-03",
+    "state": "done",
+    "amount_total": 18035.36,
+    "margin_amount": 9157.29,
+    "lines": [
+      {
+        "product_id": "prod-060",
+        "brand_surface": "Maybelline New York",
+        "qty": 100,
+        "unit_price": 70.04,
+        "subtotal": 7004.0
+      },
+      {
+        "product_id": "prod-027",
+        "brand_surface": "Estee Lauder",
+        "qty": 108,
+        "unit_price": 33.11,
+        "subtotal": 3575.88
+      },
+      {
+        "product_id": "prod-044",
+        "brand_surface": "Neutrogena",
+        "qty": 53,
+        "unit_price": 33.26,
+        "subtotal": 1762.78
+      },
+      {
+        "product_id": "prod-078",
+        "brand_surface": "Kérastase",
+        "qty": 151,
+        "unit_price": 37.7,
+        "subtotal": 5692.7
+      }
+    ]
+  },
+  {
+    "id": "so-0099",
+    "ref": "S10099",
+    "partner_id": "cust-030",
+    "trader_id": "t5",
+    "order_date": "2025-10-28",
+    "state": "done",
+    "amount_total": 5345.2,
+    "margin_amount": 3346.56,
+    "lines": [
+      {
+        "product_id": "prod-035",
+        "brand_surface": "The Ordinary",
+        "qty": 83,
+        "unit_price": 64.4,
+        "subtotal": 5345.2
+      }
+    ]
+  },
+  {
+    "id": "so-0100",
+    "ref": "S10100",
+    "partner_id": "cust-019",
+    "trader_id": "t3",
+    "order_date": "2025-12-30",
+    "state": "confirmed",
+    "amount_total": 42152.06,
+    "margin_amount": 21375.19,
+    "lines": [
+      {
+        "product_id": "prod-079",
+        "brand_surface": "Redken",
+        "qty": 167,
+        "unit_price": 41.68,
+        "subtotal": 6960.56
+      },
+      {
+        "product_id": "prod-054",
+        "brand_surface": "Kiehl's",
+        "qty": 68,
+        "unit_price": 28.07,
+        "subtotal": 1908.76
+      },
+      {
+        "product_id": "prod-032",
+        "brand_surface": "LRP",
+        "qty": 147,
+        "unit_price": 42.12,
+        "subtotal": 6191.64
+      },
+      {
+        "product_id": "prod-021",
+        "brand_surface": "CK",
+        "qty": 139,
+        "unit_price": 194.9,
+        "subtotal": 27091.1
+      }
+    ]
+  },
+  {
+    "id": "so-0101",
+    "ref": "S10101",
+    "partner_id": "cust-032",
+    "trader_id": "t2",
+    "order_date": "2025-11-26",
+    "state": "cancel",
+    "amount_total": 13876.37,
+    "margin_amount": 8026.63,
+    "lines": [
+      {
+        "product_id": "prod-012",
+        "brand_surface": "Versace",
+        "qty": 149,
+        "unit_price": 93.13,
+        "subtotal": 13876.37
+      }
+    ]
+  },
+  {
+    "id": "so-0102",
+    "ref": "S10102",
+    "partner_id": "cust-014",
+    "trader_id": "t1",
+    "order_date": "2025-10-18",
+    "state": "confirmed",
+    "amount_total": 35869.77,
+    "margin_amount": 22697.94,
+    "lines": [
+      {
+        "product_id": "prod-007",
+        "brand_surface": "Giorgio Armani",
+        "qty": 93,
+        "unit_price": 341.71,
+        "subtotal": 31779.03
+      },
+      {
+        "product_id": "prod-037",
+        "brand_surface": "The Ordinary",
+        "qty": 47,
+        "unit_price": 61.68,
+        "subtotal": 2898.96
+      },
+      {
+        "product_id": "prod-064",
+        "brand_surface": "NARS",
+        "qty": 54,
+        "unit_price": 22.07,
+        "subtotal": 1191.78
+      }
+    ]
+  },
+  {
+    "id": "so-0103",
+    "ref": "S10103",
+    "partner_id": "cust-026",
+    "trader_id": "t4",
+    "order_date": "2025-08-28",
+    "state": "done",
+    "amount_total": 50524.38,
+    "margin_amount": 26209.99,
+    "lines": [
+      {
+        "product_id": "prod-006",
+        "brand_surface": "Tom Ford",
+        "qty": 163,
+        "unit_price": 206.68,
+        "subtotal": 33688.84
+      },
+      {
+        "product_id": "prod-052",
+        "brand_surface": "Garnier",
+        "qty": 112,
+        "unit_price": 34.38,
+        "subtotal": 3850.56
+      },
+      {
+        "product_id": "prod-007",
+        "brand_surface": "Armani",
+        "qty": 38,
+        "unit_price": 341.71,
+        "subtotal": 12984.98
+      }
+    ]
+  },
+  {
+    "id": "so-0104",
+    "ref": "S10104",
+    "partner_id": "cust-036",
+    "trader_id": "t4",
+    "order_date": "2026-04-16",
+    "state": "confirmed",
+    "amount_total": 13595.88,
+    "margin_amount": 7962.26,
+    "lines": [
+      {
+        "product_id": "prod-080",
+        "brand_surface": "Redken",
+        "qty": 52,
+        "unit_price": 42.95,
+        "subtotal": 2233.4
+      },
+      {
+        "product_id": "prod-088",
+        "brand_surface": "Pantene",
+        "qty": 120,
+        "unit_price": 57.87,
+        "subtotal": 6944.4
+      },
+      {
+        "product_id": "prod-079",
+        "brand_surface": "Redken",
+        "qty": 106,
+        "unit_price": 41.68,
+        "subtotal": 4418.08
+      }
+    ]
+  },
+  {
+    "id": "so-0105",
+    "ref": "S10105",
+    "partner_id": "cust-013",
+    "trader_id": "t4",
+    "order_date": "2025-12-27",
+    "state": "cancel",
+    "amount_total": 46640.88,
+    "margin_amount": 25728.42,
+    "lines": [
+      {
+        "product_id": "prod-065",
+        "brand_surface": "NARS",
+        "qty": 141,
+        "unit_price": 85.68,
+        "subtotal": 12080.88
+      },
+      {
+        "product_id": "prod-006",
+        "brand_surface": "Tom Ford",
+        "qty": 58,
+        "unit_price": 206.68,
+        "subtotal": 11987.44
+      },
+      {
+        "product_id": "prod-005",
+        "brand_surface": "Chanel",
+        "qty": 103,
+        "unit_price": 119.65,
+        "subtotal": 12323.95
+      },
+      {
+        "product_id": "prod-018",
+        "brand_surface": "Boss",
+        "qty": 61,
+        "unit_price": 168.01,
+        "subtotal": 10248.61
+      }
+    ]
+  },
+  {
+    "id": "so-0106",
+    "ref": "S10106",
+    "partner_id": "cust-020",
+    "trader_id": "t2",
+    "order_date": "2025-10-08",
+    "state": "done",
+    "amount_total": 28067.31,
+    "margin_amount": 15070.38,
+    "lines": [
+      {
+        "product_id": "prod-065",
+        "brand_surface": "NARS",
+        "qty": 164,
+        "unit_price": 85.68,
+        "subtotal": 14051.52
+      },
+      {
+        "product_id": "prod-066",
+        "brand_surface": "NARS",
+        "qty": 141,
+        "unit_price": 70.07,
+        "subtotal": 9879.87
+      },
+      {
+        "product_id": "prod-069",
+        "brand_surface": "Bobbi Brown",
+        "qty": 114,
+        "unit_price": 36.28,
+        "subtotal": 4135.92
+      }
+    ]
+  },
+  {
+    "id": "so-0107",
+    "ref": "S10107",
+    "partner_id": "cust-027",
+    "trader_id": "t5",
+    "order_date": "2026-06-02",
+    "state": "done",
+    "amount_total": 14079.02,
+    "margin_amount": 8439.45,
+    "lines": [
+      {
+        "product_id": "prod-093",
+        "brand_surface": "L Occitane",
+        "qty": 172,
+        "unit_price": 55.46,
+        "subtotal": 9539.12
+      },
+      {
+        "product_id": "prod-089",
+        "brand_surface": "The Body Shop",
+        "qty": 87,
+        "unit_price": 29.5,
+        "subtotal": 2566.5
+      },
+      {
+        "product_id": "prod-081",
+        "brand_surface": "Olaplex",
+        "qty": 33,
+        "unit_price": 59.8,
+        "subtotal": 1973.4
+      }
+    ]
+  },
+  {
+    "id": "so-0108",
+    "ref": "S10108",
+    "partner_id": "cust-040",
+    "trader_id": "t2",
+    "order_date": "2025-08-26",
+    "state": "done",
+    "amount_total": 51668.98,
+    "margin_amount": 32061.72,
+    "lines": [
+      {
+        "product_id": "prod-019",
+        "brand_surface": "Hugo Boss",
+        "qty": 199,
+        "unit_price": 135.57,
+        "subtotal": 26978.43
+      },
+      {
+        "product_id": "prod-088",
+        "brand_surface": "Pantene",
+        "qty": 68,
+        "unit_price": 57.87,
+        "subtotal": 3935.16
+      },
+      {
+        "product_id": "prod-032",
+        "brand_surface": "La Roche Posay",
+        "qty": 132,
+        "unit_price": 42.12,
+        "subtotal": 5559.84
+      },
+      {
+        "product_id": "prod-005",
+        "brand_surface": "Chanel",
+        "qty": 127,
+        "unit_price": 119.65,
+        "subtotal": 15195.55
+      }
+    ]
+  },
+  {
+    "id": "so-0109",
+    "ref": "S10109",
+    "partner_id": "cust-014",
+    "trader_id": "t1",
+    "order_date": "2026-05-15",
+    "state": "done",
+    "amount_total": 37169.78,
+    "margin_amount": 19503.23,
+    "lines": [
+      {
+        "product_id": "prod-065",
+        "brand_surface": "NARS",
+        "qty": 200,
+        "unit_price": 85.68,
+        "subtotal": 17136.0
+      },
+      {
+        "product_id": "prod-079",
+        "brand_surface": "Redken",
+        "qty": 152,
+        "unit_price": 41.68,
+        "subtotal": 6335.36
+      },
+      {
+        "product_id": "prod-061",
+        "brand_surface": "Revlon",
+        "qty": 163,
+        "unit_price": 50.46,
+        "subtotal": 8224.98
+      },
+      {
+        "product_id": "prod-094",
+        "brand_surface": "Rituals",
+        "qty": 189,
+        "unit_price": 28.96,
+        "subtotal": 5473.44
+      }
+    ]
+  },
+  {
+    "id": "so-0110",
+    "ref": "S10110",
+    "partner_id": "cust-021",
+    "trader_id": "t1",
+    "order_date": "2025-12-22",
+    "state": "done",
+    "amount_total": 27638.65,
+    "margin_amount": 17627.86,
+    "lines": [
+      {
+        "product_id": "prod-059",
+        "brand_surface": "Maybelline New York",
+        "qty": 159,
+        "unit_price": 129.79,
+        "subtotal": 20636.61
+      },
+      {
+        "product_id": "prod-069",
+        "brand_surface": "Bobbi Brown",
+        "qty": 193,
+        "unit_price": 36.28,
+        "subtotal": 7002.04
+      }
+    ]
+  },
+  {
+    "id": "so-0111",
+    "ref": "S10111",
+    "partner_id": "cust-013",
+    "trader_id": "t4",
+    "order_date": "2026-01-14",
+    "state": "done",
+    "amount_total": 9306.19,
+    "margin_amount": 5414.39,
+    "lines": [
+      {
+        "product_id": "prod-036",
+        "brand_surface": "The Ordinary",
+        "qty": 77,
+        "unit_price": 35.36,
+        "subtotal": 2722.72
+      },
+      {
+        "product_id": "prod-072",
+        "brand_surface": "Fenty Beauty",
+        "qty": 93,
+        "unit_price": 70.79,
+        "subtotal": 6583.47
+      }
+    ]
+  },
+  {
+    "id": "so-0112",
+    "ref": "S10112",
+    "partner_id": "cust-032",
+    "trader_id": "t2",
+    "order_date": "2026-01-26",
+    "state": "cancel",
+    "amount_total": 34789.29,
+    "margin_amount": 21446.29,
+    "lines": [
+      {
+        "product_id": "prod-062",
+        "brand_surface": "Urban Decay",
+        "qty": 93,
+        "unit_price": 133.2,
+        "subtotal": 12387.6
+      },
+      {
+        "product_id": "prod-045",
+        "brand_surface": "Oil of Olay",
+        "qty": 166,
+        "unit_price": 83.35,
+        "subtotal": 13836.1
+      },
+      {
+        "product_id": "prod-072",
+        "brand_surface": "Fenty",
+        "qty": 121,
+        "unit_price": 70.79,
+        "subtotal": 8565.59
+      }
+    ]
+  },
+  {
+    "id": "so-0113",
+    "ref": "S10113",
+    "partner_id": "cust-010",
+    "trader_id": "t2",
+    "order_date": "2026-05-06",
+    "state": "done",
+    "amount_total": 38531.66,
+    "margin_amount": 18457.13,
+    "lines": [
+      {
+        "product_id": "prod-006",
+        "brand_surface": "TF",
+        "qty": 108,
+        "unit_price": 206.68,
+        "subtotal": 22321.44
+      },
+      {
+        "product_id": "prod-037",
+        "brand_surface": "The Ordinary",
+        "qty": 187,
+        "unit_price": 61.68,
+        "subtotal": 11534.16
+      },
+      {
+        "product_id": "prod-092",
+        "brand_surface": "Dove",
+        "qty": 142,
+        "unit_price": 32.93,
+        "subtotal": 4676.06
+      }
+    ]
+  },
+  {
+    "id": "so-0114",
+    "ref": "S10114",
+    "partner_id": "cust-035",
+    "trader_id": "t4",
+    "order_date": "2026-04-06",
+    "state": "done",
+    "amount_total": 20117.03,
+    "margin_amount": 11668.83,
+    "lines": [
+      {
+        "product_id": "prod-072",
+        "brand_surface": "Fenty Beauty",
+        "qty": 47,
+        "unit_price": 70.79,
+        "subtotal": 3327.13
+      },
+      {
+        "product_id": "prod-090",
+        "brand_surface": "Dove",
+        "qty": 82,
+        "unit_price": 54.75,
+        "subtotal": 4489.5
+      },
+      {
+        "product_id": "prod-035",
+        "brand_surface": "The Ordinary",
+        "qty": 191,
+        "unit_price": 64.4,
+        "subtotal": 12300.4
+      }
+    ]
+  },
+  {
+    "id": "so-0115",
+    "ref": "S10115",
+    "partner_id": "cust-004",
+    "trader_id": "t1",
+    "order_date": "2025-12-28",
+    "state": "done",
+    "amount_total": 10897.6,
+    "margin_amount": 5152.0,
+    "lines": [
+      {
+        "product_id": "prod-053",
+        "brand_surface": "Kiehl's",
+        "qty": 140,
+        "unit_price": 77.84,
+        "subtotal": 10897.6
+      }
+    ]
+  },
+  {
+    "id": "so-0116",
+    "ref": "S10116",
+    "partner_id": "cust-009",
+    "trader_id": "t4",
+    "order_date": "2026-03-27",
+    "state": "done",
+    "amount_total": 8745.72,
+    "margin_amount": 4849.64,
+    "lines": [
+      {
+        "product_id": "prod-071",
+        "brand_surface": "CT",
+        "qty": 124,
+        "unit_price": 70.53,
+        "subtotal": 8745.72
+      }
+    ]
+  },
+  {
+    "id": "so-0117",
+    "ref": "S10117",
+    "partner_id": "cust-013",
+    "trader_id": "t4",
+    "order_date": "2026-05-16",
+    "state": "confirmed",
+    "amount_total": 15653.5,
+    "margin_amount": 8006.36,
+    "lines": [
+      {
+        "product_id": "prod-042",
+        "brand_surface": "Neutrogena",
+        "qty": 42,
+        "unit_price": 37.67,
+        "subtotal": 1582.14
+      },
+      {
+        "product_id": "prod-037",
+        "brand_surface": "The Ordinary",
+        "qty": 156,
+        "unit_price": 61.68,
+        "subtotal": 9622.08
+      },
+      {
+        "product_id": "prod-083",
+        "brand_surface": "Moroccan Oil",
+        "qty": 64,
+        "unit_price": 69.52,
+        "subtotal": 4449.28
+      }
+    ]
+  },
+  {
+    "id": "so-0118",
+    "ref": "S10118",
+    "partner_id": "cust-012",
+    "trader_id": "t3",
+    "order_date": "2025-10-05",
+    "state": "confirmed",
+    "amount_total": 4462.87,
+    "margin_amount": 2811.32,
+    "lines": [
+      {
+        "product_id": "prod-051",
+        "brand_surface": "Garnier",
+        "qty": 67,
+        "unit_price": 66.61,
+        "subtotal": 4462.87
+      }
+    ]
+  },
+  {
+    "id": "so-0119",
+    "ref": "S10119",
+    "partner_id": "cust-001",
+    "trader_id": "t1",
+    "order_date": "2025-12-26",
+    "state": "done",
+    "amount_total": 23096.08,
+    "margin_amount": 13723.26,
+    "lines": [
+      {
+        "product_id": "prod-073",
+        "brand_surface": "Benefit Cosmetics",
+        "qty": 92,
+        "unit_price": 93.13,
+        "subtotal": 8567.96
+      },
+      {
+        "product_id": "prod-078",
+        "brand_surface": "Kerastase",
+        "qty": 184,
+        "unit_price": 37.7,
+        "subtotal": 6936.8
+      },
+      {
+        "product_id": "prod-014",
+        "brand_surface": "Gaultier",
+        "qty": 54,
+        "unit_price": 140.58,
+        "subtotal": 7591.32
+      }
+    ]
+  },
+  {
+    "id": "so-0120",
+    "ref": "S10120",
+    "partner_id": "cust-013",
+    "trader_id": "t4",
+    "order_date": "2026-03-24",
+    "state": "confirmed",
+    "amount_total": 11343.6,
+    "margin_amount": 6882.88,
+    "lines": [
+      {
+        "product_id": "prod-043",
+        "brand_surface": "Neutrogena",
+        "qty": 137,
+        "unit_price": 82.8,
+        "subtotal": 11343.6
+      }
+    ]
+  },
+  {
+    "id": "so-0121",
+    "ref": "S10121",
+    "partner_id": "cust-001",
+    "trader_id": "t1",
+    "order_date": "2026-03-09",
+    "state": "done",
+    "amount_total": 19802.13,
+    "margin_amount": 11942.48,
+    "lines": [
+      {
+        "product_id": "prod-038",
+        "brand_surface": "Vichy",
+        "qty": 64,
+        "unit_price": 107.19,
+        "subtotal": 6860.16
+      },
+      {
+        "product_id": "prod-073",
+        "brand_surface": "Benefit Cosmetics",
+        "qty": 129,
+        "unit_price": 93.13,
+        "subtotal": 12013.77
+      },
+      {
+        "product_id": "prod-087",
+        "brand_surface": "Pantene",
+        "qty": 42,
+        "unit_price": 22.1,
+        "subtotal": 928.2
+      }
+    ]
+  },
+  {
+    "id": "so-0122",
+    "ref": "S10122",
+    "partner_id": "cust-012",
+    "trader_id": "t3",
+    "order_date": "2026-02-08",
+    "state": "done",
+    "amount_total": 7242.26,
+    "margin_amount": 4365.28,
+    "lines": [
+      {
+        "product_id": "prod-062",
+        "brand_surface": "UD",
+        "qty": 21,
+        "unit_price": 133.2,
+        "subtotal": 2797.2
+      },
+      {
+        "product_id": "prod-042",
+        "brand_surface": "Neutrogena",
+        "qty": 118,
+        "unit_price": 37.67,
+        "subtotal": 4445.06
+      }
+    ]
+  },
+  {
+    "id": "so-0123",
+    "ref": "S10123",
+    "partner_id": "cust-018",
+    "trader_id": "t4",
+    "order_date": "2025-08-26",
+    "state": "done",
+    "amount_total": 22285.1,
+    "margin_amount": 13352.5,
+    "lines": [
+      {
+        "product_id": "prod-039",
+        "brand_surface": "Vichy",
+        "qty": 22,
+        "unit_price": 71.62,
+        "subtotal": 1575.64
+      },
+      {
+        "product_id": "prod-075",
+        "brand_surface": "Benefit Cosmetics",
+        "qty": 187,
+        "unit_price": 52.32,
+        "subtotal": 9783.84
+      },
+      {
+        "product_id": "prod-093",
+        "brand_surface": "L'Occitane en Provence",
+        "qty": 197,
+        "unit_price": 55.46,
+        "subtotal": 10925.62
+      }
+    ]
+  },
+  {
+    "id": "so-0124",
+    "ref": "S10124",
+    "partner_id": "cust-008",
+    "trader_id": "t5",
+    "order_date": "2025-10-01",
+    "state": "done",
+    "amount_total": 64887.12,
+    "margin_amount": 35392.44,
+    "lines": [
+      {
+        "product_id": "prod-040",
+        "brand_surface": "Vichy",
+        "qty": 200,
+        "unit_price": 68.99,
+        "subtotal": 13798.0
+      },
+      {
+        "product_id": "prod-021",
+        "brand_surface": "Calvin Klein",
+        "qty": 196,
+        "unit_price": 194.9,
+        "subtotal": 38200.4
+      },
+      {
+        "product_id": "prod-052",
+        "brand_surface": "Garnier",
+        "qty": 183,
+        "unit_price": 34.38,
+        "subtotal": 6291.54
+      },
+      {
+        "product_id": "prod-088",
+        "brand_surface": "Pantene",
+        "qty": 114,
+        "unit_price": 57.87,
+        "subtotal": 6597.18
+      }
+    ]
+  },
+  {
+    "id": "so-0125",
+    "ref": "S10125",
+    "partner_id": "cust-009",
+    "trader_id": "t4",
+    "order_date": "2025-11-15",
+    "state": "done",
+    "amount_total": 70053.58,
+    "margin_amount": 43587.72,
+    "lines": [
+      {
+        "product_id": "prod-020",
+        "brand_surface": "Boss",
+        "qty": 199,
+        "unit_price": 156.93,
+        "subtotal": 31229.07
+      },
+      {
+        "product_id": "prod-059",
+        "brand_surface": "Maybelline",
+        "qty": 157,
+        "unit_price": 129.79,
+        "subtotal": 20377.03
+      },
+      {
+        "product_id": "prod-078",
+        "brand_surface": "Kérastase",
+        "qty": 83,
+        "unit_price": 37.7,
+        "subtotal": 3129.1
+      },
+      {
+        "product_id": "prod-048",
+        "brand_surface": "Bioderma",
+        "qty": 154,
+        "unit_price": 99.47,
+        "subtotal": 15318.38
+      }
+    ]
+  },
+  {
+    "id": "so-0126",
+    "ref": "S10126",
+    "partner_id": "cust-024",
+    "trader_id": "t5",
+    "order_date": "2026-04-19",
+    "state": "done",
+    "amount_total": 3259.55,
+    "margin_amount": 1996.4,
+    "lines": [
+      {
+        "product_id": "prod-073",
+        "brand_surface": "Benefit",
+        "qty": 35,
+        "unit_price": 93.13,
+        "subtotal": 3259.55
+      }
+    ]
+  },
+  {
+    "id": "so-0127",
+    "ref": "S10127",
+    "partner_id": "cust-010",
+    "trader_id": "t2",
+    "order_date": "2025-11-01",
+    "state": "done",
+    "amount_total": 23058.71,
+    "margin_amount": 14518.64,
+    "lines": [
+      {
+        "product_id": "prod-042",
+        "brand_surface": "Neutrogena",
+        "qty": 49,
+        "unit_price": 37.67,
+        "subtotal": 1845.83
+      },
+      {
+        "product_id": "prod-067",
+        "brand_surface": "Bobbi Brown",
+        "qty": 169,
+        "unit_price": 125.52,
+        "subtotal": 21212.88
+      }
+    ]
+  },
+  {
+    "id": "so-0128",
+    "ref": "S10128",
+    "partner_id": "cust-033",
+    "trader_id": "t1",
+    "order_date": "2025-11-15",
+    "state": "done",
+    "amount_total": 56894.16,
+    "margin_amount": 34427.88,
+    "lines": [
+      {
+        "product_id": "prod-008",
+        "brand_surface": "Dolce & Gabbana",
+        "qty": 136,
+        "unit_price": 121.29,
+        "subtotal": 16495.44
+      },
+      {
+        "product_id": "prod-059",
+        "brand_surface": "Maybelline New York",
+        "qty": 163,
+        "unit_price": 129.79,
+        "subtotal": 21155.77
+      },
+      {
+        "product_id": "prod-017",
+        "brand_surface": "CH",
+        "qty": 192,
+        "unit_price": 91.1,
+        "subtotal": 17491.2
+      },
+      {
+        "product_id": "prod-066",
+        "brand_surface": "NARS",
+        "qty": 25,
+        "unit_price": 70.07,
+        "subtotal": 1751.75
+      }
+    ]
+  },
+  {
+    "id": "so-0129",
+    "ref": "S10129",
+    "partner_id": "cust-001",
+    "trader_id": "t1",
+    "order_date": "2026-05-23",
+    "state": "done",
+    "amount_total": 65415.89,
+    "margin_amount": 38773.18,
+    "lines": [
+      {
+        "product_id": "prod-075",
+        "brand_surface": "Benefit Cosmetics",
+        "qty": 128,
+        "unit_price": 52.32,
+        "subtotal": 6696.96
+      },
+      {
+        "product_id": "prod-010",
+        "brand_surface": "Versace",
+        "qty": 199,
+        "unit_price": 295.07,
+        "subtotal": 58718.93
+      }
+    ]
+  },
+  {
+    "id": "so-0130",
+    "ref": "S10130",
+    "partner_id": "cust-004",
+    "trader_id": "t1",
+    "order_date": "2026-05-30",
+    "state": "done",
+    "amount_total": 4692.78,
+    "margin_amount": 2552.85,
+    "lines": [
+      {
+        "product_id": "prod-061",
+        "brand_surface": "Revlon",
+        "qty": 93,
+        "unit_price": 50.46,
+        "subtotal": 4692.78
+      }
+    ]
+  },
+  {
+    "id": "so-0131",
+    "ref": "S10131",
+    "partner_id": "cust-009",
+    "trader_id": "t4",
+    "order_date": "2025-09-12",
+    "state": "confirmed",
+    "amount_total": 45307.33,
+    "margin_amount": 28977.18,
+    "lines": [
+      {
+        "product_id": "prod-048",
+        "brand_surface": "Bioderma",
+        "qty": 54,
+        "unit_price": 99.47,
+        "subtotal": 5371.38
+      },
+      {
+        "product_id": "prod-049",
+        "brand_surface": "L'Oreal",
+        "qty": 50,
+        "unit_price": 68.74,
+        "subtotal": 3437.0
+      },
+      {
+        "product_id": "prod-058",
+        "brand_surface": "M.A.C",
+        "qty": 157,
+        "unit_price": 56.35,
+        "subtotal": 8846.95
+      },
+      {
+        "product_id": "prod-011",
+        "brand_surface": "Versace",
+        "qty": 155,
+        "unit_price": 178.4,
+        "subtotal": 27652.0
+      }
+    ]
+  },
+  {
+    "id": "so-0132",
+    "ref": "S10132",
+    "partner_id": "cust-015",
+    "trader_id": "t5",
+    "order_date": "2026-01-14",
+    "state": "confirmed",
+    "amount_total": 27377.82,
+    "margin_amount": 17726.1,
+    "lines": [
+      {
+        "product_id": "prod-003",
+        "brand_surface": "CD",
+        "qty": 138,
+        "unit_price": 198.39,
+        "subtotal": 27377.82
+      }
+    ]
+  },
+  {
+    "id": "so-0133",
+    "ref": "S10133",
+    "partner_id": "cust-028",
+    "trader_id": "t4",
+    "order_date": "2026-03-28",
+    "state": "done",
+    "amount_total": 48556.32,
+    "margin_amount": 30202.89,
+    "lines": [
+      {
+        "product_id": "prod-030",
+        "brand_surface": "Clinique",
+        "qty": 90,
+        "unit_price": 80.57,
+        "subtotal": 7251.3
+      },
+      {
+        "product_id": "prod-032",
+        "brand_surface": "La Roche-Posay",
+        "qty": 48,
+        "unit_price": 42.12,
+        "subtotal": 2021.76
+      },
+      {
+        "product_id": "prod-059",
+        "brand_surface": "Maybelline New York",
+        "qty": 189,
+        "unit_price": 129.79,
+        "subtotal": 24530.31
+      },
+      {
+        "product_id": "prod-045",
+        "brand_surface": "Olay",
+        "qty": 177,
+        "unit_price": 83.35,
+        "subtotal": 14752.95
+      }
+    ]
+  },
+  {
+    "id": "so-0134",
+    "ref": "S10134",
+    "partner_id": "cust-005",
+    "trader_id": "t2",
+    "order_date": "2026-05-29",
+    "state": "done",
+    "amount_total": 8082.88,
+    "margin_amount": 4869.56,
+    "lines": [
+      {
+        "product_id": "prod-077",
+        "brand_surface": "e.l.f.",
+        "qty": 134,
+        "unit_price": 60.32,
+        "subtotal": 8082.88
+      }
+    ]
+  },
+  {
+    "id": "so-0135",
+    "ref": "S10135",
+    "partner_id": "cust-003",
+    "trader_id": "t5",
+    "order_date": "2026-05-18",
+    "state": "confirmed",
+    "amount_total": 52633.68,
+    "margin_amount": 31568.35,
+    "lines": [
+      {
+        "product_id": "prod-057",
+        "brand_surface": "MAC Cosmetics",
+        "qty": 55,
+        "unit_price": 56.54,
+        "subtotal": 3109.7
+      },
+      {
+        "product_id": "prod-030",
+        "brand_surface": "Clinique",
+        "qty": 94,
+        "unit_price": 80.57,
+        "subtotal": 7573.58
+      },
+      {
+        "product_id": "prod-070",
+        "brand_surface": "CT",
+        "qty": 167,
+        "unit_price": 132.35,
+        "subtotal": 22102.45
+      },
+      {
+        "product_id": "prod-028",
+        "brand_surface": "EL",
+        "qty": 167,
+        "unit_price": 118.85,
+        "subtotal": 19847.95
+      }
+    ]
+  },
+  {
+    "id": "so-0136",
+    "ref": "S10136",
+    "partner_id": "cust-021",
+    "trader_id": "t1",
+    "order_date": "2025-09-22",
+    "state": "done",
+    "amount_total": 18457.84,
+    "margin_amount": 11326.8,
+    "lines": [
+      {
+        "product_id": "prod-039",
+        "brand_surface": "Vichy",
+        "qty": 76,
+        "unit_price": 71.62,
+        "subtotal": 5443.12
+      },
+      {
+        "product_id": "prod-019",
+        "brand_surface": "Boss",
+        "qty": 96,
+        "unit_price": 135.57,
+        "subtotal": 13014.72
+      }
+    ]
+  },
+  {
+    "id": "so-0137",
+    "ref": "S10137",
+    "partner_id": "cust-038",
+    "trader_id": "t1",
+    "order_date": "2025-11-09",
+    "state": "confirmed",
+    "amount_total": 10394.8,
+    "margin_amount": 6410.26,
+    "lines": [
+      {
+        "product_id": "prod-081",
+        "brand_surface": "Olaplex",
+        "qty": 162,
+        "unit_price": 59.8,
+        "subtotal": 9687.6
+      },
+      {
+        "product_id": "prod-087",
+        "brand_surface": "Pantene",
+        "qty": 32,
+        "unit_price": 22.1,
+        "subtotal": 707.2
+      }
+    ]
+  },
+  {
+    "id": "so-0138",
+    "ref": "S10138",
+    "partner_id": "cust-025",
+    "trader_id": "t1",
+    "order_date": "2026-03-31",
+    "state": "done",
+    "amount_total": 13441.73,
+    "margin_amount": 6440.06,
+    "lines": [
+      {
+        "product_id": "prod-090",
+        "brand_surface": "Dove",
+        "qty": 96,
+        "unit_price": 54.75,
+        "subtotal": 5256.0
+      },
+      {
+        "product_id": "prod-054",
+        "brand_surface": "Kiehls",
+        "qty": 67,
+        "unit_price": 28.07,
+        "subtotal": 1880.69
+      },
+      {
+        "product_id": "prod-053",
+        "brand_surface": "Kiehl's",
+        "qty": 81,
+        "unit_price": 77.84,
+        "subtotal": 6305.04
+      }
+    ]
+  },
+  {
+    "id": "so-0139",
+    "ref": "S10139",
+    "partner_id": "cust-010",
+    "trader_id": "t2",
+    "order_date": "2025-09-03",
+    "state": "confirmed",
+    "amount_total": 36759.64,
+    "margin_amount": 19840.37,
+    "lines": [
+      {
+        "product_id": "prod-008",
+        "brand_surface": "D&G",
+        "qty": 155,
+        "unit_price": 121.29,
+        "subtotal": 18799.95
+      },
+      {
+        "product_id": "prod-072",
+        "brand_surface": "Fenty Beauty",
+        "qty": 119,
+        "unit_price": 70.79,
+        "subtotal": 8424.01
+      },
+      {
+        "product_id": "prod-053",
+        "brand_surface": "Kiehl's",
+        "qty": 85,
+        "unit_price": 77.84,
+        "subtotal": 6616.4
+      },
+      {
+        "product_id": "prod-054",
+        "brand_surface": "Kiehl's",
+        "qty": 104,
+        "unit_price": 28.07,
+        "subtotal": 2919.28
+      }
+    ]
+  },
+  {
+    "id": "so-0140",
+    "ref": "S10140",
+    "partner_id": "cust-024",
+    "trader_id": "t5",
+    "order_date": "2026-03-10",
+    "state": "done",
+    "amount_total": 1197.24,
+    "margin_amount": 741.84,
+    "lines": [
+      {
+        "product_id": "prod-069",
+        "brand_surface": "Bobbi Brown",
+        "qty": 33,
+        "unit_price": 36.28,
+        "subtotal": 1197.24
+      }
+    ]
+  },
+  {
+    "id": "so-0141",
+    "ref": "S10141",
+    "partner_id": "cust-039",
+    "trader_id": "t3",
+    "order_date": "2026-03-11",
+    "state": "done",
+    "amount_total": 50161.9,
+    "margin_amount": 29828.2,
+    "lines": [
+      {
+        "product_id": "prod-010",
+        "brand_surface": "Versace",
+        "qty": 170,
+        "unit_price": 295.07,
+        "subtotal": 50161.9
+      }
+    ]
+  },
+  {
+    "id": "so-0142",
+    "ref": "S10142",
+    "partner_id": "cust-022",
+    "trader_id": "t5",
+    "order_date": "2026-04-16",
+    "state": "done",
+    "amount_total": 79504.96,
+    "margin_amount": 47168.14,
+    "lines": [
+      {
+        "product_id": "prod-002",
+        "brand_surface": "Christian Dior",
+        "qty": 142,
+        "unit_price": 210.23,
+        "subtotal": 29852.66
+      },
+      {
+        "product_id": "prod-028",
+        "brand_surface": "EL",
+        "qty": 198,
+        "unit_price": 118.85,
+        "subtotal": 23532.3
+      },
+      {
+        "product_id": "prod-025",
+        "brand_surface": "Lancôme",
+        "qty": 200,
+        "unit_price": 130.6,
+        "subtotal": 26120.0
+      }
+    ]
+  },
+  {
+    "id": "so-0143",
+    "ref": "S10143",
+    "partner_id": "cust-016",
+    "trader_id": "t1",
+    "order_date": "2025-09-15",
+    "state": "done",
+    "amount_total": 26053.48,
+    "margin_amount": 12966.84,
+    "lines": [
+      {
+        "product_id": "prod-037",
+        "brand_surface": "The Ordinary",
+        "qty": 186,
+        "unit_price": 61.68,
+        "subtotal": 11472.48
+      },
+      {
+        "product_id": "prod-049",
+        "brand_surface": "Loreal",
+        "qty": 98,
+        "unit_price": 68.74,
+        "subtotal": 6736.52
+      },
+      {
+        "product_id": "prod-060",
+        "brand_surface": "Maybelline New York",
+        "qty": 112,
+        "unit_price": 70.04,
+        "subtotal": 7844.48
+      }
+    ]
+  },
+  {
+    "id": "so-0144",
+    "ref": "S10144",
+    "partner_id": "cust-031",
+    "trader_id": "t4",
+    "order_date": "2025-11-16",
+    "state": "done",
+    "amount_total": 9533.65,
+    "margin_amount": 5714.02,
+    "lines": [
+      {
+        "product_id": "prod-027",
+        "brand_surface": "EL",
+        "qty": 31,
+        "unit_price": 33.11,
+        "subtotal": 1026.41
+      },
+      {
+        "product_id": "prod-048",
+        "brand_surface": "Bioderma",
+        "qty": 76,
+        "unit_price": 99.47,
+        "subtotal": 7559.72
+      },
+      {
+        "product_id": "prod-041",
+        "brand_surface": "Eucerin",
+        "qty": 24,
+        "unit_price": 39.48,
+        "subtotal": 947.52
+      }
+    ]
+  },
+  {
+    "id": "so-0145",
+    "ref": "S10145",
+    "partner_id": "cust-038",
+    "trader_id": "t1",
+    "order_date": "2026-02-18",
+    "state": "done",
+    "amount_total": 66978.14,
+    "margin_amount": 40212.16,
+    "lines": [
+      {
+        "product_id": "prod-038",
+        "brand_surface": "Vichy",
+        "qty": 117,
+        "unit_price": 107.19,
+        "subtotal": 12541.23
+      },
+      {
+        "product_id": "prod-020",
+        "brand_surface": "Boss",
+        "qty": 147,
+        "unit_price": 156.93,
+        "subtotal": 23068.71
+      },
+      {
+        "product_id": "prod-026",
+        "brand_surface": "Lancome",
+        "qty": 85,
+        "unit_price": 189.8,
+        "subtotal": 16133.0
+      },
+      {
+        "product_id": "prod-043",
+        "brand_surface": "Neutrogena",
+        "qty": 184,
+        "unit_price": 82.8,
+        "subtotal": 15235.2
+      }
+    ]
+  },
+  {
+    "id": "so-0146",
+    "ref": "S10146",
+    "partner_id": "cust-023",
+    "trader_id": "t4",
+    "order_date": "2025-09-09",
+    "state": "done",
+    "amount_total": 33124.13,
+    "margin_amount": 21521.29,
+    "lines": [
+      {
+        "product_id": "prod-018",
+        "brand_surface": "Hugo Boss",
+        "qty": 145,
+        "unit_price": 168.01,
+        "subtotal": 24361.45
+      },
+      {
+        "product_id": "prod-093",
+        "brand_surface": "L'Occitane",
+        "qty": 158,
+        "unit_price": 55.46,
+        "subtotal": 8762.68
+      }
+    ]
+  },
+  {
+    "id": "so-0147",
+    "ref": "S10147",
+    "partner_id": "cust-005",
+    "trader_id": "t2",
+    "order_date": "2025-11-16",
+    "state": "done",
+    "amount_total": 7687.9,
+    "margin_amount": 4461.05,
+    "lines": [
+      {
+        "product_id": "prod-001",
+        "brand_surface": "YSL",
+        "qty": 55,
+        "unit_price": 139.78,
+        "subtotal": 7687.9
+      }
+    ]
+  },
+  {
+    "id": "so-0148",
+    "ref": "S10148",
+    "partner_id": "cust-010",
+    "trader_id": "t2",
+    "order_date": "2025-09-30",
+    "state": "done",
+    "amount_total": 16163.6,
+    "margin_amount": 10175.52,
+    "lines": [
+      {
+        "product_id": "prod-028",
+        "brand_surface": "Estee Lauder",
+        "qty": 136,
+        "unit_price": 118.85,
+        "subtotal": 16163.6
+      }
+    ]
+  },
+  {
+    "id": "so-0149",
+    "ref": "S10149",
+    "partner_id": "cust-040",
+    "trader_id": "t2",
+    "order_date": "2025-09-16",
+    "state": "done",
+    "amount_total": 51899.99,
+    "margin_amount": 31760.66,
+    "lines": [
+      {
+        "product_id": "prod-085",
+        "brand_surface": "Moroccan Oil",
+        "qty": 161,
+        "unit_price": 40.6,
+        "subtotal": 6536.6
+      },
+      {
+        "product_id": "prod-063",
+        "brand_surface": "Urban Decay",
+        "qty": 23,
+        "unit_price": 88.38,
+        "subtotal": 2032.74
+      },
+      {
+        "product_id": "prod-003",
+        "brand_surface": "CD",
+        "qty": 155,
+        "unit_price": 198.39,
+        "subtotal": 30750.45
+      },
+      {
+        "product_id": "prod-001",
+        "brand_surface": "Saint Laurent",
+        "qty": 90,
+        "unit_price": 139.78,
+        "subtotal": 12580.2
+      }
+    ]
+  },
+  {
+    "id": "so-0150",
+    "ref": "S10150",
+    "partner_id": "cust-028",
+    "trader_id": "t4",
+    "order_date": "2025-09-20",
+    "state": "confirmed",
+    "amount_total": 13452.84,
+    "margin_amount": 7392.32,
+    "lines": [
+      {
+        "product_id": "prod-014",
+        "brand_surface": "Jean Paul Gaultier",
+        "qty": 58,
+        "unit_price": 140.58,
+        "subtotal": 8153.64
+      },
+      {
+        "product_id": "prod-013",
+        "brand_surface": "Rabanne",
+        "qty": 69,
+        "unit_price": 76.8,
+        "subtotal": 5299.2
+      }
+    ]
+  },
+  {
+    "id": "so-0151",
+    "ref": "S10151",
+    "partner_id": "cust-reorder",
+    "trader_id": "t5",
+    "order_date": "2026-03-16",
+    "state": "confirmed",
+    "amount_total": 3835.2,
+    "margin_amount": 2455.65,
+    "lines": [
+      {
+        "product_id": "prod-031",
+        "brand_surface": "LRP",
+        "qty": 85,
+        "unit_price": 45.12,
+        "subtotal": 3835.2
+      }
+    ]
+  },
+  {
+    "id": "so-0152",
+    "ref": "S10152",
+    "partner_id": "cust-reorder",
+    "trader_id": "t5",
+    "order_date": "2026-04-15",
+    "state": "confirmed",
+    "amount_total": 1173.12,
+    "margin_amount": 751.14,
+    "lines": [
+      {
+        "product_id": "prod-031",
+        "brand_surface": "LRP",
+        "qty": 26,
+        "unit_price": 45.12,
+        "subtotal": 1173.12
+      }
+    ]
+  },
+  {
+    "id": "so-0153",
+    "ref": "S10153",
+    "partner_id": "cust-reorder",
+    "trader_id": "t5",
+    "order_date": "2026-05-15",
+    "state": "confirmed",
+    "amount_total": 5188.8,
+    "margin_amount": 3322.35,
+    "lines": [
+      {
+        "product_id": "prod-031",
+        "brand_surface": "LRP",
+        "qty": 115,
+        "unit_price": 45.12,
+        "subtotal": 5188.8
+      }
+    ]
+  }
+]

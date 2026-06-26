@@ -1,0 +1,848 @@
+[
+  {
+    "id": "inv-001",
+    "product_id": "prod-001",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-002",
+    "product_id": "prod-002",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 40,
+    "qty_reserved": 27,
+    "qty_available": 13,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-003",
+    "product_id": "prod-003",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-004",
+    "product_id": "prod-004",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-005",
+    "product_id": "prod-005",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 40,
+    "qty_reserved": 29,
+    "qty_available": 11,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-006",
+    "product_id": "prod-006",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 600,
+    "qty_reserved": 34,
+    "qty_available": 566,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-007",
+    "product_id": "prod-007",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 31,
+    "qty_available": 89,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-008",
+    "product_id": "prod-008",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 0,
+    "qty_available": 120,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-009",
+    "product_id": "prod-009",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 44,
+    "qty_available": 76,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-010",
+    "product_id": "prod-010",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-011",
+    "product_id": "prod-011",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-012",
+    "product_id": "prod-012",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 300,
+    "qty_reserved": 5,
+    "qty_available": 295,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-013",
+    "product_id": "prod-013",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-014",
+    "product_id": "prod-014",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 42,
+    "qty_available": 78,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-015",
+    "product_id": "prod-015",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 600,
+    "qty_reserved": 45,
+    "qty_available": 555,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-016",
+    "product_id": "prod-016",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 20,
+    "qty_available": 100,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-017",
+    "product_id": "prod-017",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 300,
+    "qty_reserved": 13,
+    "qty_available": 287,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-018",
+    "product_id": "prod-018",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 40,
+    "qty_reserved": 18,
+    "qty_available": 22,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-019",
+    "product_id": "prod-019",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 600,
+    "qty_reserved": 35,
+    "qty_available": 565,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-020",
+    "product_id": "prod-020",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-021",
+    "product_id": "prod-021",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 600,
+    "qty_reserved": 21,
+    "qty_available": 579,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-022",
+    "product_id": "prod-022",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-023",
+    "product_id": "prod-023",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 40,
+    "qty_reserved": 8,
+    "qty_available": 32,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-024",
+    "product_id": "prod-024",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 300,
+    "qty_reserved": 0,
+    "qty_available": 300,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-025",
+    "product_id": "prod-025",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 40,
+    "qty_reserved": 37,
+    "qty_available": 3,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-026",
+    "product_id": "prod-026",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 40,
+    "qty_reserved": 2,
+    "qty_available": 38,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-027",
+    "product_id": "prod-027",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 300,
+    "qty_reserved": 26,
+    "qty_available": 274,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-028",
+    "product_id": "prod-028",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-029",
+    "product_id": "prod-029",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 600,
+    "qty_reserved": 47,
+    "qty_available": 553,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-030",
+    "product_id": "prod-030",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-031",
+    "product_id": "prod-031",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 40,
+    "qty_reserved": 14,
+    "qty_available": 26,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-032",
+    "product_id": "prod-032",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 40,
+    "qty_reserved": 4,
+    "qty_available": 36,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-033",
+    "product_id": "prod-033",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-034",
+    "product_id": "prod-034",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-035",
+    "product_id": "prod-035",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 300,
+    "qty_reserved": 32,
+    "qty_available": 268,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-036",
+    "product_id": "prod-036",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-037",
+    "product_id": "prod-037",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 4,
+    "qty_available": 116,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-038",
+    "product_id": "prod-038",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 300,
+    "qty_reserved": 19,
+    "qty_available": 281,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-039",
+    "product_id": "prod-039",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-040",
+    "product_id": "prod-040",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 35,
+    "qty_available": 85,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-041",
+    "product_id": "prod-041",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 28,
+    "qty_available": 92,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-042",
+    "product_id": "prod-042",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 40,
+    "qty_reserved": 32,
+    "qty_available": 8,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-043",
+    "product_id": "prod-043",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 600,
+    "qty_reserved": 19,
+    "qty_available": 581,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-044",
+    "product_id": "prod-044",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-045",
+    "product_id": "prod-045",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 600,
+    "qty_reserved": 36,
+    "qty_available": 564,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-046",
+    "product_id": "prod-046",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-047",
+    "product_id": "prod-047",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-048",
+    "product_id": "prod-048",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 300,
+    "qty_reserved": 15,
+    "qty_available": 285,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-049",
+    "product_id": "prod-049",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 300,
+    "qty_reserved": 46,
+    "qty_available": 254,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-050",
+    "product_id": "prod-050",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 600,
+    "qty_reserved": 30,
+    "qty_available": 570,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-051",
+    "product_id": "prod-051",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 600,
+    "qty_reserved": 15,
+    "qty_available": 585,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-052",
+    "product_id": "prod-052",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 40,
+    "qty_reserved": 21,
+    "qty_available": 19,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-053",
+    "product_id": "prod-053",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 44,
+    "qty_available": 76,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-054",
+    "product_id": "prod-054",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 40,
+    "qty_reserved": 34,
+    "qty_available": 6,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-055",
+    "product_id": "prod-055",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 300,
+    "qty_reserved": 44,
+    "qty_available": 256,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-056",
+    "product_id": "prod-056",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-057",
+    "product_id": "prod-057",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 14,
+    "qty_available": 106,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-058",
+    "product_id": "prod-058",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 600,
+    "qty_reserved": 43,
+    "qty_available": 557,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-059",
+    "product_id": "prod-059",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 37,
+    "qty_available": 83,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-060",
+    "product_id": "prod-060",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 11,
+    "qty_available": 109,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-061",
+    "product_id": "prod-061",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 40,
+    "qty_reserved": 24,
+    "qty_available": 16,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-062",
+    "product_id": "prod-062",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 1,
+    "qty_available": 119,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-063",
+    "product_id": "prod-063",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 600,
+    "qty_reserved": 4,
+    "qty_available": 596,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-064",
+    "product_id": "prod-064",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-065",
+    "product_id": "prod-065",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 300,
+    "qty_reserved": 13,
+    "qty_available": 287,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-066",
+    "product_id": "prod-066",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 300,
+    "qty_reserved": 38,
+    "qty_available": 262,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-067",
+    "product_id": "prod-067",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-068",
+    "product_id": "prod-068",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 600,
+    "qty_reserved": 12,
+    "qty_available": 588,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-069",
+    "product_id": "prod-069",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 600,
+    "qty_reserved": 49,
+    "qty_available": 551,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-070",
+    "product_id": "prod-070",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 40,
+    "qty_reserved": 34,
+    "qty_available": 6,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-071",
+    "product_id": "prod-071",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 31,
+    "qty_available": 89,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-072",
+    "product_id": "prod-072",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 11,
+    "qty_available": 109,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-073",
+    "product_id": "prod-073",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 46,
+    "qty_available": 74,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-074",
+    "product_id": "prod-074",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 40,
+    "qty_reserved": 28,
+    "qty_available": 12,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-075",
+    "product_id": "prod-075",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-076",
+    "product_id": "prod-076",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 40,
+    "qty_reserved": 21,
+    "qty_available": 19,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-077",
+    "product_id": "prod-077",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 300,
+    "qty_reserved": 12,
+    "qty_available": 288,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-078",
+    "product_id": "prod-078",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 600,
+    "qty_reserved": 45,
+    "qty_available": 555,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-079",
+    "product_id": "prod-079",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 44,
+    "qty_available": 76,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-080",
+    "product_id": "prod-080",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 300,
+    "qty_reserved": 33,
+    "qty_available": 267,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-081",
+    "product_id": "prod-081",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 900,
+    "qty_reserved": 100,
+    "qty_available": 800,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-082",
+    "product_id": "prod-082",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 40,
+    "qty_reserved": 7,
+    "qty_available": 33,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-083",
+    "product_id": "prod-083",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-084",
+    "product_id": "prod-084",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-085",
+    "product_id": "prod-085",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 600,
+    "qty_reserved": 34,
+    "qty_available": 566,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-086",
+    "product_id": "prod-086",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 600,
+    "qty_reserved": 48,
+    "qty_available": 552,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-087",
+    "product_id": "prod-087",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 28,
+    "qty_available": 92,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-088",
+    "product_id": "prod-088",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-089",
+    "product_id": "prod-089",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 0,
+    "qty_reserved": 0,
+    "qty_available": 0,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-090",
+    "product_id": "prod-090",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 300,
+    "qty_reserved": 48,
+    "qty_available": 252,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-091",
+    "product_id": "prod-091",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 28,
+    "qty_available": 92,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-092",
+    "product_id": "prod-092",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 300,
+    "qty_reserved": 39,
+    "qty_available": 261,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-093",
+    "product_id": "prod-093",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 40,
+    "qty_reserved": 5,
+    "qty_available": 35,
+    "reorder_min": 50
+  },
+  {
+    "id": "inv-094",
+    "product_id": "prod-094",
+    "warehouse": "Rotterdam Warehouse",
+    "qty_on_hand": 120,
+    "qty_reserved": 28,
+    "qty_available": 92,
+    "reorder_min": 50
+  }
+]
