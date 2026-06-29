@@ -1,446 +1,288 @@
-# BF Atlas Real-Data Implementation Plan
+# BF Atlas — Phase 1 Implementation Plan (Real-Data Foundation)
 
-## Goal
-
-Keep the current BF Atlas app shell and replace the synthetic POC data flow with a real import, normalization, and matching pipeline built from the client files in `New folder`.
-
-This approach preserves the strongest parts of the current project:
-
-- frontend navigation and screens
-- backend API structure
-- trader-scoped access-control concept
-- alerting and brand-intelligence product direction
-
-The main remaining work is in the data layer, not the UI layer.
+> Branch: `Phase1`. This plan supersedes the original synthetic-POC plan. The
+> objective of Phase 1 is to **replace the synthetic data flow with the real
+> client package**, close the major data gaps, then polish the code so it stays
+> correct and fast on a **large corpus** (the real Odoo export is ~20k products,
+> ~64k sales lines, ~46k purchase lines — and production will be larger).
 
 ---
 
-## Current Situation
+## 0. Guiding principle: real-first, synthesize-only-the-missing — in Odoo shape
 
-The current POC is strong as a clickable product prototype, but it is not yet aligned with the real BF sample package.
+The single rule that governs Phase 1:
 
-What is already in good shape:
+1. **If the client package (`New folder/`) contains the data, use the real data.**
+   Do not generate it.
+2. **If an entity the product needs is *not* in the package, synthesize it — but
+   strictly in the client's own schema and flow** (Odoo-shaped, EAN-keyed,
+   multi-currency, access-controlled), so that swapping in a live read-only Odoo
+   feed later is a near drop-in and the synthetic rows are indistinguishable in
+   shape from real ones.
 
-- FastAPI backend with clear business-domain services and routers
-- React + TypeScript + Tailwind frontend with the main application screens
-- trader-scoped auth and masking model
-- offer inbox, retailer radar, brand maps, and brand catalog screens
-- synthetic pipeline proving the product concept end-to-end
+This keeps the app honest (real history drives every price/margin claim) while
+still letting every screen and alert type function end-to-end.
 
-What is still missing:
+### What is real vs. what we synthesize
 
-- importing the real Excel and CSV files
-- handling large real-world datasets
-- expanding the brand dictionary beyond the current limited catalog
-- barcode/EAN-driven reconciliation
-- multi-currency normalization
-- rebuilding signals and alerts from imported data instead of planted demo scenarios
+| Entity | Source in `New folder/` | Decision |
+|---|---|---|
+| **Products** (name, EAN, brand, category, avg/min purchase, avg/max sale price) | `Products_Info.xlsx` (~20,588 rows, 482 brands) | **REAL** |
+| **Sales history** (product, EAN, qty, unit price, currency, salesperson, date, customer) | `Sales_Order_History.xlsx` (~64k lines, EUR/USD/GBP) | **REAL** |
+| **Purchase history** (product, EAN, unit price, currency, qty, buyer, date, vendor) | `Purchase_Order_History.xlsx` (~46k lines, EUR/USD/GBP/JPY) | **REAL** |
+| **Supplier offers** (3 messy formats) | `offer_1/2/3_supplier.csv` | **REAL** (these are the trial inputs to evaluate) |
+| **Retailer market prices** | `retailer_prices (2).csv` (EUR/USD/GBP) | **REAL** |
+| **Traders** (roster) | Derived from `Salesperson` + `Buyer` columns (~24 unique) | **REAL (derived)** |
+| **Customers / Vendors** (partners) | Derived from `Customer` (~650) + `Vendor` (~428) | **REAL (derived)** |
+| **Team assignment** (5 teams) | Not in package | **SYNTHESIZE** — deterministic assignment of the ~24 real traders into 5 teams |
+| **Demand signals / leads** (NetHunt forward-looking demand) | Not in package | **SYNTHESIZE** — derive "open demand" from recent real sales cadence + a small planted set, in the demand-signal schema |
+| **Live inventory / stock lots** (Lot/Serial) | Not in package | **SYNTHESIZE** — Odoo stock-lot shape, seeded from real products |
+| **Trade model + Matched %** | Not in package (exports are PO/SO level, not Trade level) | **SYNTHESIZE/DEFER** — model the schema, populate a representative subset; full Trade feed is a real-Odoo Phase-2 item |
+| **FX rates** | Not in package | **REAL (live)** — European Central Bank reference rates, with a cached offline fallback |
 
----
-
-## Files To Implement Around
-
-### Product Master
-
-- `New folder/Products_Info.xlsx`
-
-Primary fields observed:
-
-- `Name`
-- `Product/Barcode`
-- `Product Category`
-- `Brand`
-- `Avg. Purchase Price`
-- `Min Purchase Price (mPP)`
-- `Avg. Sale Price`
-- `Max Selling Price (MSP)`
-
-### Sales History
-
-- `New folder/Sales_Order_History.xlsx`
-
-Primary fields observed:
-
-- `Order Lines/Product`
-- `Order Lines/Barcode`
-- `Order Lines/Product Qty`
-- `Order Lines/Unit Price`
-- `Order Lines/Currency`
-- `Salesperson`
-- `Order Date`
-- `Customer`
-
-### Purchase History
-
-- `New folder/Purchase_Order_History.xlsx`
-
-Primary fields observed:
-
-- `Order Lines/Product`
-- `Order Lines/Product/Barcode`
-- `Order Lines/Unit Price`
-- `Order Lines/Currency`
-- `Order Lines/Quantity`
-- `Buyer`
-- `Confirmation Date`
-- `Vendor`
-
-### Supplier Offers
-
-- `New folder/offer_1_supplier.csv`
-- `New folder/offer_2_supplier.csv`
-- `New folder/offer_3_supplier.csv`
-
-Observation:
-
-- these files do not follow one common schema
-- at least one of them is highly messy and needs custom parsing
-
-### Retailer Prices
-
-- `New folder/retailer_prices (2).csv`
-
-Primary fields observed:
-
-- `scan_date`
-- `retailer`
-- `country`
-- `brand`
-- `product_name`
-- `sku_observed`
-- `size`
-- `ean`
-- `current_price`
-- `currency`
-- `in_stock`
+> Honesty note for the client call: every margin/verdict shown is computed from
+> **real** purchase/sale/retailer history. Only relational scaffolding that the
+> export format omits (teams, leads, live stock) is synthetic, and it is clearly
+> tagged as such in the data so it is never mistaken for real history.
 
 ---
 
-## Main Gaps Identified
+## 1. The internal data contract (target schema)
 
-### 1. Brand Coverage Gap
+Canonical, EAN-keyed, currency-normalized tables. All money stored **twice**:
+original (`amount`, `currency`) and comparable (`amount_eur`), plus a
+`fx_rate`/`fx_date` provenance and an `is_comparable` flag.
 
-The current POC brand dictionary is too small for the real package.
+```
+brands(brand_id, canonical_name, category, source)          -- built from Products_Info
+brand_aliases(brand_id, alias_norm)                          -- generated normalisation map
+products(ean, name, brand_id, category,
+         avg_purchase_price_eur, min_purchase_price_eur,
+         avg_sale_price_eur, max_sale_price_eur)             -- Products_Info (prices already EUR)
+traders(trader_id, name, team_id, role)                      -- derived roster + synthetic teams
+teams(team_id, name)                                         -- synthetic (5)
+partners(partner_id, name, kind[customer|vendor], owner_trader_id)  -- derived from SO/PO
+sales_history(ean, qty, unit_price, currency, unit_price_eur,
+              salesperson_trader_id, customer_id, order_date)  -- Sales_Order_History (ffill'd)
+purchase_history(ean, qty, unit_price, currency, unit_price_eur,
+                 buyer_trader_id, vendor_id, confirmation_date) -- Purchase_Order_History (ffill'd)
+supplier_offers(offer_id, source_file, supplier_name, brand_id, ean,
+                product_name, size, qty, unit_price, currency,
+                unit_price_eur, offer_date, match_status)     -- 3 offer adapters
+retailer_prices(scan_date, retailer, country, brand_id, ean,
+                product_name, price, currency, price_eur, in_stock)  -- retailer file
+demand_signals(...)        -- SYNTHESIZED in schema (leads/open demand)
+inventory(ean, lot, qty_available, ...)  -- SYNTHESIZED in Odoo stock shape
+unresolved(source, raw_brand, raw_name, ean, reason)         -- everything we refused to force-match
+fx_rates(date, currency, rate_to_eur, source)                -- ECB
+build_report(metric, value)                                  -- coverage/quality metrics per build
+```
 
-Observed overlap:
-
-- `Products_Info.xlsx`: 482 unique brands, only 43 matched by the current dictionary
-- `retailer_prices (2).csv`: 151 unique brand values, only 8 matched
-
-This is the biggest implementation gap.
-
-### 2. Product Matching Gap
-
-The real files include barcode/EAN fields, but the current POC is built mostly around a smaller synthetic brand-first dataset.
-
-The real implementation should use:
-
-1. barcode/EAN as the primary product key
-2. normalized brand + normalized product name as fallback
-3. unresolved reporting when no safe match exists
-
-### 3. Currency Gap
-
-The real package includes multiple currencies:
-
-- `EUR`
-- `USD`
-- `GBP`
-- `JPY`
-
-The current POC price logic assumes a much simpler environment, so normalization is still needed before reliable comparison and alerting.
-
-### 4. Data Quality Gap
-
-The real package contains:
-
-- inconsistent brand spelling
-- formatting noise
-- incomplete rows
-- flattened exports with blank repeated values
-- inconsistent size formats
-- multiple supplier-offer file layouts
-
-### 5. Signal Generation Gap
-
-The current alerts are driven by planted synthetic scenarios.
-
-The new implementation must derive signals from:
-
-- real product master data
-- sales order history
-- purchase order history
-- supplier offers
-- retailer market prices
+**Join policy (non-negotiable):** EAN is the primary key linking offers ↔
+products ↔ history ↔ retailer. Normalized brand+name is **fallback only**, used
+when EAN is missing/unmatched, and any fallback match is recorded with lower
+confidence. Unmatched rows go to `unresolved` — **never force-matched.**
 
 ---
 
-## Implementation Phases
+## 2. The build pipeline (replaces the synthetic generator)
 
-## Phase 1: Define The Internal Data Contract
+Reshape `data/pipeline/` so `build.py` orchestrates **ingest → normalize → load →
+verify** over the real package, generating only the missing entities:
 
-Goal:
-Map each client file into a stable internal schema.
+```
+data/pipeline/
+├── sources/
+│   ├── products.py        # read Products_Info.xlsx → products + seed brand dictionary
+│   ├── sales.py           # read Sales_Order_History.xlsx (ffill flattened cols)
+│   ├── purchases.py       # read Purchase_Order_History.xlsx (ffill flattened cols)
+│   ├── offers.py          # 3 format adapters → common offer schema
+│   └── retailer.py        # read retailer_prices.csv
+├── normalize/
+│   ├── brands.py          # canonicalisation + alias generation (REWRITTEN, 482 brands)
+│   ├── currency.py        # ECB rates + to_eur(amount, currency, date)
+│   └── clean.py           # decimal commas, units (x50/pcs), tester-EAN, doubled-prefix, size parsing
+├── synth/
+│   ├── teams.py           # assign 24 real traders → 5 teams (deterministic)
+│   ├── demand.py          # derive/plant demand signals in schema
+│   └── inventory.py       # seed live stock lots in Odoo shape
+├── load_db.py             # schema + bulk load (indexed, batched)
+├── build.py               # orchestrate + emit build_report (coverage, unresolved, fx)
+└── reports/_build_report.json
+```
 
-Tasks:
-
-1. Define canonical tables:
-   - `brands`
-   - `brand_aliases`
-   - `products`
-   - `sales_history`
-   - `purchase_history`
-   - `supplier_offers`
-   - `retailer_prices`
-   - `unresolved_matches`
-2. Write field mappings from each input file to the internal schema.
-3. Decide key relationships:
-   - product identity
-   - brand identity
-   - customer/vendor ownership
-   - currency handling
-
-Deliverable:
-
-- a documented import contract for every BF file
-
-## Phase 2: Replace Synthetic Pipeline Inputs
-
-Goal:
-Stop generating fake raw data and build from the real package.
-
-Tasks:
-
-1. Replace `data/pipeline/generate_raw.py` with real import scripts.
-2. Add loaders for:
-   - products
-   - sales history
-   - purchase history
-   - supplier offers
-   - retailer prices
-3. Keep the orchestration idea in `build.py`, but change the sequence to:
-   - import
-   - normalize
-   - load database
-   - verify coverage and unresolved records
-
-Deliverable:
-
-- reproducible database build from the BF sample files only
-
-## Phase 3: Rebuild Brand And Product Normalization
-
-Goal:
-Move from a 50-brand demo dictionary to a real normalization system.
-
-Tasks:
-
-1. Generate the working brand catalog from `Products_Info.xlsx`.
-2. Build brand normalization helpers for:
-   - case differences
-   - punctuation
-   - accents
-   - suffix noise like `Paris`, `Beauty`, etc.
-   - variants like `Y.S.L.` vs `Yves Saint Laurent`
-3. Add product reconciliation by barcode/EAN first.
-4. Add unresolved brand and unresolved product reports.
-
-Deliverable:
-
-- a robust normalization layer that does not silently lose matches
-
-## Phase 4: Add Currency Normalization
-
-Goal:
-Make price comparisons reliable across all input sources.
-
-Tasks:
-
-1. Detect original currency in all imports.
-2. Convert to a common comparison currency for analytics.
-3. Store both:
-   - original price
-   - original currency
-   - normalized comparable price
-4. Flag any row that cannot be safely compared.
-
-Deliverable:
-
-- one trustworthy price basis for alerting and retailer comparison
-
-## Phase 5: Build Real Signals From Imported Data
-
-Goal:
-Generate demand, supply, and market signals from the actual files.
-
-Tasks:
-
-1. From `Sales_Order_History.xlsx`:
-   - derive customer demand history
-   - derive reorder cadence
-   - derive best historical sale price
-2. From `Purchase_Order_History.xlsx`:
-   - derive sourcing history
-   - derive historical buy-side behavior
-   - derive buyer/vendor relationships
-3. From offer files:
-   - generate fresh supplier-offer signals
-4. From retailer prices:
-   - generate external market signals
-
-Deliverable:
-
-- real signal tables replacing synthetic planted scenarios
-
-## Phase 6: Rewrite Matching And Alerts Around Real Data
-
-Goal:
-Make the matching engine use imported BF data rather than demo-only data.
-
-Tasks:
-
-1. Demand-supply matching:
-   - customer-side demand vs supplier offers
-2. External market window:
-   - retailer prices vs available or benchmark buy prices
-3. Reorder reminders:
-   - cadence inferred from real sales history
-4. Offer-to-request:
-   - supplier offer imports matched against relevant demand indicators
-5. Triple-match logic:
-   - only if supported cleanly by the imported sources
-
-Deliverable:
-
-- alert generation backed by real imported records
-
-## Phase 7: Refactor Backend Services With Stable API Shapes
-
-Goal:
-Preserve the good backend structure while changing the data source logic.
-
-Main files likely to change:
-
-- `backend/app/services/matching.py`
-- `backend/app/services/alerts.py`
-- `backend/app/services/brands.py`
-- `backend/app/services/offers.py`
-- `backend/app/services/radar.py`
-- `backend/app/services/relationships.py`
-- `data/pipeline/*`
-
-Tasks:
-
-1. keep router structure where possible
-2. update services to use imported normalized tables
-3. add data-quality reporting where helpful
-
-Deliverable:
-
-- the frontend can keep most of its current contract while backend behavior becomes real-data-driven
-
-## Phase 8: Update Frontend For Real-Data Honesty
-
-Goal:
-Keep the UI, but make it truthful about imported data quality.
-
-Tasks:
-
-1. add indicators for:
-   - unresolved brands
-   - unmatched offers
-   - unknown products
-   - normalized currency basis
-2. remove wording that assumes complete or planted coverage
-3. keep the current page layout and navigation unless the new data requires a change
-
-Deliverable:
-
-- a production-like interface with honest data-state messaging
-
-## Phase 9: Verification And Trial Readiness
-
-Goal:
-Make the implementation defensible and demo-safe.
-
-Tasks:
-
-1. verify import counts by file
-2. verify brand match rates
-3. verify unresolved counts
-4. verify currency conversion coverage
-5. verify alert generation is non-empty and reasonable
-6. add summary checks for data quality
-
-Deliverable:
-
-- a trial-ready build with measurable confidence, not only a demo flow
+The **Trade/Matched% model** is schema-modeled here but populated as a
+representative subset (full live Trade feed is a real-Odoo integration item).
 
 ---
 
-## Recommended Build Order
+## 3. Major gaps to close (do these first, in order)
 
-1. Define schema and field mappings
-2. Import `Products_Info.xlsx`
-3. Import sales history
-4. Import purchase history
-5. Import supplier offers
-6. Import retailer prices
-7. Build brand and product normalization
-8. Add currency normalization
-9. Rework matching and alert generation
-10. Update frontend wording and reporting
-11. Verify results end-to-end
+These are the load-bearing gaps. Each must land with a measurable check.
 
----
+### Gap 1 — Brand coverage (50 → 482)
+- Build the working brand dictionary **from `Products_Info.xlsx`** (482 unique
+  brands), not a hardcoded list.
+- Normalisation must absorb: case, accents (`Hermès`→`hermes`), punctuation
+  (`Y.S.L.`→`ysl`), doubled prefixes (`Electimuss Electimuss…`), and **noise
+  suffixes** seen in retailer data (`" Paris"`, `" Beauty"`, `" London"`,
+  truncations like `The`/`La`/`AS`).
+- Keep a curated alias set for known multi-name brands (YSL / Saint Laurent /
+  Yves Saint Laurent; Dior / Christian Dior; D&G / Dolce & Gabbana).
+- **Check:** brand match-rate report on offers + retailer file; unresolved list
+  is short and genuinely unknown (e.g. `LuxeNiche`, `MysticOud`, `Aurelia`).
 
-## What To Keep vs What To Rewrite
+### Gap 2 — EAN-first product matching
+- Match every offer/retailer/history line to `products` on **EAN first**.
+- Strip tester markers (trailing `T`), normalize leading-zero/length issues.
+- Fallback to normalized brand+name only when EAN is absent/unmatched; flag it.
+- **Check:** % of offer lines matched by EAN vs. fallback vs. unresolved.
 
-### Keep
+### Gap 3 — Multi-currency normalization (ECB)
+- Fetch **ECB reference rates**; convert every monetary value to EUR.
+- Convert **at the row's own date** (offer/order/scan date), not "today"; fall
+  back to nearest available rate; flag rows that can't be safely converted.
+- Store original + EUR + rate + date. Products_Info prices are already EUR.
+- **Check:** every EUR figure has a rate provenance; `is_comparable` coverage %.
 
-- frontend app structure
-- page routing
-- backend router structure
-- authentication/session flow
-- trader-scoped access-control direction
-- overall BF Atlas product story
+### Gap 4 — Data quality (treat the mess as the problem)
+- **Flattened-export ffill:** `Salesperson`/`Customer`/`Order Date` (sales) and
+  `Buyer`/`Vendor`/`Confirmation Date` (purchases) appear only on the first line
+  of each order — forward-fill before aggregating or ~90% of trader attribution
+  is lost. *(This is the single highest-impact data fix.)*
+- Decimal commas (`"255,00"` → `255.00`), mixed price tokens (`€51.39`,
+  `12.25 EUR`), quantity tokens (`x50`, `60 pcs`, `24 units`), junk header rows
+  (`*** STOCK OFFER ***`), missing EANs, inconsistent sizes.
+- **Check:** per-file row-in/row-out counts; dropped-row reasons logged.
 
-### Rewrite Or Heavily Refactor
+### Gap 5 — Real signal generation
+- **Demand** from sales cadence (who reorders what, how often) + synthesized
+  leads in schema. **Supply** from purchase history + offers. **Reorder** from
+  real per-(customer, brand) cadence. **Market** from retailer prices.
+- **Check:** each signal table is non-empty and traces back to real rows.
 
-- `data/pipeline/generate_raw.py`
-- much of `data/pipeline/preprocess.py`
-- the small hardcoded brand dictionary approach
-- synthetic signal generation
-- alert logic assumptions tied to planted data
-- offer ingestion assumptions based on fixture emails
-
----
-
-## Honest Progress Estimate
-
-Approximate status after reviewing the real files:
-
-- product/app shell: `70-80% done`
-- backend architecture: `65-75% done`
-- real-data ingestion readiness: `20-30% done`
-- trial-package alignment overall: about `40% done`
-
-Interpretation:
-
-- the visible product foundation is already strong
-- the bulk of remaining work is in the data integration and normalization layer
-- this is not a frontend rebuild
-- this is mainly a data-model, importer, and matching rewrite
+### Gap 6 — Trader mapping + access control on real partners
+- Map real `Salesperson`/`Buyer` → `traders`; assign `partners.owner_trader_id`
+  from who actually traded the account.
+- Re-assert the spec's hard rule: a trader sees only their own accounts; others
+  appear masked (`via <colleague>`), enforced server-side.
+- **Check:** two traders get disjoint client/supplier sets; masking holds.
 
 ---
 
-## Practical Next Step
+## 4. Then: partial improvements (after the gaps close)
 
-The best next move is:
+Smaller, high-value refinements once the foundation is real:
 
-1. create the internal schema mapping from the BF files
-2. implement the real import pipeline
-3. measure unresolved brands/products early
-4. only then adjust matching and alerts
+- Size/volume parsing into a comparable unit (ml) for like-for-like pricing.
+- Per-EAN price bands (p25/median/p75) instead of single avg, for robust verdicts.
+- Retailer spread/outlier handling (drop obviously broken scrapes before using as market).
+- Offer-date staleness flag (offers from 2024 vs. retail scans from 2025).
+- Confidence scoring on every match (EAN-exact > brand+name > brand-only).
+- Coverage dashboard surfaced in the UI (honest "X% matched, Y unresolved").
 
-That gives the fastest path from a polished POC to a trial-aligned implementation.
+---
+
+## 5. Code polishing (quality pass)
+
+After behavior is correct, raise the code quality bar across `data/pipeline/`,
+`backend/app/services/`, and the trial offer-evaluator:
+
+- **Single responsibility:** one module per source/normalizer; no god-functions.
+- **Pure, testable core:** parsing/normalization/verdict logic as pure functions
+  taking DataFrames/dicts and returning DataFrames/dicts — no hidden I/O.
+- **Typed boundaries:** type hints + small dataclasses/`TypedDict` for the
+  internal record shapes (offer line, product ref, verdict).
+- **One config surface:** thresholds (margin bands), paths, currency base, FX
+  source live in one `config`/`settings` object — tunable and explainable on the call.
+- **Deterministic builds:** fixed seeds for any synthesis; same inputs → same DB.
+- **Tests:** unit tests for each adapter against the 3 real offer files + golden
+  fixtures for the messy cases (decimal comma, doubled prefix, tester EAN, USD row).
+- **Logging not prints:** structured logs with per-stage counts; a build summary.
+- **Docstrings that explain *why*** (especially every data-quality decision), so
+  the "walk us through your code" call is easy.
+
+---
+
+## 6. Large-corpus engineering standards (build for future scale)
+
+> **Instruction for all Phase-1 code:** assume the real corpus is large and
+> growing (today ~130k rows across files; production Odoo is far bigger). Write
+> every data-path component so it scales without a rewrite.
+
+Concrete rules:
+
+1. **Vectorize, never iterate rows.** Use pandas/SQL set operations; ban
+   `df.iterrows()`/Python loops over rows in hot paths. Merges on indexed keys (EAN).
+2. **Stream/chunk large reads.** Read Excel/CSV in chunks where feasible; process
+   and release. Don't hold multiple full copies of a 64k-row frame in memory.
+3. **Push work into SQLite/SQL.** Do joins/aggregations in the database with
+   proper **indexes** (`ean`, `brand_id`, `owner_trader_id`, `order_date`),
+   not in Python. Batch inserts via `executemany`/`to_sql(method='multi')`.
+4. **Idempotent, incremental builds.** Builds are re-runnable; design so a future
+   version can ingest only new/changed rows (date-watermarked) rather than full reload.
+5. **Bounded memory + explicit dtypes.** Set column dtypes on read (category for
+   brand, string for EAN to preserve leading zeros); downcast numerics.
+6. **Pagination & limits at the API/UI.** Never return an unbounded result set;
+   server-side filter/paginate. Precompute heavy aggregates at build time.
+7. **Cache the stable, recompute the volatile.** FX rates and brand dictionary
+   cached; only signals/alerts recomputed per run.
+8. **Profile the hot path.** Keep a timing log per pipeline stage; flag any stage
+   that grows worse than linearly with input size.
+9. **Fail loud on data scale issues.** Assert expected row-count ranges; surface
+   coverage drops in the build report instead of silently shrinking.
+
+These standards are requirements, not suggestions — every PR on `Phase1` should
+be checkable against them.
+
+---
+
+## 7. Build order (recommended sequence)
+
+1. Internal schema + `load_db.py` (indexed) + `config`.
+2. `currency.py` (ECB + cache) — needed by every money column.
+3. `products.py` + brand dictionary from Products_Info (Gap 1).
+4. `sales.py` + `purchases.py` with ffill + EUR (Gaps 3, 4).
+5. EAN matcher + `unresolved` reporting (Gap 2).
+6. Offer adapters (3) → common schema (Gaps 2, 4) — also powers the trial tool.
+7. `retailer.py` + market join (Gap 3, 5).
+8. `synth/` teams, demand, inventory — in client schema (Section 0).
+9. Trader mapping + access control on real partners (Gap 6).
+10. Signals + matching/alerts rebuilt on real tables (Gap 5).
+11. Partial improvements (Section 4).
+12. Code polish + tests + large-corpus pass (Sections 5, 6).
+13. Verification (below).
+
+The **trial offer-evaluator** (small React page + EAN-join + EUR + verdict) sits
+on top of steps 1–7 and stays deliberately small for submission; the rest of the
+sequence builds the real-data foundation the full Atlas needs.
+
+---
+
+## 8. Verification & acceptance (per build)
+
+`build.py` must emit a `_build_report.json` with:
+
+- Import counts per file (rows in / rows loaded / rows dropped + reasons).
+- Brand match-rate (offers, retailer) + unresolved brand list.
+- EAN match-rate (exact / fallback / unresolved) per source.
+- FX coverage (% of monetary rows with a comparable EUR value).
+- Trader/partner attribution coverage (% of history lines with an owner).
+- Signal counts (demand/supply/reorder/market) — all non-empty.
+- A sanity run of all 3 offers through the evaluator returning verdicts.
+
+Acceptance = real data loaded, gaps closed with measurable coverage, no silent
+data loss, and all checks green on the large corpus within a sensible runtime.
+
+---
+
+## 9. Keep vs. rewrite
+
+**Keep:** frontend app shell & routing, backend router structure, trader-scoped
+access-control concept, brand-dictionary + EAN-join concept, the overall BF Atlas
+product story, the matching/alerts *interfaces*.
+
+**Rewrite/heavily refactor:** `data/pipeline/generate_raw.py` (→ real `sources/`),
+`preprocess.py` (→ `normalize/`), the 50-brand hardcoded dictionary (→ 482 from
+Products_Info), synthetic signal planting (→ derived from real history), currency
+assumptions (→ ECB normalization), and any row-by-row logic (→ vectorized/SQL).

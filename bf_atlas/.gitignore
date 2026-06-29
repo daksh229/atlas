@@ -1,0 +1,46 @@
+# ─────────────────────────────────────────────────────────────
+# BF Atlas — root .gitignore
+# ─────────────────────────────────────────────────────────────
+
+# NDA / confidential client data — NEVER commit (dummy but under NDA)
+New folder/
+
+# Secrets / environment
+.env
+*.env
+!*.env.example
+backend/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Node / frontend builds
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Generated data & build artifacts (rebuilt by the pipeline)
+data/atlas.db
+data/pipeline/.cache/
+data/pipeline/reports/
+data/pipeline/processed/
+data/pipeline/raw/
+# NDA-derived output published for the web app — regenerate locally
+trial/web/public/offer_evaluation.json
+
+# Dev-only screenshot tooling
+frontend-react/shots/
+frontend-react/shoot.cjs
+**/.session.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+*.swp

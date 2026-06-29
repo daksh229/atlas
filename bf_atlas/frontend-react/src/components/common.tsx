@@ -41,3 +41,10 @@ export function eur(n: number | null | undefined): string {
   if (n == null) return "—";
   return "€" + Math.round(n).toLocaleString();
 }
+
+// The Odoo export uses "All" / "All / Fragrances" as the category — tidy it.
+export function category(c: string | null | undefined): string {
+  if (!c) return "—";
+  const cleaned = c.replace(/^All\s*\/?\s*/i, "").trim();
+  return cleaned || "—";
+}

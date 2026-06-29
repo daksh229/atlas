@@ -19,9 +19,21 @@ import pandas as pd
 
 from app.core.database import run_query
 
-# "today" matches the seed's fixed clock (data/pipeline/generate_raw.py).
-NOW = "2026-06-16"
-WINDOW_DAYS = 30  # signals older than this don't count as "recent"
+# "today" is derived from the real data: the most recent signal we hold. The
+# window is wide enough to span the derived-signal horizon (see synth/derive.py).
+WINDOW_DAYS = 180  # signals older than this don't count as "recent"
+_FALLBACK_NOW = "2026-06-16"
+
+
+def _now() -> str:
+    """The latest signal date in the DB — keeps 'recent' anchored to real data."""
+    df = run_query(
+        "SELECT MAX(d) AS now FROM ("
+        "  SELECT MAX(fired_at) AS d FROM demand_signals"
+        "  UNION ALL SELECT MAX(fired_at) FROM supply_signals)"
+    )
+    val = None if df.empty else df.iloc[0]["now"]
+    return str(val)[:10] if val else _FALLBACK_NOW
 
 
 def demand_supply_matches() -> pd.DataFrame:
@@ -30,6 +42,7 @@ def demand_supply_matches() -> pd.DataFrame:
     Returns one row per (demand, supply) pair, carrying both owning traders so the
     router can notify the right people (and mask the counterparty).
     """
+    now = _now()
     return run_query(
         f"""
         SELECT b.id AS brand_id, b.canonical_name AS brand,
@@ -46,8 +59,8 @@ def demand_supply_matches() -> pd.DataFrame:
         JOIN supply_signals s ON s.brand_id = d.brand_id
         JOIN brands b ON b.id = d.brand_id
         WHERE d.target_price > s.offer_price
-          AND d.fired_at >= date('{NOW}', '-{WINDOW_DAYS} days')
-          AND s.fired_at >= date('{NOW}', '-{WINDOW_DAYS} days')
+          AND d.fired_at >= date('{now}', '-{WINDOW_DAYS} days')
+          AND s.fired_at >= date('{now}', '-{WINDOW_DAYS} days')
         ORDER BY margin_value DESC
         """)
 
@@ -57,6 +70,7 @@ def external_market_windows() -> pd.DataFrame:
 
     Routed to the trader who can supply (owns the supply signal).
     """
+    now = _now()
     return run_query(
         f"""
         SELECT b.id AS brand_id, b.canonical_name AS brand,
@@ -68,13 +82,14 @@ def external_market_windows() -> pd.DataFrame:
         JOIN brands b ON b.id = r.brand_id
         WHERE r.brand_id IS NOT NULL
           AND r.price > s.offer_price
-          AND s.fired_at >= date('{NOW}', '-{WINDOW_DAYS} days')
+          AND s.fired_at >= date('{now}', '-{WINDOW_DAYS} days')
         ORDER BY headroom_per_unit DESC
         """)
 
 
 def stock_matches() -> pd.DataFrame:
     """We hold live inventory of a brand that a client wants → fastest deal."""
+    now = _now()
     return run_query(
         f"""
         SELECT b.id AS brand_id, b.canonical_name AS brand,
@@ -86,7 +101,7 @@ def stock_matches() -> pd.DataFrame:
         JOIN brands b ON b.id = p.brand_id
         JOIN demand_signals d ON d.brand_id = b.id
         WHERE i.qty_available > 0
-          AND d.fired_at >= date('{NOW}', '-{WINDOW_DAYS} days')
+          AND d.fired_at >= date('{now}', '-{WINDOW_DAYS} days')
         GROUP BY p.id, d.id
         HAVING qty_available >= 100
         ORDER BY qty_available DESC
@@ -111,7 +126,7 @@ def reorder_due(cadence_tolerance_days: int = 7) -> pd.DataFrame:
         return pd.DataFrame()
 
     orders["order_date"] = pd.to_datetime(orders["order_date"])
-    now = pd.Timestamp(NOW)
+    now = pd.Timestamp(_now())
     rows = []
     for (client_id, brand_id), g in orders.groupby(["client_id", "brand_id"]):
         dates = g["order_date"].sort_values()

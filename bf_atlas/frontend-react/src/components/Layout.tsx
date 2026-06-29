@@ -6,6 +6,7 @@ import {
   Users,
   Truck,
   Inbox,
+  FlaskConical,
   Radar,
   BookOpen,
   LayoutDashboard,
@@ -43,6 +44,7 @@ const SECTIONS: {
     section: "Market Activity",
     items: [
       { to: "/offers", label: "Offers Inbox", icon: Inbox },
+      { to: "/offer-evaluation", label: "Offer Evaluation", icon: FlaskConical },
       { to: "/radar", label: "Retailer Radar", icon: Radar },
     ],
   },
@@ -91,7 +93,7 @@ export function Layout() {
           ))}
         </nav>
         <div className="p-4 text-xs text-brand-100/60 border-t border-white/10">
-          Trader-owned access · POC on mock data
+          Trader-owned access · real Odoo-export data
         </div>
       </aside>
 
@@ -101,7 +103,7 @@ export function Layout() {
             Signed in as{" "}
             <span className="font-semibold text-slate-800">{auth?.name}</span>{" "}
             <span className="badge bg-slate-100 text-slate-500 ml-1">
-              Team {auth?.team}
+              {auth?.team}
             </span>
           </div>
           <button

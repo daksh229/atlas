@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useApi } from "../hooks/useApi";
 import { getBrandsBuy, getBrandsSell } from "../api/endpoints";
-import { ErrorMsg, Loading, PageHeader, eur } from "../components/common";
+import { ErrorMsg, Loading, PageHeader, category, eur } from "../components/common";
 
 function BrandTable({
   rows,
@@ -58,7 +58,7 @@ export function BrandsSell() {
             rows={data}
             cols={[
               { key: "brand", label: "Brand" },
-              { key: "category", label: "Category" },
+              { key: "category", label: "Category", fmt: category },
               { key: "clients", label: "Clients", align: "right" },
               { key: "avg_target_price", label: "Avg target", align: "right", fmt: eur },
               { key: "total_wanted", label: "Units wanted", align: "right" },
@@ -84,7 +84,7 @@ export function BrandsBuy() {
             rows={data}
             cols={[
               { key: "brand", label: "Brand" },
-              { key: "category", label: "Category" },
+              { key: "category", label: "Category", fmt: category },
               { key: "offers", label: "Offers", align: "right" },
               { key: "best_buy_price", label: "Best buy", align: "right", fmt: eur },
               { key: "total_available", label: "Available", align: "right" },

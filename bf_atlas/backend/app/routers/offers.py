@@ -35,6 +35,12 @@ def submit(body: OfferIn, session: Session = Depends(get_session)):
     return offers_svc.submit_offer(session, body.brand, body.offer_price, body.qty)
 
 
+@router.get("/evaluation")
+def evaluation(session: Session = Depends(get_session)):
+    """Supplier-offer evaluation: the 3 real offers judged against BF's data."""
+    return offers_svc.evaluation()
+
+
 @router.get("/inbox")
 def inbox(session: Session = Depends(get_session)):
     return {"items": offers_svc.inbox()}

@@ -4,3 +4,8 @@ dist-ssr
 *.local
 .env
 .vite
+
+# dev-only screenshot tooling
+shots/
+shoot.cjs
+.session.json

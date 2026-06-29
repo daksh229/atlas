@@ -100,6 +100,16 @@ export async function acceptOffers(offers: any[]) {
   return data as { accepted: number; skipped: number; match_count: number; matches: any[] };
 }
 
+// ---- Supplier-offer evaluation (the 3 real offers judged vs our data) ----
+export async function getOfferEvaluation() {
+  const { data } = await api.get("/offers/evaluation");
+  return data as {
+    offers: Record<string, any[]>;
+    report: { verdicts?: Record<string, Record<string, number>>; fx_source?: string };
+    error?: string;
+  };
+}
+
 // ---- Retailer Radar ----
 export async function getRadar() {
   const { data } = await api.get("/radar");

@@ -25,8 +25,24 @@ from app.core.config import settings
 from app.core.database import get_conn, run_query
 from app.services import brands, email_parser, matching
 
-NOW = matching.NOW
 EMAIL_DIR = os.path.join(settings.DATA_DIR, "samples", "emails")
+
+# Pre-computed supplier-offer evaluation (built by `python -m data.pipeline.build_offers`).
+_EVAL_PATH = os.path.abspath(os.path.join(
+    os.path.dirname(__file__), "..", "..", "..",
+    "data", "pipeline", "reports", "offer_evaluation.json",
+))
+
+
+def evaluation() -> dict:
+    """The three real supplier offers, judged against BF's own data (verdict +
+    reasoning + who-should-know). Read from the pipeline's pre-built JSON so the
+    screen is fast and the heavy analysis runs at build time, not per request."""
+    import json
+    if not os.path.exists(_EVAL_PATH):
+        return {"offers": {}, "report": {}, "error": "not_built"}
+    with open(_EVAL_PATH, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 
 # ── manual quick-add ────────────────────────────────────────────────────────
@@ -54,7 +70,7 @@ def _persist_offer(session, brand_id, offer_price, qty, source) -> str:
                (id, brand_id, partner_id, trader_id, offer_price, available_qty,
                 fired_at, source)
                VALUES (?,?,?,?,?,?,?,?)""",
-            (sid, brand_id, None, session.trader_id, offer_price, qty, NOW, source))
+            (sid, brand_id, None, session.trader_id, offer_price, qty, matching._now(), source))
         conn.commit()
     return sid
 

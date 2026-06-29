@@ -1,7 +1,7 @@
-import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { useApi } from "../hooks/useApi";
 import { getDashboard } from "../api/endpoints";
-import { ErrorMsg, Loading, PageHeader, eur } from "../components/common";
+import { ErrorMsg, Loading, PageHeader, Pill, eur } from "../components/common";
 import { KpiCard } from "../components/KpiCard";
 
 export function Overview() {
@@ -9,6 +9,11 @@ export function Overview() {
   return (
     <div>
       <PageHeader title="📊 Overview" subtitle="Your slice of BF — scoped to your own accounts." />
+      <div className="flex flex-wrap gap-2 mb-5 -mt-2">
+        <Pill tone="green">Orders & partners — real Odoo export</Pill>
+        <Pill tone="brand">Demand — derived from sales history</Pill>
+        <Pill tone="amber">Live stock — synthetic</Pill>
+      </div>
       {error && <ErrorMsg message={error} />}
       {loading || !data ? (
         <Loading />
@@ -32,8 +37,9 @@ export function Overview() {
                   <XAxis dataKey="brand" fontSize={10} angle={-25} textAnchor="end" height={70} />
                   <YAxis fontSize={11} allowDecimals={false} />
                   <Tooltip />
-                  <Bar dataKey="demand" stackId="a" fill="#6c5ce7" name="Demand signals" radius={[3, 3, 0, 0]} />
-                  <Bar dataKey="supply" stackId="a" fill="#a29bfe" name="Supply signals" radius={[3, 3, 0, 0]} />
+                  <Legend wrapperStyle={{ fontSize: 12 }} />
+                  <Bar dataKey="demand" stackId="a" fill="#6c5ce7" name="Demand signals" radius={[0, 0, 0, 0]} isAnimationActive={false} />
+                  <Bar dataKey="supply" stackId="a" fill="#a29bfe" name="Supply signals" radius={[3, 3, 0, 0]} isAnimationActive={false} />
                 </BarChart>
               </ResponsiveContainer>
             )}

@@ -9,6 +9,7 @@ import { BrandDetail } from "./pages/BrandDetail";
 import { MyClients } from "./pages/MyClients";
 import { MySuppliers } from "./pages/MySuppliers";
 import { OffersInbox } from "./pages/OffersInbox";
+import { OfferEvaluation } from "./pages/OfferEvaluation";
 import { RetailerRadar } from "./pages/RetailerRadar";
 import { BrandCatalog } from "./pages/BrandCatalog";
 
@@ -40,6 +41,7 @@ export default function App() {
         <Route path="/clients" element={<MyClients />} />
         <Route path="/suppliers" element={<MySuppliers />} />
         <Route path="/offers" element={<OffersInbox />} />
+        <Route path="/offer-evaluation" element={<OfferEvaluation />} />
         <Route path="/radar" element={<RetailerRadar />} />
         <Route path="/catalog" element={<BrandCatalog />} />
       </Route>
