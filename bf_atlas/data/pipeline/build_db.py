@@ -18,7 +18,7 @@ import sqlite3
 import pandas as pd
 
 from data.pipeline.config import PATHS
-from data.pipeline.load_db import SCHEMA, COLUMNS
+from data.pipeline.schema import SCHEMA, COLUMNS
 from data.pipeline.normalize.currency import CurrencyConverter
 from data.pipeline.sources.products import load_products
 from data.pipeline.sources.orders import load_orders

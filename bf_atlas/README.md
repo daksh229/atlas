@@ -1,130 +1,118 @@
-# BF Atlas — Trader Intelligence Platform (POC)
+# BF Atlas — Trader Intelligence Platform
 
-A spec-aligned POC of **BF Atlas**, B Futurist's internal trader-intelligence
-platform, on BF's required stack: **React 18 + TypeScript + Tailwind** frontend,
-**FastAPI** backend, **SQLite** (POC stand-in for PostgreSQL 16).
+BF Atlas is an internal intelligence application for B Futurist's wholesale traders.
+It reads the company's ERP data (products, sales, purchases), supplier offers, and
+retailer market prices, and surfaces — per brand — where supply, demand, live stock,
+and market prices align, so a trader can act on an opportunity *before* it reaches the
+ERP. It also evaluates incoming supplier offers ("is this a good deal, and who should
+know?").
 
-This POC implements the load-bearing requirements of the BF Atlas spec:
+The application runs on the actual exported B Futurist data, normalized through a
+data pipeline into a single SQLite database that the API and UI read.
 
-| Spec § | Requirement | Where |
-|---|---|---|
-| §4 | **A web application, not a chatbot** — navigable screens, no chat | the whole UI; the agent/chat layer was removed |
-| §5 | Data sources, brand-dictionary canonicalisation | `data/pipeline/` (Odoo-shaped, preprocessing pipeline) |
-| §6 | **Matching engine** — per-brand signal convergence | `services/matching.py` |
-| §7 | The **4 core alerts** + Offer-to-Request + Triple Match | `services/alerts.py` |
-| §7 | Brand Intelligence view + shareable **Brand Catalog (PDF)** | `services/brands.py`, `services/catalog.py` |
-| §8 | **Navigation** in the spec's menu sections | `components/Layout.tsx` |
-| §9 | **Trader-based access control** + counterparty masking | `core/security.py` |
-| §9 | **Alert quality control** (dedup, bundle-by-brand, daily cap, priority) | `services/alerts.py` |
-| §9 | **Right-person routing** | every alert carries a `target_trader_id` |
-| §9 | **Brand dictionary** (canonical + aliases) | `data/pipeline/brands.py`, `brand_aliases` table |
-
-> POC scope: **5 traders / 2 teams / 50 brands** on planted mock data, SQLite not
-> Postgres, no AWS, no real Odoo. The data is **Odoo-shaped** so a future read-only
-> Odoo integration is a near drop-in.
+- **Architecture & how it works:** [ARCHITECTURE.md](ARCHITECTURE.md)
+- **Repository layout:** [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md)
 
 ---
 
-## Architecture
+## Stack
 
-```
-React 18 + TS + Tailwind  ──HTTP/JSON + JWT──▶  FastAPI
-  • Opportunity Alerts (landing)                • Auth (trader identity, JWT)
-  • Brand Maps (Sell / Buy)                     • Matching engine (brand_id joins)
-  • My Clients / My Suppliers                   • Alert engine (route + dedup + cap)
-  • Offers Inbox · Retailer Radar               • Access control (trader-owned + mask)
-  • Brand Catalog (+ PDF)                       • SQLite (atlas.db)
-```
+| Layer | Technology |
+|---|---|
+| Frontend | React 18 + TypeScript + Tailwind (Vite) |
+| Backend | Python 3.12 + FastAPI |
+| Database | SQLite (Odoo-shaped schema; a PostgreSQL drop-in for production) |
+| AI | Anthropic Claude (offer email parsing) with a deterministic heuristic fallback |
+| FX | European Central Bank reference rates (cached) |
 
-Access control is enforced **server-side** in `core/security.py`: each trader sees
-only their own clients/suppliers; other traders' accounts appear only as aggregate
-signals + the responsible colleague ("via …"), never by name.
-
-### The matching engine
-
-For each brand it asks *which signals fired recently* (demand, supply, live stock,
-retail price) and detects overlap inside a recency window. Overlaps become typed,
-routed, quality-controlled alerts:
-
-- **Demand–Supply Match** — a client wants a brand a colleague can supply (notifies both)
-- **External Market Window** — a retailer lists a brand above a price we can supply at
-- **Stock Match** — we hold live inventory a client wants
-- **Reorder Reminder** — a client is overdue for a repeat order (cadence-inferred)
-- **Offer-to-Request** — a manual offer matches an existing client request (Offers Inbox)
-- **Triple Match** — demand + supply + retail align (highest priority)
-
-Everything joins on **brand_id**, never a raw string, so the brand dictionary
-guarantees "YSL" and "Saint Laurent" land on one brand.
-
----
-
-## Layout
+## Repository at a glance
 
 ```
 bf_atlas/
-├── backend/app/
-│   ├── main.py                  # FastAPI app (routers = spec nav sections)
-│   ├── core/                    # config, database, security (trader RBAC + masking), serialize
-│   ├── services/                # matching, alerts, brands, relationships, offers, radar, catalog, dashboard
-│   └── routers/                 # auth, alerts, brands, relationships, offers, radar, catalog, dashboard
-├── frontend-react/src/
-│   ├── auth/                    # trader-identity session
-│   ├── api/                     # axios client + typed endpoints
-│   └── pages/                   # OpportunityAlerts, BrandMaps, BrandDetail, MyClients,
-│                                #   MySuppliers, OffersInbox, RetailerRadar, BrandCatalog, Overview
-└── data/
-    ├── pipeline/                # raw seed → preprocess (brand canonicalisation) → load atlas.db
-    │   ├── brands.py            # THE brand dictionary (50 brands + aliases)
-    │   ├── generate_raw.py      # messy raw seed + 5 planted alert scenarios
-    │   ├── preprocess.py        # alias resolution + normalisation
-    │   ├── load_db.py           # schema + load
-    │   └── build.py             # orchestrate + verify all alerts fire
-    └── atlas.db                 # generated SQLite DB
+├── backend/          FastAPI API (core, routers, services)
+├── frontend-react/   React + TS + Tailwind UI
+├── data/
+│   ├── pipeline/     ingest → normalize → build atlas.db / offer evaluation
+│   ├── samples/      sample supplier emails (Offers Inbox)
+│   └── atlas.db      generated SQLite database (gitignored)
+└── trial/            standalone supplier-offer evaluator + written notes
+```
+
+Full breakdown in [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md).
+
+---
+
+## Setup
+
+Prerequisites: **Python 3.12+**, **Node 18+**, and the source data package present at
+`New folder/` (the Odoo exports, supplier offers, and retailer prices). Internet is
+required on the first run to fetch ECB rates (cached afterwards).
+
+```bash
+# 1. Python dependencies
+pip install pandas openpyxl                                   # pipeline
+python -m pip install -r backend/requirements.txt             # backend (use backend/.venv)
+
+# 2. Frontend dependencies
+cd frontend-react && npm install && cd ..
+```
+
+## Build the data
+
+Run from the **repository root** (the pipeline uses package imports):
+
+```bash
+python -m data.pipeline.build_db        # builds data/atlas.db from the source files
+python -m data.pipeline.build_offers    # builds the supplier-offer evaluation JSON
+```
+
+`build_db` prints per-table row counts; `build_offers` prints a verdict summary per
+offer file.
+
+## Run the application
+
+Two terminals:
+
+```bash
+# Terminal A — backend (http://localhost:8000, docs at /docs)
+cd backend
+python -m uvicorn app.main:app --reload --port 8000
+
+# Terminal B — frontend (http://localhost:5173, proxies /api → :8000)
+cd frontend-react
+npm run dev
+```
+
+Open **http://localhost:5173** and select a trader to sign in. Each trader sees only
+their own accounts; counterparties on shared opportunities are shown as the
+responsible colleague, never by account name (enforced server-side).
+
+### Standalone offer evaluator (optional)
+
+A minimal, self-contained version of the offer evaluator lives in `trial/`:
+
+```bash
+python -m data.pipeline.build_offers
+cd trial/web && npm install && npm run dev    # http://localhost:5174
 ```
 
 ---
 
-## Setup & run
+## Data sources & confidentiality
 
-```powershell
-# 0. (once) build the database from the pipeline
-cd bf_atlas/data/pipeline
-python build.py                 # raw → preprocess → atlas.db, then verifies all alert types fire
+The source data under `New folder/` is confidential and **gitignored** — it is never
+committed. The generated database (`data/atlas.db`), the FX cache, and pipeline
+reports are also gitignored and rebuilt from the source files.
 
-# 1. backend (terminal A)
-cd ../../backend
-pip install -r requirements.txt
-uvicorn app.main:app --reload --port 8000      # docs at http://localhost:8000/docs
+Data provenance is explicit throughout the UI:
 
-# 2. frontend (terminal B)
-cd ../frontend-react
-npm install
-npm run dev                     # http://localhost:5173  (proxies /api → :8000)
-```
+- **Real** — products, partners, sales and purchase history (from the Odoo exports),
+  supplier offers, and retailer prices.
+- **Derived** — demand signals (inferred from sales history).
+- **Synthetic** — live stock and team assignment (not present in the exports).
 
-Or use the helpers: `./run_backend.ps1` and `./run_frontend_react.ps1`.
+## Notes
 
-### Try the access control
-- Onboard as **Sophie Laurent** (Team Aurora) vs **David Chen** (Team Zenith): each
-  sees a different alert feed, different clients/suppliers, and counterparties on
-  shared matches show as **"(via <colleague>)"** — never by name.
-
-### Suggested demo flow
-1. **Opportunity Alerts** — routed, ranked, bundled-by-brand, capped (note "suppressed" count).
-2. **Brand Maps → click a brand** — full Brand Intelligence with masked vs. owned rows.
-3. **Offers Inbox** — submit *Chanel @ 30 × 200* → an Offer-to-Request Match fires.
-4. **Retailer Radar** — market windows + the flagged unknown brand (not force-matched).
-5. **Brand Catalog → Export PDF** — anonymised, no internal data.
-
----
-
-## Honesty / safety notes
-- The brand dictionary resolves 41 aliases; one retailer row is a genuinely unknown
-  brand that is **flagged, never force-matched**.
-- All access control is enforced server-side, not hidden in the UI.
-- All data is synthetic and deliberately planted so every alert type demonstrably fires.
-
-## Out of scope for this POC (real Phase 1)
-Real read-only Odoo (JSON-RPC) + NetHunt; Google OAuth; PostgreSQL row-level
-security; production scrapers (robots/ToS, scheduling); AWS eu-central-1; the
-email/offers parsing infrastructure (the Offers Inbox here is a structural stand-in).
+- Run the `python -m data.pipeline.*` commands from the repository root.
+- `build_db` overwrites `data/atlas.db`; run it before starting the backend.
+- If the Offer Evaluation screen reports "not built", run `build_offers` first.

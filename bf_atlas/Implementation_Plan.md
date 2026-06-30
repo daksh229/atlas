@@ -1,5 +1,13 @@
 # BF Atlas — Phase 1 Implementation Plan (Real-Data Foundation)
 
+> **Status: implemented.** This is the original planning document and is kept for
+> context. Some proposed module names below differ from the final code (e.g. the
+> planned `build.py` / `load_db.py` / `sales.py` shipped as `build_db.py` /
+> `schema.py` / `sources/orders.py` + `sources/history.py`, and the `synth/` and
+> demand-derivation modules were consolidated into `synth/derive.py`). For the
+> current structure and behaviour, see [ARCHITECTURE.md](ARCHITECTURE.md) and
+> [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md).
+
 > Branch: `Phase1`. This plan supersedes the original synthetic-POC plan. The
 > objective of Phase 1 is to **replace the synthetic data flow with the real
 > client package**, close the major data gaps, then polish the code so it stays
