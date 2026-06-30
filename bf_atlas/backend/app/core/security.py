@@ -13,7 +13,7 @@ Model:
   - `owns()` / `mask_partner()` are the primitives every service uses so the rule
     holds uniformly, not per-endpoint.
 
-Auth is intentionally password-less for the POC (production adds Google OAuth).
+Authentication is password-less in this build; production adds Google OAuth.
 """
 
 from dataclasses import dataclass

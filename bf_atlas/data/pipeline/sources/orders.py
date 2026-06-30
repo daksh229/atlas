@@ -11,8 +11,8 @@ continuation lines. We:
   4. derive partners (customers from sales, suppliers from purchases) and assign
      each an owner trader = the trader who handled it most.
 
-Output feeds the existing atlas.db schema unchanged, so the POC's services and
-screens run on real data.
+Output feeds the existing atlas.db schema unchanged, so the application's
+services and screens run on real data.
 """
 
 from __future__ import annotations

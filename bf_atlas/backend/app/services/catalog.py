@@ -6,7 +6,7 @@ clients ("here's what we can supply") or suppliers ("here's what we distribute")
 with NO internal data exposed — no prices, clients, suppliers, margins or traders.
 
 PDF generation is pure-Python (reportlab) with a no-dependency text fallback so it
-always works in the POC.
+always works.
 """
 
 import io
@@ -61,7 +61,7 @@ def build_pdf() -> tuple[bytes, str]:
         c.save()
         return buf.getvalue(), "application/pdf"
     except ImportError:
-        # Fallback: plain text so the export endpoint never hard-fails in the POC.
+        # Fallback: plain text so the export endpoint never hard-fails.
         lines = ["B Futurist — Brand Catalogue", ""]
         last_cat = None
         for r in sorted(rows, key=lambda x: (x["category"] or "", x["brand"])):

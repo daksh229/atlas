@@ -37,7 +37,7 @@ def submit(body: OfferIn, session: Session = Depends(get_session)):
 
 @router.get("/evaluation")
 def evaluation(session: Session = Depends(get_session)):
-    """Supplier-offer evaluation: the 3 real offers judged against BF's data."""
+    """Supplier-offer evaluation: the 3 offers evaluated against BF's data."""
     return offers_svc.evaluation()
 
 

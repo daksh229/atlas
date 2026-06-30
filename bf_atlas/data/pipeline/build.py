@@ -4,7 +4,7 @@ build.py — one-shot data build for BF Atlas.
     raw seed  →  preprocess (brand canonicalisation)  →  load atlas.db  →  verify
 
 After it runs, it asserts that every alert type has the data it needs to fire, so
-a fresh database is always demo-ready.
+a fresh database is always ready to use.
 
 Run:  python build.py
 """

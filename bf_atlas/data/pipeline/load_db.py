@@ -1,7 +1,7 @@
 """
 load_db.py — create the BF Atlas schema and load processed/*.json into atlas.db.
 
-Odoo-SHAPED but SQLite (POC): table/field names mirror Odoo concepts
+Odoo-SHAPED but SQLite: table/field names mirror Odoo concepts
 (res.partner → partners, sale.order → sale_orders, purchase.order →
 purchase_orders, product → products, stock → inventory) so a future read-only
 Odoo integration is a near drop-in — without depending on Odoo now.

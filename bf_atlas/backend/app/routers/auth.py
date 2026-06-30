@@ -25,7 +25,7 @@ class SessionResponse(BaseModel):
 
 @router.get("/traders")
 def list_traders():
-    """Trader identities available at onboarding (the 5 POC traders)."""
+    """Trader identities available at onboarding."""
     return {"traders": to_records(traders())}
 
 

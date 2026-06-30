@@ -1,11 +1,11 @@
 """
-offers.py — the Offers Inbox (spec §7 Phase 2, structural).
+offers.py — the Offers Inbox (spec §7 Phase 2).
 
 Two ways an offer becomes a supply signal that the matcher checks against client
 demand:
 
   1. Manual quick-add: a trader types brand/price/qty (submit_offer).
-  2. Email parse: a trader opens a mock supplier email, the AI/heuristic parser
+  2. Email parse: a trader opens a sample supplier email, the AI/heuristic parser
      extracts structured offers (email_parser), the trader reviews/edits them,
      and accepts (accept_offers).
 
@@ -35,7 +35,7 @@ _EVAL_PATH = os.path.abspath(os.path.join(
 
 
 def evaluation() -> dict:
-    """The three real supplier offers, judged against BF's own data (verdict +
+    """The three supplier offers, evaluated against BF's own data (verdict +
     reasoning + who-should-know). Read from the pipeline's pre-built JSON so the
     screen is fast and the heavy analysis runs at build time, not per request."""
     import json

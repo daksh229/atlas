@@ -3,8 +3,8 @@ config.py — the single configuration surface for the BF Atlas data pipeline.
 
 Everything tunable lives here: input paths, the DB path, the base currency, the
 FX source, and the margin bands that decide whether an offer is "good". Keeping
-this in one place means the logic is explainable on the client call and the
-thresholds can be adjusted without hunting through modules.
+this in one place keeps the logic transparent and lets the thresholds be
+adjusted without hunting through modules.
 """
 
 from __future__ import annotations
@@ -20,8 +20,8 @@ def _p(*parts: str) -> str:
     return os.path.abspath(os.path.join(PROJECT_ROOT, *parts))
 
 
-# --- Where the real client package lives -----------------------------------
-# The NDA data sits in "New folder/". We read it read-only and never mutate it.
+# --- Where the source data package lives -----------------------------------
+# Source files sit in "New folder/". They are read read-only and never mutated.
 RAW_DIR = _p("New folder")
 
 
@@ -53,16 +53,16 @@ class Settings:
     ecb_rates_url: str = "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml"
     fx_cache_file: str = "ecb_rates.json"
 
-    # Read large files in chunks so memory stays bounded on the real corpus.
+    # Read large files in chunks so memory stays bounded on the full corpus.
     read_chunksize: int = 50_000
     insert_batchsize: int = 5_000
 
     # "Good offer" margin bands (vs. the conservative resale benchmark, in EUR).
-    # No client-mandated target — these are our reasoning, surfaced and tunable.
+    # These thresholds are surfaced and tunable rather than fixed externally.
     margin_good: float = 0.25       # >= 25% headroom → good
     margin_borderline: float = 0.10  # >= 10% → borderline; below → skip
 
-    # 5 synthetic teams for the ~24 real traders (assignment is deterministic).
+    # 5 teams for the ~24 traders (assignment is deterministic).
     n_teams: int = 5
 
     paths: Paths = field(default_factory=Paths)

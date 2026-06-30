@@ -2,10 +2,10 @@
 brands.py — the brand dictionary, built FROM the real product master.
 
 Spec §9 ("Brand name consistency") calls one-canonical-record-per-brand
-"foundational to everything". The old POC hardcoded 50 brands; the real package
-has 482. So we derive the dictionary from `Products_Info.xlsx` and layer a small
-curated alias set on top for the cross-name brands that matching would otherwise
-split (YSL / Saint Laurent / Yves Saint Laurent, Dior / Christian Dior, ...).
+"foundational to everything". The brand dictionary is derived from the product
+master (`Products_Info.xlsx`), with a small curated alias set layered on top for
+the cross-name brands that matching would otherwise split (YSL / Saint Laurent /
+Yves Saint Laurent, Dior / Christian Dior, ...).
 
 resolve() is the only entry point the rest of the pipeline uses: a surface form
 (however messy) → a stable brand_id, or None (then it goes to `unresolved`,

@@ -1,10 +1,10 @@
 """
 currency.py — multi-currency normalization to EUR using ECB reference rates.
 
-The client mandates the European Central Bank reference rates. We fetch the full
-ECB history once (covers every date in the package), cache it locally, and fall
-back to a small pinned table only if there is no network AND no cache — so a
-build is reproducible offline but uses live rates when available.
+Prices are normalized to EUR using European Central Bank reference rates. We
+fetch the full ECB history once (covers every date in the package), cache it
+locally, and fall back to a small pinned table only if there is no network AND
+no cache — so a build is reproducible offline but uses live rates when available.
 
 Conversion is DATE-AWARE: an amount is converted at the rate for its own row
 date (offer/order/scan date), using the nearest available ECB date on-or-before

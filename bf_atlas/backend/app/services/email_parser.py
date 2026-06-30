@@ -7,8 +7,8 @@ contain several offers (a price list), so it returns a list.
 
 The offline half: if no ANTHROPIC_API_KEY is set (or the call fails), a
 deterministic heuristic scans for brand-dictionary names + nearby price/qty so
-the POC still runs with zero external dependencies. Each result is labelled
-`engine: "ai" | "heuristic"` so we never pretend a heuristic parse was AI.
+the application still runs with zero external dependencies. Each result is
+labelled `engine: "ai" | "heuristic"` to record the parse provenance.
 
 Brand resolution is NOT done here — it stays deterministic in offers.py via the
 brand dictionary, so an extracted name is canonicalised (or flagged) exactly the

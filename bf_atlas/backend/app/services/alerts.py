@@ -7,7 +7,7 @@ Alert types
     external_market  — a retailer lists a brand above a price we can supply at
     stock_match      — we hold live inventory of a brand a client wants
     reorder          — a client is overdue for a repeat order
-  Phase 2 (demonstrated on planted data):
+  Phase 2 (over seeded data):
     offer_to_request — a manual offer matches an existing client request
     triple_match     — demand + supply + retail all align on one brand (top priority)
 
@@ -165,8 +165,25 @@ def for_trader(session: Session) -> dict:
 
     feed = sorted(bundles.values(), key=lambda a: (a["priority"], a["value"]), reverse=True)
 
-    # daily cap (right-sized so the feed stays useful, not spam)
-    capped = feed[:DAILY_CAP]
+    # Daily cap — but DIVERSIFIED across alert types. A pure top-N by priority
+    # lets the highest-priority type (Triple Match) eat every slot and bury the
+    # core alerts. Instead we round-robin across types so the feed stays varied
+    # and useful, then sort the chosen set for display.
+    from collections import defaultdict
+    by_type: dict[str, list] = defaultdict(list)
+    for a in feed:  # feed already sorted, so each type's list stays ranked
+        by_type[a["type"]].append(a)
+    type_order = sorted(by_type, key=lambda t: PRIORITY[t], reverse=True)
+
+    capped: list[dict] = []
+    while len(capped) < DAILY_CAP and any(by_type[t] for t in type_order):
+        for t in type_order:
+            if by_type[t]:
+                capped.append(by_type[t].pop(0))
+                if len(capped) >= DAILY_CAP:
+                    break
+    capped.sort(key=lambda a: (a["priority"], a["value"]), reverse=True)
+
     counts: dict[str, int] = {}
     for a in capped:
         counts[a["label"]] = counts.get(a["label"], 0) + 1

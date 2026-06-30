@@ -10,9 +10,9 @@ The pipeline uses it two ways:
                      writes raw data — simulating the messy real world.
   - preprocess.py    resolves every surface form back to a single brand_id.
 
-50 brands (POC scale); ~20 carry aliases so the dictionary visibly earns its
-place. brand_id is derived deterministically from the canonical name in
-preprocess.py, so it is stable across rebuilds.
+50 brands; ~20 carry aliases so the dictionary visibly earns its place. brand_id
+is derived deterministically from the canonical name in preprocess.py, so it is
+stable across rebuilds.
 """
 
 # (canonical_name, category, [aliases])

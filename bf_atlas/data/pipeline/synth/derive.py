@@ -2,7 +2,7 @@
 derive.py — turn real history into the SIGNALS the matching engine needs, and
 synthesize only what the Odoo exports don't contain (live stock, team structure).
 
-Honesty model (matches the spec's "reason about the uncertain sources"):
+Data provenance (matches the spec's "reason about the uncertain sources"):
   - DEMAND   — DERIVED from real sales: a client actively buying a brand is
                standing demand at the price they pay. source='derived_sales'.
   - SUPPLY   — REAL: from purchase history (what a vendor sourced us) and from the
@@ -124,8 +124,8 @@ def synth_inventory(products: list[dict], demand_brands: set, supply_brands: set
 
 
 def assign_teams(roster: list[dict], n_teams: int = 5) -> list[dict]:
-    """Deterministically split the real traders into N teams; all are traders.
-    One manager is appointed (sees all) so the masking model is demonstrable."""
+    """Deterministically split the traders into N teams; all are traders.
+    One manager is appointed (sees all) to exercise the masking model."""
     teams = [f"Team {chr(ord('A') + i)}" for i in range(n_teams)]
     out = []
     for i, t in enumerate(sorted(roster, key=lambda r: r["id"])):

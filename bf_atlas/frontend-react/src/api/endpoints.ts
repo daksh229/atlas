@@ -100,7 +100,7 @@ export async function acceptOffers(offers: any[]) {
   return data as { accepted: number; skipped: number; match_count: number; matches: any[] };
 }
 
-// ---- Supplier-offer evaluation (the 3 real offers judged vs our data) ----
+// ---- Supplier-offer evaluation (offers evaluated against historical data) ----
 export async function getOfferEvaluation() {
   const { data } = await api.get("/offers/evaluation");
   return data as {

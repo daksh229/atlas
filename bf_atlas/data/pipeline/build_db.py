@@ -1,9 +1,9 @@
 """
-build_db.py — build atlas.db from the REAL client package.
+build_db.py — build atlas.db from the source data package.
 
-Populates the existing POC schema (so the FastAPI services and React screens run
-unchanged) from the real Odoo exports + offers + retailer file, deriving demand
-from sales and synthesizing only what the exports omit (live stock, teams).
+Populates the schema (so the FastAPI services and React screens run unchanged)
+from the Odoo exports + offers + retailer file, deriving demand from sales and
+synthesizing only what the exports omit (live stock, teams).
 
     products + orders + partners + signals + retailer  ──▶  atlas.db (SQLite)
 

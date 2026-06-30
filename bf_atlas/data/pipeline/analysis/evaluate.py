@@ -2,7 +2,7 @@
 evaluate.py — the core judgment: is this offer line good, why, and who should know?
 
 The reasoning is deliberately transparent (every number that drives the verdict
-is returned alongside it) so a trader trusts it and we can defend it on the call.
+is returned alongside it) so a trader can trust it and audit it.
 
 For one offer line, joined by EAN to BF's own data:
   - COST: how the offered price compares to what BF usually pays
@@ -13,7 +13,7 @@ For one offer line, joined by EAN to BF's own data:
   - WHO SHOULD KNOW: the traders who have bought this product before (potential
     sources) and those who have sold it (potential sell-side / clients).
 
-No client-mandated margin target — the bands live in config and are surfaced.
+The margin bands live in config and are surfaced rather than fixed externally.
 """
 
 from __future__ import annotations

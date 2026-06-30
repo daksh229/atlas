@@ -1,11 +1,11 @@
 """
-clean.py — pure data-quality helpers for the messy real package.
+clean.py — pure data-quality helpers for the messy source package.
 
 Everything here is a small, side-effect-free function so it can be unit-tested
 against golden fixtures (decimal commas, doubled brand prefixes, tester EANs,
 mixed price tokens) and applied vectorized over large frames.
 
-The mess these handle is real and observed in the client files:
+The mess these handle is real and observed in the source data:
   - prices like "255,00"  (European decimal comma)
   - prices like "€51.39", "12.25 EUR", "59,94"  (mixed symbol/code placement)
   - quantities like "24 units", "60 pcs", "x50"

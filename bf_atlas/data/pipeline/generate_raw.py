@@ -9,11 +9,11 @@ generate_raw.py — produce the RAW (intentionally messy) seed for BF Atlas.
 It writes one JSON file per source into  data/pipeline/raw/ .
 preprocess.py then canonicalises and load_db.py loads the result.
 
-The data is PLANTED: five specific scenarios are hand-built so that every alert
-type in Atlas demonstrably fires on a fresh database. Random background data is
-layered on top so the lists/screens are never empty.
+The data is SEEDED: five specific scenarios are hand-built so that every alert
+type in Atlas fires on a fresh database. Random background data is layered on
+top so the lists/screens are never empty.
 
-Scale (POC): 5 traders / 2 teams, 50 brands, ~2 products per brand.
+Scale: 5 traders / 2 teams, 50 brands, ~2 products per brand.
 Run:  python generate_raw.py
 """
 
@@ -28,7 +28,7 @@ random.seed(42)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 RAW = os.path.join(HERE, "raw")
-TODAY = datetime(2026, 6, 16)  # fixed "now" so the demo is stable
+TODAY = datetime(2026, 6, 16)  # fixed "now" so the seed is stable
 
 # ── Traders: 5 across 2 teams ────────────────────────────────────────────────
 TRADERS = [
@@ -250,7 +250,7 @@ def build():
     })
 
     # ════════════════════════════════════════════════════════════════════════
-    #  PLANTED SCENARIOS — one per alert type (deterministic, demonstrable)
+    #  SEEDED SCENARIOS — one per alert type (deterministic)
     # ════════════════════════════════════════════════════════════════════════
 
     # 1) DEMAND–SUPPLY MATCH (cross-trader): t1's client wants YSL; t4's supplier
@@ -294,7 +294,7 @@ def build():
                            "wanted_qty": 250, "fired_at": _d(1), "source": "crm"})
 
     # 4) REORDER REMINDER: t5's client reorders La Roche-Posay ~every 30 days;
-    #    last order was 32 days ago → due now. Plant a 3-order cadence.
+    #    last order was 32 days ago → due now. Seed a 3-order cadence.
     partners.append({"id": "cust-reorder", "name": "Summit Perfumery", "is_customer": 1,
                      "is_supplier": 0, "owner_trader_id": "t5", "country": "Belgium",
                      "ref": "odoo-partner-9005", "email": "buying@summitperf.be"})
@@ -302,7 +302,7 @@ def build():
     for days_ago in (92, 62, 32):  # every ~30 days, last 32 days ago → overdue
         add_sale_order("cust-reorder", "t5", [lrp_pid], days_ago)
 
-    # 5) OFFER-TO-REQUEST (the dummy "Offers Inbox"): t2 submits a manual offer
+    # 5) OFFER-TO-REQUEST (the "Offers Inbox"): t2 submits a manual offer
     #    for Chanel; t3's client already requested Chanel → both notified.
     partners.append({"id": "cust-offer", "name": "Pioneer Imports", "is_customer": 1,
                      "is_supplier": 0, "owner_trader_id": "t3", "country": "Italy",

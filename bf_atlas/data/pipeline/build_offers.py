@@ -1,11 +1,11 @@
 """
-build_offers.py — end-to-end run of the offer evaluator (the trial deliverable).
+build_offers.py — end-to-end run of the offer evaluator.
 
     products + history + retailer + ECB  ──▶  evaluate each offer line  ──▶  JSON
 
 Produces `reports/offer_evaluation.json`: per-offer-file results a trader can act
 on (verdict, the numbers behind it, and who internally should know), plus a
-coverage report. The minimal React screen reads this JSON directly.
+coverage report. The React screen reads this JSON directly.
 
 Run:  python -m data.pipeline.build_offers
 """
@@ -121,7 +121,7 @@ def main() -> dict:
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, ensure_ascii=False, default=str)
 
-    # Publish a copy where the minimal React page reads it.
+    # Publish a copy where the React page reads it.
     web_public = os.path.join(PATHS.processed_dir, "..", "..", "..", "trial", "web", "public")
     web_public = os.path.abspath(web_public)
     if os.path.isdir(web_public):

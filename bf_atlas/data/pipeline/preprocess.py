@@ -12,7 +12,7 @@ Steps:
      rows. Our own data MUST resolve (anything that doesn't is a seed bug).
   3. Retailer rows may contain genuinely unknown brands → keep them with
      brand_id=None and record them in an "unresolved" report. They are FLAGGED,
-     never force-matched (spec honesty requirement).
+     never force-matched (data-provenance requirement).
   4. Emit processed/*.json for load_db.py.
 
 Run (after generate_raw.py):  python preprocess.py
