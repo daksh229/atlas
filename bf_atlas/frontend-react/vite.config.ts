@@ -9,7 +9,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       "/api": {
-        target: import.meta.env.VITE_API_TARGET || "https://unwearied-hostly-audrey.ngrok-free.dev",
+        target: "https://unwearied-hostly-audrey.ngrok-free.dev",
         changeOrigin: true,
         rewrite: (p) => p.replace(/^\/api/, ""),
       },
