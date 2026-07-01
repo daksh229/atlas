@@ -34,9 +34,13 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
+    # Any origin may call the API. Credentials are off because auth is a Bearer
+    # token in the Authorization header, not cookies — so "*" is safe here and
+    # avoids having to enumerate every frontend origin (localhost, tunnels, etc.).
     allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
+    allow_credentials=False,
 )
 
 for r in (auth, alerts, brands, relationships, offers, radar, catalog, dashboard):
